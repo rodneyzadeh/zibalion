@@ -64,6 +64,50 @@
 
   <!-- All styling lives in this one file -->
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- ==== ZB-SIGNUP-CSS START ==== -->
+  <style>
+    .zb-signup { background: #EDEAE3; padding: 3.5rem 1.5rem; }
+    .zb-signup-inner { max-width: 40rem; margin: 0 auto; }
+    .zb-signup-kicker {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+      color: #B8862B; margin: 0 0 .6rem;
+    }
+    .zb-signup h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.6rem; font-weight: 500; line-height: 1.2;
+      color: #1E2A38; margin: 0 0 .8rem;
+      border: 0; padding: 0; text-transform: none; letter-spacing: 0;
+    }
+    .zb-signup-note {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .82rem; line-height: 1.65;
+      color: #1E2A38; opacity: .7; margin: 0 0 1.6rem;
+    }
+    .zb-signup-form { display: flex; gap: .6rem; flex-wrap: wrap; }
+    .zb-signup-form input[type=email] {
+      flex: 1 1 16rem; min-width: 0;
+      font-family: 'IBM Plex Mono', monospace; font-size: .9rem;
+      padding: .85rem 1rem; color: #1E2A38; background: #FAF9F6;
+      border: 1px solid rgba(30,42,56,.25); border-radius: 0;
+    }
+    .zb-signup-form input[type=email]:focus { outline: none; border-color: #B8862B; }
+    .zb-signup-form button {
+      font-family: 'IBM Plex Mono', monospace; font-size: .8rem;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: .85rem 1.6rem; cursor: pointer;
+      color: #FAF9F6; background: #1E2A38;
+      border: 1px solid #1E2A38; border-radius: 0;
+    }
+    .zb-signup-form button:hover { background: #B8862B; border-color: #B8862B; }
+    .zb-visually-hidden {
+      position: absolute; width: 1px; height: 1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+    }
+    @media (max-width: 32rem) { .zb-signup-form button { flex: 1 1 100%; } }
+  </style>
+  <!-- ==== ZB-SIGNUP-CSS END ==== -->
 </head>
 
 <body>
@@ -437,7 +481,27 @@
 
   </main>
 
-  <footer class="footer">
+  
+  <!-- ==== ZB-SIGNUP START ==== -->
+  <section class="zb-signup">
+    <div class="zb-signup-inner">
+      <p class="zb-signup-kicker">The list</p>
+      <h2>New pieces, sent when they're finished.</h2>
+      <p class="zb-signup-note">
+        No schedule, no filler. Each piece goes out once, with the audio version
+        attached. No tracking pixels, no selling the list, unsubscribe in one click.
+      </p>
+      <form class="zb-signup-form" action="https://app.kit.com/forms/9888894/subscriptions" method="post">
+        <label class="zb-visually-hidden" for="zb-email">Email address</label>
+        <input id="zb-email" type="email" name="email_address" required
+               placeholder="you@example.com" autocomplete="email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+  <!-- ==== ZB-SIGNUP END ==== -->
+
+<footer class="footer">
     <div class="footer__meta">
       <p>Los Angeles</p>
       <p><a href="mailto:rodney@zibalion.com">rodney@zibalion.com</a></p>
