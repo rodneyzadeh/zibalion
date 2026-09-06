@@ -1,0 +1,14 @@
+# editor / OS noise
+.DS_Store
+*.swp
+
+# script backups
+*.bak
+*.bak.*
+
+# salvaged SiteGround media — not part of the site
+zibalion-media/
+zibalion-media.zip
+
+# source art, not served
+*.ai

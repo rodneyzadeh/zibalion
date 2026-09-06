@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+  ARTICLE TEMPLATE
+  ------------------------------------------------------------------
+  This is the file you copy for every new piece.
+
+  To publish something:
+    1. Duplicate this file in the /writing/ folder
+    2. Rename it, e.g. on-systems.html  (lowercase, hyphens, no spaces)
+    3. Change the <title>, the <h1>, the date, and the body text
+    4. Drop your recording in assets/audio/ and point the player at it
+    5. Add a row for it in the list on index.html
+
+  Note the ../ in the paths below — this file sits one folder deep,
+  so ../ means "go up one level to the site root".
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Article title — Zibalion</title>
+  <meta name="description" content="One sentence describing this piece.">
+
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/article.css">
+</head>
+
+<body>
+
+  <header class="masthead">
+    <a class="wordmark" href="../" aria-label="Zibalion home">
+      <img src="../assets/img/zibalion-logo.svg" alt="Zibalion">
+    </a>
+    <nav class="band" aria-label="Main">
+      <ul>
+        <li><a href="../writing/">Writing</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="mailto:rodney@zibalion.com">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <article class="piece">
+
+    <header class="piece__head">
+      <time class="piece__date" datetime="2026-09-05">2026.09.05</time>
+      <h1 class="piece__title">Article title goes here</h1>
+    </header>
+
+    <!-- ============================================================
+         THE NARRATION PLAYER
+         This is the "read it or hear me talk about it" feature.
+
+         Change the src on the <audio> line to your recording.
+         Delete this whole <div class="listen"> block on any piece
+         that doesn't have audio yet.
+         ============================================================ -->
+    <div class="listen">
+      <button class="listen__btn" type="button" aria-label="Play narration">
+        <span class="listen__icon" aria-hidden="true">▶</span>
+        <span class="listen__label">Listen to this piece</span>
+      </button>
+      <span class="listen__time" aria-hidden="true">—:—</span>
+
+      <!-- The real audio element. Hidden, because the button above
+           drives it. Browsers will still stream the file properly. -->
+      <audio class="listen__audio" preload="metadata">
+        <source src="../assets/audio/article-title.mp3" type="audio/mpeg">
+        Your browser can't play audio. <a href="../assets/audio/article-title.mp3">Download the recording.</a>
+      </audio>
+    </div>
+
+    <!-- ============================================================
+         THE WRITING
+         Each paragraph goes in its own <p> tag. That's the whole
+         syntax you need for prose.
+         ============================================================ -->
+    <div class="piece__body">
+
+      <p>Your opening paragraph. Write it as you'd say it out loud, since you're going to be saying it out loud.</p>
+
+      <p>A second paragraph. Blank line between them in the file makes no difference to the browser — only the tags matter.</p>
+
+      <h2>A section heading</h2>
+
+      <p>More text. Use <em>em</em> for emphasis and <strong>strong</strong> for weight.</p>
+
+      <blockquote>
+        <p>A pulled quote, if you want one.</p>
+      </blockquote>
+
+      <p>And so on.</p>
+
+    </div>
+
+    <footer class="piece__foot">
+      <a href="../writing/">All writing</a>
+    </footer>
+
+  </article>
+
+  <footer class="footer">
+    <p>Los Angeles</p>
+    <p><a href="mailto:rodney@zibalion.com">rodney@zibalion.com</a></p>
+  </footer>
+
+  <!-- ==============================================================
+       The script that makes the listen button work.
+       It's about 25 lines. Read the comments and you'll follow it.
+       ============================================================== -->
+  <script>
+    // Find the player pieces on the page
+    const wrap = document.querySelector('.listen');
+
+    if (wrap) {
+      const audio = wrap.querySelector('.listen__audio');
+      const btn   = wrap.querySelector('.listen__btn');
+      const icon  = wrap.querySelector('.listen__icon');
+      const label = wrap.querySelector('.listen__label');
+      const time  = wrap.querySelector('.listen__time');
+
+      // Turn 143 seconds into "2:23"
+      const fmt = s => {
+        if (!isFinite(s)) return '—:—';
+        const m = Math.floor(s / 60);
+        const r = Math.floor(s % 60).toString().padStart(2, '0');
+        return `${m}:${r}`;
+      };
+
+      // Once the browser knows how long the file is, show the length
+      audio.addEventListener('loadedmetadata', () => {
+        time.textContent = fmt(audio.duration);
+      });
+
+      // Clicking the button toggles play and pause
+      btn.addEventListener('click', () => {
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      });
+
+      // Keep the button label honest about what's happening
+      audio.addEventListener('play', () => {
+        icon.textContent = '❙❙';
+        label.textContent = 'Pause';
+        btn.setAttribute('aria-label', 'Pause narration');
+      });
+
+      audio.addEventListener('pause', () => {
+        icon.textContent = '▶';
+        label.textContent = 'Listen to this piece';
+        btn.setAttribute('aria-label', 'Play narration');
+      });
+
+      // Count down while it plays
+      audio.addEventListener('timeupdate', () => {
+        time.textContent = fmt(audio.duration - audio.currentTime);
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,954 @@
+/* ==================================================================
+   ZIBALION — stylesheet
+   ------------------------------------------------------------------
+   Read this top to bottom; it's ordered the way the page is built.
+   Anything between slash-star and star-slash is a comment the
+   browser ignores. Change values, save, refresh.
+   ================================================================== */
+
+
+/* ------------------------------------------------------------------
+   1. TOKENS
+   Every colour and measurement is named once here. Change it in this
+   block and it updates everywhere it's used. This is why you never
+   hunt through a stylesheet for "that navy".
+   ------------------------------------------------------------------ */
+:root {
+  --bone:   #FAF9F6;   /* page background — warm off-white, not #FFF */
+  --navy:   #1E2A38;   /* the band */
+  --ink:    #16181C;   /* body text */
+  --muted:  #6B6B6B;   /* dates, secondary lines */
+  --rule:   #DFDCD5;   /* hairlines between entries */
+  /* The one saturated colour on the page. Used sparingly — a single
+     rule and interactive states. Deliberately not a muted clay. */
+  --sand:   #EDEAE3;   /* footer ground, echoes the mockup's grey */
+  --accent: #B8862B;   /* brass — the surviving thread from the old mark */
+
+  --serif: "Newsreader", Georgia, serif;
+  --mono:  "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --measure: 62ch;     /* max line length for readable prose */
+  --gutter: clamp(1.5rem, 5vw, 5rem);
+  /* One shared content width. Everything on the page snaps to this,
+     so nothing is flung to the window edges on a wide monitor. */
+  --page: 1360px;
+}
+
+
+/* ------------------------------------------------------------------
+   2. RESET + BASE
+   Browsers ship with their own default margins. Clearing them first
+   means your spacing is the only spacing.
+   ------------------------------------------------------------------ */
+*, *::before, *::after { box-sizing: border-box; }
+
+main {
+  /* Leftover window height goes into the sand section below, never
+     into a bone gap between the figure band and the content. */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+body {
+  margin: 0;
+  /* Fill the screen height, so the footer band always sits at the
+     bottom of the viewport instead of floating mid-page when there
+     isn't much content yet. */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bone);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+/* Keyboard users need to see where they are. Never remove this
+   without replacing it with something equally visible. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+
+/* ------------------------------------------------------------------
+   3. MASTHEAD — wordmark and the navy band
+   ------------------------------------------------------------------ */
+.masthead {
+  padding-top: clamp(1.5rem, 4vw, 2.75rem);
+}
+
+.wordmark {
+  display: block;
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 var(--gutter) clamp(1.25rem, 3vw, 2rem);
+}
+
+.wordmark img {
+  width: clamp(180px, 26vw, 340px);
+}
+
+/* The band runs edge to edge. The figure will overlap it, which is
+   what gives the header depth instead of looking like a stray bar. */
+.band {
+  background: var(--navy);
+  padding: 1rem 0;
+}
+
+.band ul {
+  list-style: none;          /* no bullets */
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.25rem, 4vw, 3rem);
+}
+
+.band a {
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  color: var(--bone);
+  text-decoration: none;
+  opacity: 0.82;
+  transition: opacity 0.18s ease;
+}
+
+.band a:hover { opacity: 1; }
+
+
+/* ------------------------------------------------------------------
+   4. HERO
+   The hero holds ONLY the identity block and the figure, and is
+   sized to the window. Everything else lives in .ground below it.
+
+   That separation is the whole trick: the figure spans from the
+   navy stripe down to the ground's top edge, and adding sections
+   further down the page can never change its size again.
+   ------------------------------------------------------------------ */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 40rem) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 5vw, 4rem) var(--gutter) 0;
+  width: 100%;
+  /* Sized to the window, not to the content below */
+  min-height: min(30rem, 52vh);
+}
+
+.hero__text {
+  align-self: start;
+  position: relative;
+  z-index: 2;
+}
+
+/* DESKTOP BACKDROP
+   The photographed room, as a panel on the right. Its top edge is
+   the hero's top edge — which is directly below the navy stripe —
+   so the figure's head still rises above the panel and crosses the
+   bar, exactly as before. The negative right value bleeds it to the
+   window edge on wide screens. */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* Negative once the window is wider than --page, 0 below it.
+     Written inline: nesting max() in a custom property and then in
+     another calc() fails to parse in some browsers, and an invalid
+     `right` silently drops the element back to its static position. */
+  right: min(0px, (var(--page) - 100vw) / 2);
+  width: clamp(420px, 54%, 780px);
+  background: var(--navy) url("../img/backdrop.jpg") center bottom / cover no-repeat;
+  z-index: 0;
+  /* Fade the left edge into the page.
+     A two-stop gradient produces a visible band because opacity
+     climbs at a constant rate — the eye reads the start and end of
+     that ramp as edges. These stops approximate an ease curve
+     instead: almost nothing for the first tenth, then a gradual
+     acceleration, then a long slow finish. No stop is more than a
+     few percent from its neighbour, so there is no line to see. */
+  -webkit-mask-image: linear-gradient(to right,
+    rgba(0,0,0,0)    0%,
+    rgba(0,0,0,0.02) 6%,
+    rgba(0,0,0,0.06) 11%,
+    rgba(0,0,0,0.13) 16%,
+    rgba(0,0,0,0.23) 21%,
+    rgba(0,0,0,0.36) 26%,
+    rgba(0,0,0,0.50) 31%,
+    rgba(0,0,0,0.64) 36%,
+    rgba(0,0,0,0.76) 41%,
+    rgba(0,0,0,0.86) 46%,
+    rgba(0,0,0,0.93) 52%,
+    rgba(0,0,0,0.97) 58%,
+    rgba(0,0,0,0.99) 64%,
+    rgba(0,0,0,1)    70%);
+  mask-image: linear-gradient(to right,
+    rgba(0,0,0,0)    0%,
+    rgba(0,0,0,0.02) 6%,
+    rgba(0,0,0,0.06) 11%,
+    rgba(0,0,0,0.13) 16%,
+    rgba(0,0,0,0.23) 21%,
+    rgba(0,0,0,0.36) 26%,
+    rgba(0,0,0,0.50) 31%,
+    rgba(0,0,0,0.64) 36%,
+    rgba(0,0,0,0.76) 41%,
+    rgba(0,0,0,0.86) 46%,
+    rgba(0,0,0,0.93) 52%,
+    rgba(0,0,0,0.97) 58%,
+    rgba(0,0,0,0.99) 64%,
+    rgba(0,0,0,1)    70%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 22%);
+}
+
+.hero__figure {
+  position: absolute;
+  /* Sits inside the panel, inset a little from its right edge */
+  right: calc(min(0px, (var(--page) - 100vw) / 2) + 2.5rem);
+  /* Head rises through the navy stripe */
+  top: -7rem;
+  /* Feet land on the ground band's top edge */
+  bottom: 0;
+  z-index: 5;
+}
+
+.hero__figure img {
+  height: 100%;
+  width: auto;
+  max-width: none;
+  display: block;
+  /* Follows the silhouette rather than painting an ellipse */
+  filter: drop-shadow(0 22px 20px rgba(22, 24, 28, 0.18));
+}
+
+
+/* ------------------------------------------------------------------
+   4b. GROUND
+   The sand field the figure stands on. Full-bleed colour, contained
+   content. Everything below the hero goes in here.
+   ------------------------------------------------------------------ */
+.ground {
+  position: relative;
+  background: var(--sand);
+  flex: 1;
+  /* The horizon line the figure stands on */
+  border-top: 1px solid var(--accent);
+}
+
+.ground__inner {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4rem) var(--gutter) clamp(3rem, 7vw, 5rem);
+  /* Same 30rem column as the identity block above, so the whole
+     page hangs off one vertical line */
+  max-width: min(var(--page), 100%);
+}
+
+.ground__inner > .index {
+  max-width: 40rem;
+}
+
+.ground__inner > .ledger {
+  max-width: 46rem;
+}
+
+/* ---- Collapsible entries ----
+   Native <details>. No JavaScript, works with keyboard and screen
+   readers for free. The name and the number stay visible so the page
+   scans in a few seconds; the argument opens on demand. */
+.entry-toggle summary {
+  cursor: pointer;
+  list-style: none;
+  padding-right: 1.75rem;
+  position: relative;
+}
+
+.entry-toggle summary::-webkit-details-marker { display: none; }
+
+/* The +/− indicator, drawn in text so there is no icon to maintain */
+.entry-toggle summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: var(--mono);
+  font-size: 1rem;
+  color: var(--muted);
+  transition: color 0.18s ease;
+}
+
+.entry-toggle[open] summary::after { content: "−"; }
+
+.entry-toggle summary:hover::after { color: var(--ink); }
+
+.entry-toggle summary .ledger__name {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.1875rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.entry-toggle summary .ledger__stat {
+  display: block;
+  margin-bottom: 0;
+}
+
+.entry-toggle .ledger__note { margin-top: 0.9rem; }
+
+.entry-toggle summary:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 4px;
+}
+
+/* Tighter spacing now that entries are collapsed by default */
+.ledger__list li + li {
+  margin-top: 1.35rem;
+  padding-top: 1.35rem;
+}
+
+
+/* ---- Teaser paragraph on the home page ---- */
+.teaser {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3A3F47;
+  max-width: 46ch;
+  margin: 1rem 0 1.5rem;
+}
+
+
+/* ---- Interior page header ----
+   Pages other than home get a plain title block instead of the
+   hero, so the argument starts immediately. */
+.page-head {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4rem) var(--gutter) clamp(2rem, 5vw, 3rem);
+}
+
+.page-head__title {
+  font-family: var(--serif);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  margin: 0 0 0.9rem;
+}
+
+.page-head__sub {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #3A3F47;
+  max-width: 52ch;
+  margin: 0;
+}
+
+
+/* ---- Live feeds ----
+   Deliberately quieter than the hand-written sections. Fetched
+   content should never outrank content you actually wrote. */
+.feed { margin-top: 1.75rem; }
+
+.feed__label {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+
+.feed__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feed__list li {
+  padding: 0.6rem 0;
+  border-top: 1px solid rgba(22, 24, 28, 0.08);
+}
+
+.feed__list a {
+  display: block;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.feed__list a:hover { text-decoration: underline; text-underline-offset: 0.2em; }
+
+.feed__meta {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.feed-section { margin-top: clamp(3rem, 7vw, 4rem) !important; }
+
+.ground__inner > .feed-section { max-width: 40rem; }
+
+
+/* Counterexamples sits apart from the ledger it answers */
+.counter {
+  margin-top: clamp(3.5rem, 8vw, 5rem) !important;
+}
+
+/* ---- Identity block ---- */
+.identity {
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin: 0 0 1rem;
+}
+
+.descriptors {
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.13em;
+  margin: 0 0 0.35rem;
+}
+
+.descriptors--muted { color: var(--muted); }
+
+
+/* ---- Positioning statement ----
+   The one paragraph that tells a stranger what this site is. Set at
+   a larger size than body copy because it carries the most weight
+   per word of anything on the page. */
+.statement {
+  max-width: 36ch;
+  margin: 1.75rem 0 0;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: #33373E;
+}
+
+/* Following paragraphs sit closer than the first, which has to clear
+   the descriptors above it. */
+.statement + .statement { margin-top: 1.05em; }
+
+
+/* ------------------------------------------------------------------
+   5. ARTICLE INDEX
+   A list of hairline-separated rows. The date is mono so the columns
+   line up; the title is serif so it reads as writing, not data.
+   ------------------------------------------------------------------ */
+.index__heading {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.entries {
+  list-style: none;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  max-width: none;
+}
+
+.entry a,
+.entry > span {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+}
+
+.entry a:hover .entry__title {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.entry time {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.entry__title {
+  font-size: 1.1875rem;
+  line-height: 1.35;
+}
+
+/* The speaker glyph marking a narrated piece. */
+.entry__audio {
+  color: var(--navy);
+  font-size: 0.875rem;
+}
+
+.entry--placeholder {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.index__all {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+}
+
+.index__all:hover { color: var(--ink); border-color: var(--accent); }
+
+
+/* ---- Projects ----
+   Deliberately different from the writing list: no dates, no rules
+   between rows. Writing is chronological, work-in-progress isn't. */
+.projects {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: var(--measure);
+}
+
+.projects li + li { margin-top: 1.1rem; }
+
+.projects a,
+.projects .project__static {
+  display: block;
+  text-decoration: none;
+}
+
+/* The unnamed one has nowhere to go yet — it stays unlinked so the
+   cursor tells the truth about that. */
+.projects .project__static .project__name { color: var(--muted); }
+
+.project__name {
+  display: block;
+  font-size: 1.0625rem;
+}
+
+.projects a:hover .project__name {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.project__note {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+
+/* Space between list sections */
+.index + .index { margin-top: clamp(2.5rem, 6vw, 3.5rem); }
+
+
+/* ---- The ledger ----
+   The section that carries the actual argument, so it gets more
+   room than the label-style lists above it. Name in serif, note in
+   serif at reading size, generous space between entries. */
+.ledger__sub {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0.85rem 0 2rem;
+  max-width: 52ch;
+}
+
+.ledger__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ledger__list li + li {
+  margin-top: 2.25rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid rgba(22, 24, 28, 0.09);
+}
+
+/* The stat line: mono, small, muted — reads as evidence rather than
+   prose, and visually separates the number from the argument. */
+.ledger__stat {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  margin: 0 0 0.7rem;
+  max-width: 60ch;
+}
+
+.ledger__name {
+  font-family: var(--serif);
+  font-size: 1.1875rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+}
+
+.ledger__name a {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(22, 24, 28, 0.22);
+  padding-bottom: 1px;
+  transition: border-color 0.18s ease;
+}
+
+.ledger__name a:hover { border-color: var(--ink); }
+
+.ledger__note em {
+  font-style: normal;
+  color: var(--ink);
+  border-bottom: 1px dotted rgba(22, 24, 28, 0.3);
+}
+
+.ledger__note {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.62;
+  color: #3A3F47;
+  max-width: 58ch;
+}
+
+
+/* ------------------------------------------------------------------
+   6. FOOTER
+   ------------------------------------------------------------------ */
+/* This band is the GROUND. The figure's feet land on its top edge,
+   which is what stops the cutout from floating. Don't add margin
+   above it. */
+.footer {
+  background: var(--sand);
+  margin-top: 0;
+  border-top: 1px solid rgba(22, 24, 28, 0.10);
+  /* Full-bleed colour, but the CONTENT still lines up with the
+     --page column above. The max() keeps the left padding equal to
+     the gutter on narrow screens and grows it on wide ones. */
+  padding: 2rem max(var(--gutter), calc((100% - var(--page)) / 2 + var(--gutter)));
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.footer p { margin: 0; }
+.footer a { text-decoration: none; }
+.footer a:hover { color: var(--ink); }
+
+.footer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+}
+
+
+/* ---- Social ----
+   Icons are inline SVG using fill/stroke: currentColor, so they take
+   their colour from the surrounding text and need no separate hover
+   styling beyond changing that colour. */
+.social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.social a {
+  display: block;
+  color: var(--muted);
+  transition: color 0.18s ease;
+}
+
+.social a:hover { color: var(--ink); }
+
+.social svg { display: block; }
+
+
+/* ------------------------------------------------------------------
+   7. SMALL SCREENS
+   Below 860px the two columns stack. The photo moves under the text
+   and stops overlapping, because on a narrow screen the overlap just
+   makes both things harder to read.
+   ------------------------------------------------------------------ */
+@media (max-width: 1040px) {
+  /* Stacked, full width. Side-by-side was tried and abandoned: at
+     phone width the figure needs vertical space and the name needs
+     horizontal space, and splitting 400px starves both. */
+  /* Flex column so the sand band can absorb any leftover height.
+     Whatever space is spare ends up INSIDE the band as more ground,
+     never as a bone gap underneath it. */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.5rem, 5vw, 2.25rem) var(--gutter) 0;
+    min-height: 0;
+    flex: none;
+  }
+
+  /* Belt and braces — this paragraph must always be visible */
+  .statement {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #33373E !important;
+  }
+
+  .hero__text { padding-bottom: 0; }
+  .identity { padding-bottom: 0; }
+
+  .statement {
+    font-size: 1.0625rem;
+    max-width: none;
+  }
+
+  /* Ground band: runs edge to edge and flows straight into the sand
+     section below, so it reads as continuous ground rather than a
+     panel drawn around the photo. */
+  /* DEPTH BAR
+     A navy band running the full width BEHIND the figure, echoing
+     the nav stripe above. It gives the cutout something to sit in
+     front of, which is what reads as depth — the figure occludes
+     it, so the eye places him nearer than the wall. */
+  .hero__figure::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* Sits behind his head, tucked directly under the name block */
+    top: 0;
+    height: 30%;
+    background: var(--navy);
+    z-index: 0;
+  }
+
+  .hero__figure img {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero__figure {
+    position: relative;
+    /* CRITICAL: the desktop rule sets top/bottom/height/max-width for
+       absolute positioning. Under position:relative those offsets
+       still apply and shift the band UP over the text above it while
+       leaving dead space below. Every one has to be reset here. */
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    height: auto;
+    max-width: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* The photographed room replaces the flat colour band. Anchored
+       to the bottom so the floor in the image stays put as the block
+       changes height; cover so it never letterboxes. */
+    background: var(--navy) url("../img/backdrop.jpg") center bottom / cover no-repeat;
+    margin: 1.5rem calc(var(--gutter) * -1) 0;
+    padding-top: 2.5rem;
+    flex: 1 1 auto;
+  }
+
+  /* The navy bar is redundant now — the wall in the photo does that
+     job, and two dark shapes fight each other. */
+  .hero__figure::before { display: none; }
+
+  /* The desktop backdrop panel must be off here. Below this width
+     the photo is a full-width band under the text; leaving the panel
+     on draws a second dark rectangle over the paragraph. */
+  .hero::after { display: none; }
+
+  .hero__figure img {
+    height: auto;
+    width: 100%;
+    max-width: 460px;
+    max-height: none;
+    margin-bottom: 0;
+    filter: drop-shadow(0 8px 10px rgba(22, 24, 28, 0.16));
+  }
+
+  .ground__inner > .index,
+  .ground__inner > .ledger,
+  .ground__inner > .feed-section { max-width: none; }
+
+  .entry a,
+  .entry > span {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+    padding: 0.85rem 0;
+  }
+
+  .entry__audio { display: none; }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .social { margin-left: 0; }
+}
+
+
+/* ------------------------------------------------------------------
+   8. REDUCED MOTION
+   Some people set their OS to minimise animation. Respect it.
+   ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0.01ms !important; }
+}
+
+/* ==== ZB-MASK-OVERRIDE START ==== */
+.hero::after {
+  -webkit-mask-image:
+    linear-gradient(to right,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,.01) 8%,
+      rgba(0,0,0,.03) 15%,
+      rgba(0,0,0,.07) 22%,
+      rgba(0,0,0,.12) 29%,
+      rgba(0,0,0,.19) 36%,
+      rgba(0,0,0,.28) 43%,
+      rgba(0,0,0,.38) 50%,
+      rgba(0,0,0,.50) 57%,
+      rgba(0,0,0,.62) 63%,
+      rgba(0,0,0,.74) 69%,
+      rgba(0,0,0,.85) 76%,
+      rgba(0,0,0,.94) 84%,
+      rgba(0,0,0,.99) 92%,
+      rgba(0,0,0,1) 100%),
+    linear-gradient(to bottom,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,.15) 3%,
+      rgba(0,0,0,.40) 6%,
+      rgba(0,0,0,.70) 10%,
+      rgba(0,0,0,.90) 14%,
+      rgba(0,0,0,1) 18%,
+      rgba(0,0,0,1) 82%,
+      rgba(0,0,0,.90) 88%,
+      rgba(0,0,0,.65) 93%,
+      rgba(0,0,0,.30) 97%,
+      rgba(0,0,0,0) 100%);
+  -webkit-mask-composite: source-in;
+          mask-image:
+    linear-gradient(to right,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,.01) 8%,
+      rgba(0,0,0,.03) 15%,
+      rgba(0,0,0,.07) 22%,
+      rgba(0,0,0,.12) 29%,
+      rgba(0,0,0,.19) 36%,
+      rgba(0,0,0,.28) 43%,
+      rgba(0,0,0,.38) 50%,
+      rgba(0,0,0,.50) 57%,
+      rgba(0,0,0,.62) 63%,
+      rgba(0,0,0,.74) 69%,
+      rgba(0,0,0,.85) 76%,
+      rgba(0,0,0,.94) 84%,
+      rgba(0,0,0,.99) 92%,
+      rgba(0,0,0,1) 100%),
+    linear-gradient(to bottom,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,.15) 3%,
+      rgba(0,0,0,.40) 6%,
+      rgba(0,0,0,.70) 10%,
+      rgba(0,0,0,.90) 14%,
+      rgba(0,0,0,1) 18%,
+      rgba(0,0,0,1) 82%,
+      rgba(0,0,0,.90) 88%,
+      rgba(0,0,0,.65) 93%,
+      rgba(0,0,0,.30) 97%,
+      rgba(0,0,0,0) 100%);
+          mask-composite: intersect;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+}
+/* ==== ZB-MASK-OVERRIDE END ==== */
+
+
+/* ==== ZB-FOOTER-OVERRIDE START ==== */
+footer svg,
+.footer svg,
+.social svg,
+.socials svg,
+.footer-social svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* X's glyph fills its viewBox more than the other two — trim it optically */
+footer a[href*="x.com"] svg,
+footer a[href*="twitter"] svg,
+.footer a[href*="x.com"] svg,
+.footer a[href*="twitter"] svg {
+  width: 25px;
+  height: 25px;
+}
+
+/* one centered baseline row across the footer */
+footer,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+footer .social,
+footer .socials,
+footer .footer-social,
+.footer .social,
+.footer .socials,
+.footer .footer-social {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+footer a:has(svg),
+.footer a:has(svg) {
+  display: inline-flex;
+  align-items: center;
+}
+/* ==== ZB-FOOTER-OVERRIDE END ==== */

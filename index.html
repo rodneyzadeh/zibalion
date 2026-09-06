@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<!--
+  ZIBALION — home page
+  ------------------------------------------------------------------
+  Every line below is plain HTML. Nothing is generated, nothing is
+  compiled. You edit this file, save it, refresh the browser, done.
+
+  Structure of the page, top to bottom:
+    <head>    settings the browser needs (title, fonts, stylesheet)
+    <header>  wordmark + the navy navigation band
+    <main>    the hero: your name, positioning, article list, photo
+    <footer>  contact line
+-->
+<html lang="en">
+<head>
+  <!-- ==== ZB-HEAD START ==== -->
+  <title>Zibalion — Rodney Zadeh</title>
+  <meta name="description" content="Operator. Builder. Writer. Technology, systems, and axioms. Writing and projects by Rodney Zadeh — hardware, software, and the reasoning beneath both.">
+  <meta name="author" content="Rodney Zadeh">
+  <link rel="canonical" href="https://zibalion.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#1E2A38">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zibalion">
+  <meta property="og:url" content="https://zibalion.com/">
+  <meta property="og:title" content="Zibalion — Rodney Zadeh">
+  <meta property="og:description" content="Operator. Builder. Writer. Technology, systems, and axioms.">
+  <meta property="og:image" content="https://zibalion.com/assets/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Zibalion — Rodney Zadeh">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zibalion — Rodney Zadeh">
+  <meta name="twitter:description" content="Operator. Builder. Writer. Technology, systems, and axioms.">
+  <meta name="twitter:image" content="https://zibalion.com/assets/img/og-cover.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rodney Zadeh",
+    "url": "https://zibalion.com/",
+    "jobTitle": "Operator, Builder, Writer",
+    "description": "Technology, systems, and axioms.",
+    "sameAs": ["https://github.com/rodneyzadeh"]
+  }
+  </script>
+  <!-- ==== ZB-HEAD END ==== -->
+  <meta charset="utf-8">
+  <!-- Tells phones to render at real device width instead of zooming out -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Shows in the browser tab and in Google results -->
+
+  <!-- The little icon in the browser tab -->
+
+  <!-- Typefaces. Newsreader is the editorial serif, IBM Plex Mono the
+       technical counterweight. Two families, clearly distinct. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- All styling lives in this one file -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <header class="masthead">
+    <!-- Your vector wordmark. SVG stays sharp at any size. -->
+    <a class="wordmark" href="/" aria-label="Zibalion home">
+      <img src="assets/img/zibalion-logo.svg" alt="Zibalion">
+    </a>
+
+    <!-- The navy band. In the mockup it was empty decoration;
+         here it earns its place by holding the navigation. -->
+    <nav class="band" aria-label="Main">
+      <ul>
+        <li><a href="/writing/">Writing</a></li>
+        <li><a href="#ledger-heading">Ledger</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="mailto:rodney@zibalion.com">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="hero">
+
+    <!-- LEFT COLUMN: identity, then the writing index -->
+    <div class="hero__text">
+
+      <div class="identity">
+        <h1>Rodney Zadeh</h1>
+        <p class="descriptors">Operator. Builder. Writer.</p>
+        <p class="descriptors descriptors--muted">Technology / Systems / Axioms</p>
+        <p class="statement">Every system is a covenant nobody signed. Its terms are written in architecture rather than in language, which is why they are so seldom disputed and so widely obeyed.</p>
+
+        <p class="statement">I read them. I establish what a system assumes, where it places its costs, and what its makers declined to account for. Then I build, because a claim about how something works is worth no more than the attempt to make it work.</p>
+
+        <p class="statement">Hardware, software, and the reasoning beneath both.</p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: the cutout. Marked decorative-ish with a short
+         alt because the page already says who you are in the <h1>. -->
+    <div class="hero__figure">
+
+      <img src="assets/img/rodney.png" alt="Rodney Zadeh" width="1400" height="2000">
+    </div>
+
+    </div><!-- /.hero -->
+
+    <!-- Everything below the hero. The figure above is sized to the
+         window, so adding sections here never changes it. -->
+    <section class="ground">
+      <div class="ground__inner">
+      <!-- The article list. Each row: date, title, and — when a
+           narration exists — a speaker glyph so people can see at a
+           glance that the audio version is there. -->
+      <section class="index" aria-labelledby="index-heading">
+        <h2 id="index-heading" class="index__heading">Recent writing</h2>
+
+        <ol class="entries">
+          <li class="entry">
+            <a href="writing/first-piece.html">
+              <time datetime="2026-09-05">2026.09.05</time>
+              <span class="entry__title">The title of your first piece</span>
+              <span class="entry__audio" title="Narrated version available">◗</span>
+            </a>
+          </li>
+
+          <!-- Copy the <li> block above for each new piece.
+               Drop the <span class="entry__audio"> line if there's
+               no recording for that one yet. -->
+
+          <li class="entry entry--placeholder">
+            <span>
+              <time datetime="2026-09-05">Soon</time>
+              <span class="entry__title">More coming</span>
+            </span>
+          </li>
+        </ol>
+
+        <a class="index__all" href="/writing/">All writing</a>
+      </section>
+
+      <!-- PROJECTS. Three real things, each linking to its repo.
+           Swap the href for your actual GitHub URLs. -->
+      <section class="index" aria-labelledby="projects-heading">
+        <h2 id="projects-heading" class="index__heading">Building</h2>
+
+        <ul class="projects">
+          <li>
+            <a href="https://github.com/rodneyzadeh">
+              <span class="project__name">Device orchestration</span>
+              <span class="project__note">Making many machines behave as one. Private.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/rodneyzadeh">
+              <span class="project__name">Distributed provisioning</span>
+              <span class="project__note">Identical state across physical nodes, from bare metal up</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/rodneyzadeh">
+              <span class="project__name">Hardware testbed</span>
+              <span class="project__note">Where ideas meet power budgets and stop being ideas</span>
+            </a>
+          </li>
+          <li>
+            <span class="project__static">
+              <span class="project__name">Unnamed</span>
+              <span class="project__note">In progress. Ask me at a bar.</span>
+            </span>
+          </li>
+        </ul>
+
+        <!-- LIVE: recent public GitHub activity. Populates itself
+             once there are pushes; stays hidden if there are none,
+             so an empty account never advertises the gap. -->
+        <div class="feed" id="gh-feed" hidden>
+          <p class="feed__label">Recent commits</p>
+          <ul class="feed__list" id="gh-list"></ul>
+        </div>
+      </section>
+
+        <!-- THE LEDGER
+             Hand-maintained on purpose. No API can tell you which
+             covenants are coming due — that's a judgment, and the
+             judgment is the whole point of the section.
+
+             To add one: copy an <li>, write the sector, then one
+             sentence naming the mechanism that is failing. Not the
+             news. The mechanism. -->
+        <section class="index ledger" aria-labelledby="ledger-heading">
+          <h2 id="ledger-heading" class="index__heading">The ledger</h2>
+          <p class="ledger__sub">Systems whose growth now costs the people inside them. The number, the mechanism, and what a fix would actually require.</p>
+
+          <ul class="ledger__list">
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name">Swipe dating</span>
+                <span class="ledger__stat">$6.07B category revenue &mdash; first decline on record &middot; downloads down six straight years &middot; Tinder monthly actives &minus;7% &middot; Bumble paying users &minus;16.4%</span>
+                </summary>
+                <p class="ledger__note">Read the revenue model plainly: the company is paid for every month you remain single. A subscriber who meets someone in week two is a lost account; a subscriber who searches for three years is the ideal customer. That is not a bug that crept in &mdash; it is the position the business takes on your behalf, every month, in the opposite direction from the thing you paid for. A decade of growth came from widening the pool, and the first revenue decline in the category&rsquo;s history came from the same place. Operators are now pivoting to showing fewer profiles and getting people offline faster, which is an admission rather than a strategy. An honest fix prices the exit &mdash; charges once, at success, and lets you go. Nobody has been willing to.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name">Adolescent attention</span>
+                <span class="ledger__stat">48% of US teens say social media is mostly negative for people their age, up from 32% in 2022 &middot; 44% have tried to cut back &middot; 3+ hours daily associated with roughly double the risk of depression and anxiety symptoms</span>
+                </summary>
+                <p class="ledger__note">The people closest to the product have turned against it, and they can articulate why. Nearly half are trying to quit something they were never old enough to consent to. Age gates treat this as an access problem; it is a design problem, and the distinction is the entire fight. Four families sued the major platforms this July on exactly that theory.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name">Sports betting</span>
+                <span class="ledger__stat">27% of American adults hold an online sportsbook account &mdash; 52% of men 18&ndash;49 &middot; ~60% report chasing losses &middot; one operator drew 70% of profit from under 1% of users</span>
+                </summary>
+                <p class="ledger__note">That last number is the whole business. A product that earns seven-tenths of its money from one user in a hundred is not entertainment with a minority of casualties; it is a machine whose economics require them. North Carolina&rsquo;s helpline calls more than tripled as the apps went live, and the average caller got five years younger. The fix is a design that can distinguish a bettor from a person in trouble &mdash; and is obligated to act when it does.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name">Frictionless spending</span>
+                <span class="ledger__stat">68% of buy-now-pay-later users say it made them overspend &middot; 54% regret a purchase &middot; 47% paid late in the past year &middot; 29% have financed groceries, up from 14% two years ago &middot; 11% triggered an overdraft</span>
+                </summary>
+                <p class="ledger__note">Retailers adopted installment checkout because it raises cart size. That is the entire finding, stated by the industry itself. The checkout used to be the last moment a person could reconsider; the product removed it and called the removal convenience. And when a third of users are financing food, the story is no longer impulse &mdash; it is that the pressure was already there and someone built a frictionless way to borrow against it. A fix would put the friction back at the moment of purchase and take it out of the moment of repayment. Every incentive runs the other way.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name">Machine companionship</span>
+                <span class="ledger__stat">64% of US teens now use AI chatbots &middot; roughly 3 in 10 use one daily &mdash; the first year this has been measured at all</span>
+                </summary>
+                <p class="ledger__note">A behavior went from unmeasured to near-majority inside a single survey cycle. Whatever these are substituting for, the substitution is happening faster than anyone can study it, and the products have every incentive to be more available than the people they stand in for. Availability is not the same as sufficiency. The fix starts with building things that hand you back to other humans instead of holding you.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name">Ad-funded search</span>
+                <span class="ledger__stat">The answer arrives before the click. The index was paid for by the click.</span>
+                </summary>
+                <p class="ledger__note">Everyone can do the arithmetic; nobody has named the thing that replaces it. So the web gets quietly strip-mined while the question stays open, and the people who wrote the pages absorb the cost of a transition they were not consulted about.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name">Subscription capture</span>
+                <span class="ledger__stat">Ownership replaced by rent, cancellation built as a maze.</span>
+                </summary>
+                <p class="ledger__note">Renting software is a reasonable trade. Making the exit expensive in time rather than money is not a business model, it is a toll &mdash; and it is charged most heavily to the people with the least time to spend fighting it.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name">Gig classification</span>
+                <span class="ledger__stat">Flexibility offered as a favor. Risk relocated to the person least able to carry it.</span>
+                </summary>
+                <p class="ledger__note">The public argument is always about employment status, because employment status is arguable. The real question is who holds the downside when the work stops, and that question never makes it onto the ballot.</p>
+              </details>
+            </li>
+
+          </ul>
+        </section>
+
+        <!-- COUNTEREXAMPLES
+             The other half of the argument. Every entry here answers
+             a specific failure in the ledger above. Keep it that way
+             — a list of things you merely admire is a bookmark bar,
+             not an argument. -->
+        <section class="index ledger counter" aria-labelledby="counter-heading">
+          <h2 id="counter-heading" class="index__heading">Counterexamples</h2>
+          <p class="ledger__sub">Built on the opposite incentive, and still standing. Proof the ledger above describes choices, not laws of nature.</p>
+
+          <ul class="ledger__list">
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name"><a href="https://kagi.com" rel="noopener" target="_blank">Kagi</a></span>
+                <span class="ledger__stat">Subscription search &middot; no ads, no tracking, no free tier &middot; ~50,000 paying subscribers &middot; public-benefit charter</span>
+                </summary>
+                <p class="ledger__note">Answers <em>ad-funded search</em>. Charging money instead of attention sounds obvious and is nearly impossible &mdash; Neeva tried the same model, ran four years and folded. Kagi&rsquo;s bet is that the audience for search that isn&rsquo;t optimized against you is small but real. Small and real is a business. It just isn&rsquo;t a monopoly, which is why almost nobody attempts it.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name"><a href="https://bandcamp.com" rel="noopener" target="_blank">Bandcamp</a></span>
+                <span class="ledger__stat">~82% of each sale to the artist &middot; $1.68B paid out to date &middot; paid within 24&ndash;48 hours &middot; artists keep their rights</span>
+                </summary>
+                <p class="ledger__note">Answers <em>creator economics</em>. A $10 album purchase nets an artist roughly what two thousand streams would. The mechanism is unglamorous: sell the thing, pay quickly, take a stated cut. Worth noting honestly &mdash; it was acquired and cut staff twice since, and the artist-first terms survived those cuts so far. Good design is not the same as a guarantee.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name"><a href="https://frame.work" rel="noopener" target="_blank">Framework</a></span>
+                <span class="ledger__stat">10/10 iFixit repairability &middot; every part sold direct &mdash; battery $49, screen $179 &middot; mainboard upgrades into the same chassis</span>
+                </summary>
+                <p class="ledger__note">Answers <em>ownership replaced by rent</em>. A broken USB-C port costs fifty dollars here and fifteen hundred in a soldered machine. That gap is not a manufacturing constraint, it is a decision about who absorbs failure. Framework decided the owner should be able to, and then had to prove a company could survive making that choice.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name"><a href="https://signal.org" rel="noopener" target="_blank">Signal</a></span>
+                <span class="ledger__stat">Nonprofit foundation &middot; donation funded &middot; no ads, no data collected to sell &middot; protocol published and independently audited</span>
+                </summary>
+                <p class="ledger__note">Answers <em>surveillance as the default price</em>. Signal&rsquo;s structural move was legal, not technical: a foundation cannot be sold, so there is no exit event that turns the users into inventory. Most privacy promises are a policy. This one is a corporate structure, which is the only kind that survives a change of management.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name"><a href="https://privacy.ca.gov" rel="noopener" target="_blank">DROP</a></span>
+                <span class="ledger__stat">One request deletes your data across 500+ registered brokers &middot; live for consumers since Jan 1, 2026 &middot; brokers legally required to process since Aug 1 &middot; $200 per request, per day, for ignoring one</span>
+                </summary>
+                <p class="ledger__note">Answers <em>the data you never handed over</em>. Deletion rights already existed and were useless, because exercising them meant contacting hundreds of companies individually &mdash; a right that costs more to use than it returns is not a right. California built the one thing that was missing: a single button, and a fine large enough that ignoring it is more expensive than complying. Note what it does not cover: brokers only, registered ones, California residents. It is a working mechanism with a narrow blast radius, which is still infinitely more than a principle with none.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name"><a href="https://wikipedia.org" rel="noopener" target="_blank">Wikipedia</a></span>
+                <span class="ledger__stat">Twenty-five years &middot; no advertising &middot; no engagement metric &middot; no recommendation feed &middot; among the most visited sites on earth</span>
+                </summary>
+                <p class="ledger__note">Answers <em>everything</em>. By every assumption of the modern web it should not exist, and it has outlasted most of the things built on those assumptions. The lesson is not that volunteers are free. It is that a product with no incentive to hold you is one you can actually leave &mdash; and people come back to what they are allowed to leave.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name"><a href="https://joinmastodon.org" rel="noopener" target="_blank">The fediverse</a></span>
+                <span class="ledger__stat">Chronological timelines &middot; no engagement ranking &middot; portable identity across servers &middot; no central owner</span>
+                </summary>
+                <p class="ledger__note">Answers <em>attention feeds</em>. Slower, smaller, and harder to explain than the alternatives &mdash; which is the point. Remove the optimization and you remove the growth; nobody has yet shown you can keep one without the other. That is an unsolved problem, not a solved one, and it belongs on this list precisely because it is honest about that.</p>
+              </details>
+            </li>
+
+          </ul>
+        </section>
+
+        <!-- WHERE THE MONEY IS GOING
+             Hand-maintained. No free funding API exists — Crunchbase
+             and PitchBook are gated, and SEC EDGAR blocks browser
+             requests. Which is fine: knowing which rounds matter is
+             a judgment call, and that is the point of the section. -->
+        <section class="index ledger money" aria-labelledby="money-heading">
+          <h2 id="money-heading" class="index__heading">Where the money is going</h2>
+          <p class="ledger__sub">Capital is already moving toward these problems. Whether it is moving toward solutions is a separate question.</p>
+
+          <ul class="ledger__list">
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name">Wellbeing, funded on engagement</span>
+                <span class="ledger__stat">$3.6B into wellness startups in H1 2026, pacing a third above 2025 &middot; investors asking for retention curves, daily-open rates, session data</span>
+                </summary>
+                <p class="ledger__note">Read the ask carefully. The money flowing toward attention and mental health is being underwritten by the same metric that caused the damage: build something people open every day, because daily opens compound. A remedy financed on the disease&rsquo;s business model is not a remedy. It is the disease with better copy, and it will be measured by how long it holds you.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name">The subscription fork</span>
+                <span class="ledger__stat">Perplexity removed advertising entirely in early 2026, committing to subscription tiers &middot; Anthropic states no plans for ads &middot; OpenAI began testing ads on free tiers, February 2026</span>
+                </summary>
+                <p class="ledger__note">The largest open question in consumer software is being settled right now, in public, by four companies choosing differently. If the ad tests hold, the attention model walks straight back into the centre of AI and paid stays a niche. If they corrode trust, subscription gets its tailwind. Nobody knows yet &mdash; which is exactly why it is worth watching rather than predicting.</p>
+              </details>
+            </li>
+
+            <li>
+              <details class="entry-toggle">
+                <summary>
+                  <span class="ledger__name">Repair, by mandate</span>
+                <span class="ledger__stat">EU right-to-repair directive: seven-to-ten-year parts support, restrictions on software locks &middot; compliance deadline July 31, 2026</span>
+                </summary>
+                <p class="ledger__note">The one item on this page where the fix arrived as law rather than as a market. Worth noting what that implies: on repairability, nobody expected the incentive to correct itself, and it didn&rsquo;t. Regulation is what capital allocation looks like when the covenant is finally written down and signed.</p>
+              </details>
+            </li>
+
+          </ul>
+        </section>
+
+        <!-- LIVE: current discussion on the topics the ledger tracks.
+             Pulled from the Hacker News search API — free, no key,
+             no account. Evidence that these arguments are live, not
+             a snapshot from whenever this page was last edited. -->
+        <section class="index feed-section" id="hn-section" hidden>
+          <h2 class="index__heading">Under discussion</h2>
+          <p class="ledger__sub" id="hn-stamp">Live from Hacker News.</p>
+          <ul class="feed__list" id="hn-list"></ul>
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__meta">
+      <p>Los Angeles</p>
+      <p><a href="mailto:rodney@zibalion.com">rodney@zibalion.com</a></p>
+    </div>
+
+    <!-- Social links. The SVGs are inline so there are no extra
+         files to load and they inherit the text colour automatically.
+         Update the href on each when the handle is confirmed. -->
+    <ul class="social">
+      <li>
+        <a href="https://github.com/rodneyzadeh" aria-label="GitHub" rel="me noopener" target="_blank">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://x.com/rodneyzadeh" aria-label="X" rel="me noopener" target="_blank">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true">
+            <path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.22-6.82-5.96 6.82H1.68l7.73-8.84L1.25 2.25h6.82l4.71 6.23 5.46-6.23Zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64Z"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://instagram.com/rodneyzadeh" aria-label="Instagram" rel="me noopener" target="_blank">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/>
+            <circle cx="12" cy="12" r="4.2"/>
+            <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <!-- ==============================================================
+       LIVE FEEDS
+       Two fetches, no API keys, no server. Both fail silently: if a
+       request errors the section simply stays hidden, because a
+       broken feed looks worse than no feed.
+
+       NOTE: these may not run from a file:/// address in some
+       browsers. They will work once the site is hosted.
+       ============================================================== -->
+  <script>
+  (function () {
+
+    // ---- 1. GitHub: recent public pushes -------------------------
+    const GH_USER = "rodneyzadeh";
+
+    fetch(`https://api.github.com/users/${GH_USER}/events/public`)
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(events => {
+        // Keep only pushes that actually contain commits
+        const pushes = events
+          .filter(e => e.type === "PushEvent" && e.payload.commits?.length)
+          .slice(0, 4);
+
+        if (!pushes.length) return;            // nothing to show — stay hidden
+
+        const list = document.getElementById("gh-list");
+        pushes.forEach(e => {
+          const commit = e.payload.commits[e.payload.commits.length - 1];
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = `https://github.com/${e.repo.name}`;
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.textContent = e.repo.name.split("/")[1];
+          const msg = document.createElement("span");
+          msg.className = "feed__meta";
+          msg.textContent = commit.message.split("\n")[0].slice(0, 72);
+          li.append(a, msg);
+          list.appendChild(li);
+        });
+        document.getElementById("gh-feed").hidden = false;
+      })
+      .catch(() => { /* silent — section stays hidden */ });
+
+    // ---- 2. Hacker News: live discussion on ledger topics --------
+    // One search per topic, merged and ranked by points. The points
+    // filter is what keeps this signal rather than noise.
+    const TOPICS = [
+      "dating apps",
+      "sports betting",
+      "buy now pay later",
+      "social media teens",
+      "search engine ads"
+    ];
+
+    // Rolling 18-month window. Without this the points sort ranks
+    // across all of HN history and surfaces decade-old threads.
+    const HN_CUTOFF = Math.floor(Date.now() / 1000) - 60 * 60 * 24 * 547;
+
+    const searches = TOPICS.map(q =>
+      fetch("https://hn.algolia.com/api/v1/search?tags=story&numericFilters=points>50,created_at_i>" + HN_CUTOFF + "&hitsPerPage=4&query=" + encodeURIComponent(q))
+        .then(r => r.ok ? r.json() : { hits: [] })
+        .catch(() => ({ hits: [] }))
+    );
+
+    Promise.all(searches).then(results => {
+      // Flatten, drop anything without a link, dedupe by id
+      const seen = new Set();
+      const stories = results
+        .flatMap(r => r.hits || [])
+        .filter(h => h.url && h.title && !seen.has(h.objectID) && seen.add(h.objectID))
+        .sort((a, b) => b.points - a.points)
+        .slice(0, 6);
+
+      if (!stories.length) return;
+
+      const list = document.getElementById("hn-list");
+      stories.forEach(h => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = h.url;
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.textContent = h.title;
+        const meta = document.createElement("span");
+        meta.className = "feed__meta";
+        const year = new Date(h.created_at).getFullYear();
+        meta.textContent = `${h.points} points · ${year}`;
+        li.append(a, meta);
+        list.appendChild(li);
+      });
+      document.getElementById("hn-section").hidden = false;
+    });
+
+
+  })();
+  </script>
+
+</body>
+</html>
