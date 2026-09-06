@@ -1,13 +1,106 @@
 <!DOCTYPE html>
-<!--
-  ZIBALION — home page
-  ------------------------------------------------------------------
-  Every line below is plain HTML. Nothing is generated, nothing is
-  compiled. You edit this file, save it, refresh the browser, done.
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About &mdash; Zibalion</title>
+<meta name="description" content="How I read systems, what I refuse to do, and why. Rodney Zadeh.">
+<link rel="canonical" href="https://zibalion.com/about/">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Zibalion">
+<meta property="og:url" content="https://zibalion.com/about/">
+<meta property="og:title" content="About &mdash; Rodney Zadeh">
+<meta property="og:description" content="How I read systems, what I refuse to do, and why.">
+<meta property="og:image" content="https://zibalion.com/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 
-  Structure of the page, top to bottom:
-    <head>    settings the browser needs (title, fonts, stylesheet)
-    <header>  wordmark + the navy navigation band
+  <style>
+    /* ---- About page ---- */
+    .about { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
+    .ab-kicker {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+      color: #B8862B; margin: 0 0 .75rem;
+    }
+    .about h1 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 3rem); line-height: 1.05;
+      font-weight: 500; margin: 0 0 2.5rem; color: #1E2A38;
+    }
+    .about h2 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .78rem; letter-spacing: .16em; text-transform: uppercase;
+      color: #1E2A38; opacity: .55;
+      margin: 3.5rem 0 1.25rem; padding-bottom: .6rem;
+      border-bottom: 1px solid rgba(30,42,56,.14);
+    }
+    .about p {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.15rem; line-height: 1.72; color: #1E2A38;
+      margin: 0 0 1.4rem;
+    }
+    .about .lede { font-size: 1.3rem; line-height: 1.62; }
+    .about .ab-q { margin-bottom: 1.9rem; }
+    .about .ab-q strong {
+      font-weight: 600;
+      border-bottom: 2px solid rgba(184,134,43,.4);
+    }
+
+    /* ---- signup ---- */
+    .zb-signup { background: #EDEAE3; margin-top: 4rem; padding: 3.5rem 1.5rem; }
+    .zb-signup-inner { max-width: 40rem; margin: 0 auto; }
+    .zb-signup-kicker {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+      color: #B8862B; margin: 0 0 .6rem;
+    }
+    .zb-signup h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.6rem; font-weight: 500; line-height: 1.2;
+      color: #1E2A38; margin: 0 0 .8rem; border: 0; padding: 0;
+      text-transform: none; letter-spacing: 0; opacity: 1;
+    }
+    .zb-signup-note {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .82rem; line-height: 1.65;
+      color: #1E2A38; opacity: .7; margin: 0 0 1.6rem;
+    }
+    .zb-signup-form { display: flex; gap: .6rem; flex-wrap: wrap; }
+    .zb-signup-form input[type=email] {
+      flex: 1 1 16rem; min-width: 0;
+      font-family: 'IBM Plex Mono', monospace; font-size: .9rem;
+      padding: .85rem 1rem; color: #1E2A38; background: #FAF9F6;
+      border: 1px solid rgba(30,42,56,.25); border-radius: 0;
+    }
+    .zb-signup-form input[type=email]:focus {
+      outline: none; border-color: #B8862B;
+    }
+    .zb-signup-form button {
+      font-family: 'IBM Plex Mono', monospace; font-size: .8rem;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: .85rem 1.6rem; cursor: pointer;
+      color: #FAF9F6; background: #1E2A38;
+      border: 1px solid #1E2A38; border-radius: 0;
+    }
+    .zb-signup-form button:hover { background: #B8862B; border-color: #B8862B; }
+    .zb-visually-hidden {
+      position: absolute; width: 1px; height: 1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+    }
+    @media (max-width: 32rem) {
+      .zb-signup-form button { flex: 1 1 100%; }
+    }
+  </style>
+
+</head>
+<body>
+<header>  wordmark + the navy navigation band
     <main>    the hero: your name, positioning, article list, photo
     <footer>  contact line
 -->
@@ -80,7 +173,180 @@
       <ul>
         <li><a href="/writing/">Writing</a></li>
         <li><a href="#ledger-heading">Ledger</a></li>
-        <li><a href="/about/">About</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="mailto:rodney@zibalion.com">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about">
+
+    <p class="ab-kicker">About</p>
+    <h1>Rodney Zadeh</h1>
+
+    <p class="lede">I was born in Iran and left as a child, during the revolution.
+    A country can rewrite its own terms overnight. My family was still living
+    under the old ones when the new ones took effect.</p>
+
+    <p>We landed in Los Angeles. I've been here since.</p>
+
+    <p>I don't tell that story for color. It's the reason I read systems the way
+    I do &mdash; looking for the clause nobody read, the term that gets enforced
+    later, the part where the arrangement you thought you were in turns out to be
+    a different arrangement entirely. I learned early that the document and the
+    reality are two different things, and that the gap between them is where
+    everything happens.</p>
+
+    <p>Camus gave that gap a name. The absurd, in his sense, is the distance
+    between our demand that the world make sense and the world's refusal to say
+    anything back &mdash; not a mood but a permanent condition, and the only
+    interesting question is what an honest person does inside it. His answer was
+    neither resignation nor a leap. It was revolt: refuse to pretend the terms
+    are just, and go on living under them anyway, with your eyes open. Frankl,
+    from a worse vantage point, arrived somewhere adjacent &mdash; everything can
+    be taken except the choice of what to make of what remains.</p>
+
+    <p>I hold my beliefs the same way I hold that. Read the sources yourself, in
+    your own hands, and arrive at your own reading rather than an inherited one.
+    Anything I can't get to on my own I don't really have.</p>
+
+    <h2>How I read</h2>
+
+    <p>The three questions on the front page are a procedure, not a knack. Here
+    is what each one is actually asking.</p>
+
+    <p class="ab-q"><strong>What does it assume?</strong> Every system encodes a
+    belief about the people inside it &mdash; what they want, what they'll
+    tolerate, what they'll never bother to check. That belief is almost never
+    stated and almost always load-bearing.</p>
+
+    <p class="ab-q"><strong>Where does it put its costs?</strong> Nothing is free.
+    Anything that feels frictionless has moved its friction somewhere else, onto
+    someone else, usually later. Find where it landed and you know who the system
+    is actually for. Buber drew the line this question is really testing: there
+    are two ways to stand toward anything, meeting it or using it, and a person
+    can be converted from the first into the second by design &mdash; without
+    malice, purely as an engineering consequence. Most of what I write about is
+    that conversion happening at scale, to people who consented by clicking
+    something.</p>
+
+    <p class="ab-q"><strong>What did its makers decline to account for?</strong>
+    Not what they got wrong, but what they chose not to measure. Weizenbaum drew
+    that line in 1976 and it hasn't moved since: the question was never what a
+    machine can be made to do, but what it ought to be asked to do. The first is
+    a problem of calculation. The second requires judgment, and judgment is
+    exactly what gets quietly deleted from the spec.</p>
+
+    <h2>What I won't do</h2>
+
+    <p class="ab-q"><strong>Pick a side before the evidence does.</strong> Some
+    questions stay open, and the honest move is to say so and show why. Sometimes
+    the disagreement is itself the finding &mdash; when serious people read the
+    same data and reach opposite conclusions, that tells you something about the
+    data, and about who's holding it.</p>
+
+    <p class="ab-q"><strong>Only catalogue what's broken.</strong> For every
+    system I take apart I keep track of one that got its incentives right.
+    Criticism that can't name a working alternative isn't analysis, it's a
+    mood.</p>
+
+    <p class="ab-q"><strong>Stop at the argument.</strong> Dostoevsky's
+    underground man refuses to be a piano key and then does nothing with the
+    refusal for a hundred pages. That's the failure mode of every critic who
+    reads well and builds nothing. A claim about how something works is worth no
+    more than the attempt to make it work. So I build. Hardware, software, and
+    the reasoning beneath both.</p>
+
+    <h2>What this site is</h2>
+
+    <p>The reading, written down. Some of it is contracts, some is interfaces,
+    most of it is incentives running quietly under things you used this morning
+    without noticing.</p>
+
+    <p>I write about the terms &mdash; who wrote them, who's bound by them, and
+    who never got to read them.</p>
+
+    <p>If something here is wrong, tell me. That's the only way I find out.</p>
+
+  </main>
+
+
+  <!-- ==== ZB-SIGNUP START ==== -->
+  <!-- signup not installed: SIGNUP_ACTION was empty. Re-run with it set. -->
+  <!-- ==== ZB-SIGNUP END ==== -->
+
+<footer>  contact line
+-->
+<html lang="en">
+<head>
+  <!-- ==== ZB-HEAD START ==== -->
+  <title>Zibalion — Rodney Zadeh</title>
+  <meta name="description" content="Operator. Builder. Writer. Technology, systems, and axioms. Writing and projects by Rodney Zadeh — hardware, software, and the reasoning beneath both.">
+  <meta name="author" content="Rodney Zadeh">
+  <link rel="canonical" href="https://zibalion.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#1E2A38">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon.png">
+  <link rel="icon" sizes="any" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zibalion">
+  <meta property="og:url" content="https://zibalion.com/">
+  <meta property="og:title" content="Zibalion — Rodney Zadeh">
+  <meta property="og:description" content="Operator. Builder. Writer. Technology, systems, and axioms.">
+  <meta property="og:image" content="https://zibalion.com/assets/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Zibalion — Rodney Zadeh">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zibalion — Rodney Zadeh">
+  <meta name="twitter:description" content="Operator. Builder. Writer. Technology, systems, and axioms.">
+  <meta name="twitter:image" content="https://zibalion.com/assets/img/og-cover.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rodney Zadeh",
+    "url": "https://zibalion.com/",
+    "jobTitle": "Operator, Builder, Writer",
+    "description": "Technology, systems, and axioms.",
+    "sameAs": ["https://github.com/rodneyzadeh"]
+  }
+  </script>
+  <!-- ==== ZB-HEAD END ==== -->
+  <meta charset="utf-8">
+  <!-- Tells phones to render at real device width instead of zooming out -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Shows in the browser tab and in Google results -->
+
+  <!-- The little icon in the browser tab -->
+
+  <!-- Typefaces. Newsreader is the editorial serif, IBM Plex Mono the
+       technical counterweight. Two families, clearly distinct. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- All styling lives in this one file -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <header class="masthead">
+    <!-- Header wordmark. PNG — the correct crossed-O mark has no vector source yet. -->
+    <a class="wordmark" href="/" aria-label="Zibalion home">
+      <img src="assets/img/zibalion-wordmark.png" alt="Zibalion">
+    </a>
+
+    <!-- The navy band. In the mockup it was empty decoration;
+         here it earns its place by holding the navigation. -->
+    <nav class="band" aria-label="Main">
+      <ul>
+        <li><a href="/writing/">Writing</a></li>
+        <li><a href="#ledger-heading">Ledger</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="mailto:rodney@zibalion.com">Contact</a></li>
       </ul>
     </nav>
@@ -472,104 +738,5 @@
       </li>
     </ul>
   </footer>
-
-  <!-- ==============================================================
-       LIVE FEEDS
-       Two fetches, no API keys, no server. Both fail silently: if a
-       request errors the section simply stays hidden, because a
-       broken feed looks worse than no feed.
-
-       NOTE: these may not run from a file:/// address in some
-       browsers. They will work once the site is hosted.
-       ============================================================== -->
-  <script>
-  (function () {
-
-    // ---- 1. GitHub: recent public pushes -------------------------
-    const GH_USER = "rodneyzadeh";
-
-    fetch(`https://api.github.com/users/${GH_USER}/events/public`)
-      .then(r => r.ok ? r.json() : Promise.reject(r.status))
-      .then(events => {
-        // Keep only pushes that actually contain commits
-        const pushes = events
-          .filter(e => e.type === "PushEvent" && e.payload.commits?.length)
-          .slice(0, 4);
-
-        if (!pushes.length) return;            // nothing to show — stay hidden
-
-        const list = document.getElementById("gh-list");
-        pushes.forEach(e => {
-          const commit = e.payload.commits[e.payload.commits.length - 1];
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = `https://github.com/${e.repo.name}`;
-          a.target = "_blank";
-          a.rel = "noopener";
-          a.textContent = e.repo.name.split("/")[1];
-          const msg = document.createElement("span");
-          msg.className = "feed__meta";
-          msg.textContent = commit.message.split("\n")[0].slice(0, 72);
-          li.append(a, msg);
-          list.appendChild(li);
-        });
-        document.getElementById("gh-feed").hidden = false;
-      })
-      .catch(() => { /* silent — section stays hidden */ });
-
-    // ---- 2. Hacker News: live discussion on ledger topics --------
-    // One search per topic, merged and ranked by points. The points
-    // filter is what keeps this signal rather than noise.
-    const TOPICS = [
-      "dating apps",
-      "sports betting",
-      "buy now pay later",
-      "social media teens",
-      "search engine ads"
-    ];
-
-    // Rolling 18-month window. Without this the points sort ranks
-    // across all of HN history and surfaces decade-old threads.
-    const HN_CUTOFF = Math.floor(Date.now() / 1000) - 60 * 60 * 24 * 547;
-
-    const searches = TOPICS.map(q =>
-      fetch("https://hn.algolia.com/api/v1/search?tags=story&numericFilters=points>50,created_at_i>" + HN_CUTOFF + "&hitsPerPage=4&query=" + encodeURIComponent(q))
-        .then(r => r.ok ? r.json() : { hits: [] })
-        .catch(() => ({ hits: [] }))
-    );
-
-    Promise.all(searches).then(results => {
-      // Flatten, drop anything without a link, dedupe by id
-      const seen = new Set();
-      const stories = results
-        .flatMap(r => r.hits || [])
-        .filter(h => h.url && h.title && !seen.has(h.objectID) && seen.add(h.objectID))
-        .sort((a, b) => b.points - a.points)
-        .slice(0, 6);
-
-      if (!stories.length) return;
-
-      const list = document.getElementById("hn-list");
-      stories.forEach(h => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = h.url;
-        a.target = "_blank";
-        a.rel = "noopener";
-        a.textContent = h.title;
-        const meta = document.createElement("span");
-        meta.className = "feed__meta";
-        const year = new Date(h.created_at).getFullYear();
-        meta.textContent = `${h.points} points · ${year}`;
-        li.append(a, meta);
-        list.appendChild(li);
-      });
-      document.getElementById("hn-section").hidden = false;
-    });
-
-
-  })();
-  </script>
-
 </body>
 </html>
