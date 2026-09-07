@@ -952,3 +952,21 @@ footer a:has(svg),
   align-items: center;
 }
 /* ==== ZB-FOOTER-OVERRIDE END ==== */
+
+/* ==== ZB-MOBILE-HERO START ==== */
+/* Mobile uses a full photograph (hero-mobile.png) rather than a cutout, so the
+   backdrop, the width cap and the drop shadow all have to come off. */
+@media (max-width: 1040px) {
+  .hero__figure {
+    background: none;
+    padding-top: 0;
+  }
+
+  .hero__figure img {
+    width: 100%;
+    max-width: none;
+    filter: none;
+    display: block;
+  }
+}
+/* ==== ZB-MOBILE-HERO END ==== */
