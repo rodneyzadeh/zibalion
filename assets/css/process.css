@@ -1,0 +1,133 @@
+/* process.css — the How I Work page. Site tokens only: bone, navy, sand, brass. */
+
+.pr-hero{
+  margin:0 0 3rem;
+  position:relative;
+}
+.pr-hero img{
+  display:block;width:100%;height:auto;
+}
+.pr-hero__title{
+  max-width:52rem;margin:0 auto;
+  padding:2.4rem 1.5rem 0;
+}
+.pr-hero__title h1{
+  font-family:"Newsreader",Georgia,serif;
+  font-weight:600;
+  font-size:clamp(2.4rem,1.6rem + 3.4vw,4.2rem);
+  line-height:1.02;letter-spacing:-.015em;
+  color:#1E2A38;
+  margin:0 0 .75rem;
+}
+.pr-hero__title p{
+  font-size:1.15rem;line-height:1.6;
+  color:#4A5666;max-width:44ch;margin:0;
+}
+
+.pr-wrap{max-width:38rem;margin:0 auto;padding:0 1.5rem;}
+.pr-wrap p{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:1.15rem;line-height:1.75;color:#1E2A38;
+  margin:0 0 1.3rem;
+}
+.pr-lede{font-size:1.32rem !important;line-height:1.6 !important;}
+
+.pr-station{padding-top:4rem;}
+.pr-station__head{
+  border-top:1px solid #D9D5CB;
+  padding-top:1.1rem;margin-bottom:1.6rem;
+  display:flex;align-items:baseline;gap:1rem;
+}
+.pr-tab{
+  flex:0 0 auto;
+  align-self:flex-start;
+  background:#B8862B;color:#FAF9F6;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.82rem;font-weight:500;
+  padding:.3rem .62rem;border-radius:2px 2px 0 0;
+  transform:translateY(-1.5rem);
+}
+.pr-station__head h2{
+  font-family:"Newsreader",Georgia,serif;
+  font-weight:600;
+  font-size:clamp(1.7rem,1.3rem + 1.6vw,2.5rem);
+  line-height:1.06;letter-spacing:-.012em;
+  color:#1E2A38;margin:0;
+}
+
+.pr-plate{margin:2.4rem 0 2.2rem;}
+.pr-plate img{display:block;width:100%;height:auto;}
+.pr-plate figcaption{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.78rem;line-height:1.55;color:#6B7686;
+  margin-top:.65rem;max-width:52ch;
+}
+.pr-bleed{
+  width:100vw;margin-left:50%;transform:translateX(-50%);
+  max-width:1180px;padding:0 1.5rem;
+}
+.pr-pair{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;}
+@media (max-width:640px){.pr-pair{grid-template-columns:1fr;}}
+
+.pr-shelf{
+  background:#EDEAE3;
+  border-left:3px solid #B8862B;
+  padding:1.3rem 1.4rem;
+  margin:2rem 0;
+}
+.pr-shelf p{margin:0;font-size:1.06rem;}
+
+.pr-close{
+  border-top:1px solid #D9D5CB;
+  margin-top:4rem;padding-top:2.4rem;padding-bottom:3rem;
+}
+
+
+/* ---------- the shelves index ---------- */
+.pr-shelves{margin:2.2rem 0 0;}
+.pr-shelfgroup{
+  border-top:1px solid #D9D5CB;
+  padding:0;
+}
+.pr-shelfgroup:last-of-type{border-bottom:1px solid #D9D5CB;}
+.pr-shelfgroup > summary{
+  cursor:pointer;list-style:none;
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  padding:1rem 0;
+  font-family:"Newsreader",Georgia,serif;
+  font-size:1.22rem;font-weight:600;color:#1E2A38;
+}
+.pr-shelfgroup > summary::-webkit-details-marker{display:none;}
+.pr-shelfgroup > summary::before{
+  content:"+";
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:1rem;color:#B8862B;margin-right:.7rem;
+}
+.pr-shelfgroup[open] > summary::before{content:"\2212";}
+.pr-shelfgroup > summary:hover{color:#B8862B;}
+.pr-shelfgroup > summary:focus-visible{outline:2px solid #B8862B;outline-offset:3px;}
+.pr-count{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.76rem;font-weight:400;color:#6B7686;
+  flex:0 0 auto;
+}
+.pr-sub{margin:0 0 1.5rem;padding-left:1.7rem;}
+.pr-sub h4{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.74rem;font-weight:500;color:#6B7686;
+  margin:1.1rem 0 .5rem;
+}
+.pr-sub ul{list-style:none;margin:0;padding:0;}
+.pr-sub li{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:1rem;line-height:1.5;
+  padding:.28rem 0;
+}
+.pr-sub li a{color:#1E2A38;text-decoration:none;border-bottom:1px solid #D9D5CB;}
+.pr-sub li a:hover{color:#B8862B;border-bottom-color:#B8862B;}
+.pr-sub li a:focus-visible{outline:2px solid #B8862B;outline-offset:2px;}
+.pr-q{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.7rem;color:#B8862B;margin-left:.3rem;cursor:help;
+}
+
