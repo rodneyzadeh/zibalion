@@ -83,8 +83,15 @@
 }
 
 
+.pr-h3{
+  font-family:"Newsreader",Georgia,serif;
+  font-weight:600;font-size:1.32rem;color:#1E2A38;
+  margin:2.4rem 0 1rem;
+}
+
 /* ---------- the shelves index ---------- */
-.pr-shelves{margin:2.2rem 0 0;}
+.pr-shelves{margin:2.2rem 0 0;line-height:0;}
+.pr-shelves > *{line-height:1.72;}
 .pr-shelfgroup{
   border-top:1px solid #D9D5CB;
   padding:0;
@@ -92,7 +99,7 @@
 .pr-shelfgroup:last-of-type{border-bottom:1px solid #D9D5CB;}
 .pr-shelfgroup > summary{
   cursor:pointer;list-style:none;
-  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  display:flex;align-items:baseline;gap:1rem;
   padding:1rem 0;
   font-family:"Newsreader",Georgia,serif;
   font-size:1.22rem;font-weight:600;color:#1E2A38;
@@ -109,7 +116,7 @@
 .pr-count{
   font-family:"IBM Plex Mono",ui-monospace,monospace;
   font-size:.76rem;font-weight:400;color:#6B7686;
-  flex:0 0 auto;
+  flex:0 0 auto;margin-left:auto;
 }
 .pr-sub{margin:0 0 1.5rem;padding-left:1.7rem;}
 .pr-sub h4{
