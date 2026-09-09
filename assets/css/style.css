@@ -971,34 +971,45 @@ footer a:has(svg),
 }
 /* ==== ZB-MOBILE-HERO END ==== */
 /* ==== ZB-MOBILE-NAV START ==== */
-/* Six nav items no longer fit on one phone line. Keep them on one row and
-   let the row scroll sideways rather than wrapping onto a second line. */
+/* Six nav items no longer fit on one phone line. The nav is <nav class="band">
+   inside <header class="masthead">, styled through .band — so these selectors
+   are deliberately specific enough to win against it. Keep one row, scroll it
+   sideways instead of wrapping. */
 @media (max-width: 720px) {
-  header nav ul,
-  header nav {
+  .masthead nav.band,
+  .masthead nav.band ul {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     justify-content: flex-start;
+    align-items: center;
     gap: 1.1rem;
-    padding-left: 1.1rem;
-    padding-right: 1.1rem;
+    margin: 0;
+    padding: 0 1.1rem;
+    list-style: none;
+    max-width: 100%;
   }
-  header nav ul::-webkit-scrollbar,
-  header nav::-webkit-scrollbar { display: none; }
+  .masthead nav.band ul::-webkit-scrollbar,
+  .masthead nav.band::-webkit-scrollbar { display: none; }
 
-  header nav li { flex: 0 0 auto; margin: 0; }
-  header nav a {
+  .masthead nav.band li {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+  .masthead nav.band a {
     white-space: nowrap;
     font-size: 0.82rem;
     letter-spacing: 0.02em;
+    display: inline-block;
   }
 }
 @media (max-width: 400px) {
-  header nav ul,
-  header nav { gap: 0.9rem; }
-  header nav a { font-size: 0.78rem; }
+  .masthead nav.band,
+  .masthead nav.band ul { gap: 0.9rem; padding: 0 0.9rem; }
+  .masthead nav.band a { font-size: 0.76rem; }
 }
 /* ==== ZB-MOBILE-NAV END ==== */
