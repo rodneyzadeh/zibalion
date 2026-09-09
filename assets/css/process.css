@@ -193,3 +193,23 @@
   font-size:.7rem;color:#B8862B;margin-left:.3rem;cursor:help;
 }
 
+/* ==== ZB-MOBILE-BLEED START ==== */
+/* .pr-bleed uses width:100vw with a negative transform. On phones 100vw is
+   wider than the usable body, so the page becomes horizontally scrollable —
+   which is what pushed the header band and footer out of alignment.
+   Below 900px the bleed is switched off entirely. */
+@media (max-width: 900px) {
+  .pr-bleed {
+    width: auto;
+    max-width: 100%;
+    margin-left: 0;
+    transform: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* belt and braces: nothing on this page may exceed the viewport */
+html, body { max-width: 100%; overflow-x: hidden; }
+img, figure, .pr-hero, .pr-hero img { max-width: 100%; }
+.pr-hero img { width: 100%; height: auto; display: block; }
+/* ==== ZB-MOBILE-BLEED END ==== */
