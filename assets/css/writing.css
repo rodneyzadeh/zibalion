@@ -1,0 +1,53 @@
+/* writing.css — the Writing index while it is still empty. */
+
+.wr-wrap{max-width:36rem;margin:0 auto;padding:4rem 1.5rem 5rem;}
+.wr-wrap h1{
+  font-family:"Newsreader",Georgia,serif;font-weight:600;
+  font-size:clamp(1.9rem,1.4rem + 2vw,2.8rem);
+  line-height:1.04;letter-spacing:-.016em;color:#1E2A38;margin:0 0 1.4rem;
+}
+.wr-wrap p{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:1.12rem;line-height:1.72;color:#1E2A38;margin:0 0 1.3rem;
+}
+.wr-kicker{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;
+  color:#B8862B;margin:0 0 .8rem;
+}
+.wr-questions{
+  background:#EDEAE3;border-left:3px solid #B8862B;
+  padding:1.3rem 1.4rem;margin:2rem 0;
+}
+.wr-questions p{font-size:1.05rem;margin:0 0 .55rem;}
+.wr-questions p:last-child{margin:0;}
+
+.wr-signup{border-top:1px solid #D9D5CB;margin-top:3rem;padding-top:2.2rem;}
+.wr-signup h2{
+  font-family:"Newsreader",Georgia,serif;font-weight:600;
+  font-size:1.4rem;color:#1E2A38;margin:0 0 .6rem;
+}
+.wr-form{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.2rem 0 .8rem;}
+.wr-form input{
+  flex:1 1 15rem;
+  font-family:"Newsreader",Georgia,serif;font-size:1.02rem;color:#1E2A38;
+  background:#F3F0E8;border:1px solid #D9D5CB;border-radius:2px;padding:.62rem .7rem;
+}
+.wr-form input:focus{outline:none;border-color:#B8862B;box-shadow:0 0 0 3px rgba(184,134,43,.16);background:#FAF9F6;}
+.wr-form button{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.8rem;
+  color:#FAF9F6;background:#1E2A38;border:1px solid #1E2A38;border-radius:2px;
+  padding:.62rem 1.3rem;cursor:pointer;
+}
+.wr-form button:hover{background:#B8862B;border-color:#B8862B;}
+.wr-form button:focus-visible{outline:2px solid #B8862B;outline-offset:3px;}
+.wr-fine{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.7rem;line-height:1.6;color:#6B7686;margin:0;
+}
+.wr-elsewhere{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.74rem;color:#6B7686;margin-top:2.4rem;
+}
+.wr-elsewhere a{color:#1E2A38;}
+.wr-visually-hidden{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
