@@ -89,6 +89,61 @@
   margin:2.4rem 0 1rem;
 }
 
+/* ---------- recommend a book ---------- */
+.pr-form{margin:2.2rem 0 0;}
+.pr-field{margin:0 0 1.3rem;}
+.pr-field label{
+  display:block;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.74rem;font-weight:500;color:#6B7686;
+  margin:0 0 .45rem;
+}
+.pr-field input,
+.pr-field textarea{
+  display:block;width:100%;
+  font-family:"Newsreader",Georgia,serif;
+  font-size:1.02rem;line-height:1.5;color:#1E2A38;
+  background:#F3F0E8;
+  border:1px solid #D9D5CB;border-radius:2px;
+  padding:.62rem .7rem;
+}
+.pr-field textarea{resize:vertical;min-height:7.5rem;}
+.pr-field input::placeholder,
+.pr-field textarea::placeholder{color:#9AA3B0;}
+.pr-field input:focus,
+.pr-field textarea:focus{
+  outline:none;border-color:#B8862B;
+  box-shadow:0 0 0 3px rgba(184,134,43,.16);
+  background:#FAF9F6;
+}
+.pr-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+@media (max-width:560px){.pr-row{grid-template-columns:1fr;gap:0;}}
+
+.pr-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+
+.pr-formfoot{
+  display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+  margin:.4rem 0 0;
+}
+.pr-formfoot button{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.8rem;letter-spacing:.02em;
+  color:#FAF9F6;background:#1E2A38;
+  border:1px solid #1E2A38;border-radius:2px;
+  padding:.62rem 1.3rem;cursor:pointer;
+}
+.pr-formfoot button:hover{background:#B8862B;border-color:#B8862B;}
+.pr-formfoot button:focus-visible{outline:2px solid #B8862B;outline-offset:3px;}
+.pr-fine{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.7rem;line-height:1.5;color:#6B7686;
+  flex:1 1 16rem;
+}
+.pr-thanks{
+  background:#EDEAE3;border-left:3px solid #B8862B;
+  padding:1.2rem 1.3rem;margin:2.2rem 0 0;
+}
+
 /* ---------- the shelves index ---------- */
 .pr-shelves{margin:2.2rem 0 0;line-height:0;}
 .pr-shelves > *{line-height:1.72;}
