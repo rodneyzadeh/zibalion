@@ -1,0 +1,57 @@
+/* totop.css — back to top button */
+
+.zb-totop{
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 60;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+
+  width: 2.9rem;
+  height: 2.9rem;
+  padding: 0;
+
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: .95rem;
+  line-height: 1;
+
+  color: #FAF9F6;
+  background: #1E2A38;
+  border: 1px solid #1E2A38;
+  border-radius: 2px;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(.5rem);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+}
+
+.zb-totop.is-on{
+  opacity: .92;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.zb-totop:hover{ opacity: 1; background: #B8862B; border-color: #B8862B; }
+.zb-totop:focus-visible{ outline: 2px solid #B8862B; outline-offset: 3px; opacity: 1; }
+
+/* the arrow, drawn rather than a glyph so it matches at any size */
+.zb-totop svg{ width: 1.05rem; height: 1.05rem; display: block; }
+
+/* keep it clear of the safe area on phones */
+@supports (padding: max(0px)) {
+  .zb-totop{
+    right: max(1.1rem, env(safe-area-inset-right));
+    bottom: max(1.1rem, env(safe-area-inset-bottom));
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .zb-totop{ transition: none; transform: none; }
+  html{ scroll-behavior: auto; }
+}
