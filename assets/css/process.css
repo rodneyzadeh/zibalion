@@ -188,41 +188,31 @@
 .pr-sub li a{color:#1E2A38;text-decoration:none;border-bottom:1px solid #D9D5CB;}
 .pr-sub li a:hover{color:#B8862B;border-bottom-color:#B8862B;}
 .pr-sub li a:focus-visible{outline:2px solid #B8862B;outline-offset:2px;}
-.pr-q{
-  font-family:"IBM Plex Mono",ui-monospace,monospace;
-  font-size:.7rem;color:#B8862B;margin-left:.3rem;cursor:help;
-}
 
-/* ==== ZB-MOBILE-BLEED START ==== */
-/* .pr-bleed uses width:100vw with a negative transform. On phones 100vw is
-   wider than the usable body, so the page becomes horizontally scrollable,
-   which is what pushed the header band and footer out of alignment.
-   Below 900px the bleed is switched off entirely. */
-@media (max-width: 900px) {
-  .pr-bleed {
-    width: auto;
-    max-width: 100%;
-    margin-left: 0;
-    transform: none;
-    padding-left: 0;
-    padding-right: 0;
+/* ---------- mobile fixes ---------- */
+/* 100vw includes the scrollbar and overflows on iOS, which scrolls the whole
+   page sideways and leaves the footer short of the right edge. */
+@media (max-width:760px){
+  .pr-bleed{
+    width:auto;margin-left:0;transform:none;padding:0;
   }
+  .pr-wrap{padding:0 1.25rem;}
+  .pr-hero__title{padding:1.8rem 1.25rem 0;}
 }
 
-/* Stop sideways scroll WITHOUT making the root a scroll container.
-   overflow-x:hidden on html/body breaks position:fixed on iOS Safari, which
-   is what hid the back-to-top button on this page. clip does not. */
-html, body { max-width: 100%; overflow-x: clip; }
-
-/* fallback for browsers with no clip support: guard the content, not the root */
-@supports not (overflow-x: clip) {
-  html, body { overflow-x: visible; }
-  body > main, .ev-wrap, .pr-wrap { overflow-x: hidden; }
+/* the button and its fine print were fighting for one row */
+@media (max-width:620px){
+  .pr-formfoot{flex-direction:column;align-items:stretch;gap:.9rem;}
+  .pr-formfoot button{width:100%;padding:.85rem 1rem;font-size:.85rem;}
+  .pr-fine{flex:1 1 auto;}
+  .pr-station__head{gap:.7rem;}
+  .pr-tab{transform:translateY(-1.2rem);}
 }
 
-img, figure, .pr-hero, .pr-hero img { max-width: 100%; }
-.pr-hero img { width: 100%; height: auto; display: block; }
+/* long book titles must not push the page wide */
+.pr-sub li a{overflow-wrap:anywhere;}
+.pr-shelfgroup > summary{overflow-wrap:anywhere;}
 
-/* make sure nothing on this page sits above the button */
-.zb-totop { z-index: 60; }
-/* ==== ZB-MOBILE-BLEED END ==== */
+/* belt and braces against any stray horizontal overflow */
+.pr-wrap,.pr-shelves{max-width:100%;}
+
