@@ -49,18 +49,21 @@
     .about .ab-q strong {
       font-weight: 600; border-bottom: 2px solid rgba(184,134,43,.4);
     }
-  
-  .about-portrait{
-    margin:0 0 1.6rem;
-    max-width:20rem;
-  }
-  .about-portrait img{
-    display:block;width:100%;height:auto;
-    border-radius:2px;
-  }
 </style>
 
 <style id="about-page-style">
+  .about-portrait{
+    margin: 0 0 1.5rem;
+    width: 100%;
+    max-width: none;
+  }
+  .about-portrait img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+  }
+
   .about-name{
     font-size:clamp(1.45rem,1.15rem + 1vw,1.95rem);
     line-height:1.06;letter-spacing:-.015em;
@@ -68,6 +71,28 @@
   }
 </style>
   <link rel="stylesheet" href="/assets/css/totop.css?v=1">
+<style id="about-type-fix">
+  /* last in the cascade on purpose: these override whatever came before */
+  main .about-portrait,
+  figure.about-portrait{
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 0 1.4rem !important;
+  }
+  main .about-portrait img,
+  figure.about-portrait img{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    border-radius:2px;
+  }
+  h1.about-name{
+    font-size:clamp(1.15rem, 1rem + 0.55vw, 1.45rem) !important;
+    line-height:1.12;
+    letter-spacing:-0.005em;
+    margin:0 0 1.5rem !important;
+  }
+</style>
 </head>
 <body>
 <header class="masthead">
@@ -90,14 +115,15 @@
   </header>
 
   <main class="about">
+<h1 class="about-name">Rodney Zadeh</h1>
+  <p>I have always been more interested in what holds something together than what it looks like.</p>
 <!-- ==== ZB-ABOUT-PHOTO START ==== -->
 <figure class="about-portrait">
   <img src="/assets/img/rodney-about.jpg?v=2" width="1200" height="1202"
        alt="Rodney Zadeh at his desk, an Alexander the Man Who Knows poster on the wall behind him, books and an open notebook beside a lit lamp.">
 </figure>
 <!-- ==== ZB-ABOUT-PHOTO END ==== -->
-<h1 class="about-name">Rodney Zadeh</h1>
-  <p>I have always been more interested in structure than appearance.</p>
+
   <p>Taking things apart is my default. Objects, systems, claims, motives, arrangements, explanations. I want to know what holds a thing together, what it depends on, and what remains when one of its assumptions is removed.</p>
   <p>It is less a discipline than a habit of mind.</p>
   <p>I became interested early in the distance between what people say, what they mean, and what they do. We often treat the three as though they belong naturally together. They do not. Much of human behavior becomes legible only in the space between them.</p>
