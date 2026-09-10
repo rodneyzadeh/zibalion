@@ -971,45 +971,44 @@ footer a:has(svg),
 }
 /* ==== ZB-MOBILE-HERO END ==== */
 /* ==== ZB-MOBILE-NAV START ==== */
-/* Six nav items no longer fit on one phone line. The nav is <nav class="band">
-   inside <header class="masthead">, styled through .band — so these selectors
-   are deliberately specific enough to win against it. Keep one row, scroll it
-   sideways instead of wrapping. */
+/* Six items, one row, no scrolling. Type scales with the viewport so the row
+   fits without clipping on anything from 320px up. */
 @media (max-width: 720px) {
   .masthead nav.band,
   .masthead nav.band ul {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    justify-content: flex-start;
+    overflow: visible;
+    justify-content: space-between;
     align-items: center;
-    gap: 1.1rem;
+    gap: 0;
     margin: 0;
-    padding: 0 1.1rem;
+    padding: 0 0.9rem;
     list-style: none;
+    width: 100%;
     max-width: 100%;
   }
-  .masthead nav.band ul::-webkit-scrollbar,
-  .masthead nav.band::-webkit-scrollbar { display: none; }
 
   .masthead nav.band li {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     margin: 0;
     padding: 0;
-    white-space: nowrap;
+    min-width: 0;
   }
+
   .masthead nav.band a {
-    white-space: nowrap;
-    font-size: 0.82rem;
-    letter-spacing: 0.02em;
     display: inline-block;
+    white-space: nowrap;
+    font-size: clamp(0.58rem, 2.5vw, 0.78rem);
+    letter-spacing: 0;
+    padding: 0 0.15rem;
   }
 }
-@media (max-width: 400px) {
+
+/* very narrow phones: trim the padding before the type gets any smaller */
+@media (max-width: 360px) {
   .masthead nav.band,
-  .masthead nav.band ul { gap: 0.9rem; padding: 0 0.9rem; }
-  .masthead nav.band a { font-size: 0.76rem; }
+  .masthead nav.band ul { padding: 0 0.5rem; }
+  .masthead nav.band a  { padding: 0 0.1rem; }
 }
 /* ==== ZB-MOBILE-NAV END ==== */
