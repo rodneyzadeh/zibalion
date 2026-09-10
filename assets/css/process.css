@@ -214,5 +214,19 @@
 .pr-shelfgroup > summary{overflow-wrap:anywhere;}
 
 /* belt and braces against any stray horizontal overflow */
-.pr-wrap,.pr-shelves{max-width:100%;}
+.pr-shelves{max-width:100%;}
 
+/* ==== ZB-MEASURE START ==== */
+/* Last in the file on purpose. The reading column is 38rem and nothing
+   appended after this should be able to take it away again. */
+.pr-wrap{
+  max-width:38rem;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+@media (max-width:900px){
+  .pr-wrap{ padding:0 1.25rem; }
+}
+/* full-bleed figures and the shelf index are the deliberate exceptions */
+.pr-shelves{ max-width:100%; }
+/* ==== ZB-MEASURE END ==== */
