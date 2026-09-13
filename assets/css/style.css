@@ -1076,16 +1076,6 @@ footer a:has(svg),
 }
 /* ==== ZB-HERO-FIT END ==== */
 
-/* ==== ZB-BACKDROP-WIDTH START ==== */
-/* The panel was clamp(420px, 54%, 780px), which put its left edge right at
-   the figure and made him read as floating at the boundary. Wider gives him
-   room on both sides. The left-edge fade still applies. */
-@media (min-width: 1041px) {
-  .hero::after {
-    width: clamp(420px, 54%, 780px);
-  }
-}
-/* ==== ZB-BACKDROP-WIDTH END ==== */
 
 /* ==== ZB-BACKDROP-LINE START ==== */
 /* `auto <zoom>` scaled by height only, so the image did not reach the right
@@ -1100,3 +1090,14 @@ footer a:has(svg),
   }
 }
 /* ==== ZB-BACKDROP-LINE END ==== */
+
+/* ==== ZB-BACKDROP-WIDTH START ==== */
+/* The panel was clamp(420px, 54%, 780px), which put its left edge right at
+   the figure and made him read as floating at the boundary. Wider gives him
+   room on both sides. The left-edge fade still applies. */
+@media (min-width: 1041px) {
+  .hero::after {
+    width: clamp(420px, 78%, 1200px);
+  }
+}
+/* ==== ZB-BACKDROP-WIDTH END ==== */
