@@ -1015,8 +1015,8 @@ footer a:has(svg),
 
 /* ==== ZB-HERO-FIT START ==== */
 /* Seated cutout on a layout built for a standing one. Sized by width so the
-   aspect is never squashed, anchored at the bottom so it grows upward and
-   the head rises through the navy stripe. */
+   aspect is never squashed, then lifted off the bottom so the head rises
+   through the navy stripe. */
 
 /* Decorative: never intercept a click meant for the nav it overlaps. */
 .hero__figure,
@@ -1025,9 +1025,11 @@ footer a:has(svg),
 @media (min-width: 1041px) {
   .hero__figure {
     top: auto;
-    bottom: 0;
+    /* The lift. Raise to push the head higher, lower to sit him back down. */
+    bottom: 7rem;
     height: auto;
     display: block;
+    /* Above the nav stripe so the head reads as in front of it */
     z-index: 5;
     overflow: visible;
   }
