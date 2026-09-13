@@ -1058,3 +1058,20 @@ footer a:has(svg),
   }
 }
 /* ==== ZB-BACKDROP-LINE END ==== */
+
+/* ==== ZB-BLURB-WIDTH START ==== */
+/* .statement was 36ch, which made the blurb a tall narrow column. A wider
+   measure fits more words per line and shortens the block. Desktop only;
+   the mobile rule further up already sets max-width: none. */
+@media (min-width: 1041px) {
+  .statement {
+    max-width: 54ch;
+  }
+
+  /* Give the text column room for the wider measure. The figure is
+     positioned absolutely, so this does not move it. */
+  .hero {
+    grid-template-columns: minmax(0, 46rem) minmax(0, 1fr);
+  }
+}
+/* ==== ZB-BLURB-WIDTH END ==== */
