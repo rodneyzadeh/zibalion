@@ -244,10 +244,43 @@
 /* ==== ZB-CLOSE-SPACING END ==== */
 
 /* ==== ZB-FORM-FIT START ==== */
-/* The fine print was flex:1 1 16rem sitting beside the Send button, which
-   squeezed it into four short lines. It belongs under the button. */
+/* THE ALIGNMENT BUG: the inputs were content-box, so in the two-column row
+   the padding and border were added on top of each 1fr column. The name and
+   email pair overflowed the form and ended further right than the fields
+   above it. */
+.pr-field input,
+.pr-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Grid tracks default to min-content, which lets a wide child push the
+   column out. This lets them shrink to their share. */
+.pr-row {
+  align-items: start;
+}
+.pr-row > .pr-field {
+  min-width: 0;
+}
+
+/* The form was unbounded, so it ran wider than the prose above it. */
+.pr-form {
+  max-width: 38rem;
+}
+
+/* Labels should sit with their field, not float between two of them. */
+.pr-field {
+  margin: 0 0 1.15rem;
+}
+.pr-field label {
+  margin: 0 0 .35rem;
+}
+
+/* The fine print was flex:1 1 16rem beside the button, which squeezed it
+   into four short lines. It belongs under the button. */
 .pr-formfoot {
   display: block;
+  margin: 1.5rem 0 0;
 }
 .pr-formfoot button {
   display: inline-block;
@@ -259,15 +292,8 @@
   max-width: 58ch;
 }
 
-/* The form had no width cap, so the name and email row ran wider than the
-   prose above it. This lines the two up. */
-.pr-form {
-  max-width: 38rem;
-}
-
-/* Stacked fields on narrow screens need vertical space between them. */
 @media (max-width: 560px) {
   .pr-row { row-gap: 0; }
-  .pr-row .pr-field { margin-bottom: 1.3rem; }
+  .pr-row .pr-field { margin-bottom: 1.15rem; }
 }
 /* ==== ZB-FORM-FIT END ==== */
