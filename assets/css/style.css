@@ -1088,15 +1088,15 @@ footer a:has(svg),
 /* ==== ZB-BACKDROP-WIDTH END ==== */
 
 /* ==== ZB-BACKDROP-LINE START ==== */
-/* The backdrop panel is `center bottom / cover`, which put the wall-to-floor
-   line lower than the figure sitting in front of it. Scaling the image taller
-   while keeping it pinned to the bottom raises that line up behind him.
-   Only size and position are overridden; the image, the navy fallback and the
-   left-edge fade are all left as they were. */
+/* `auto <zoom>` scaled by height only, so the image did not reach the right
+   edge of the panel and the navy fallback showed through as a strip. Pinning
+   the width to 100% removes the gap; the separate height value keeps the
+   floor line raised behind the figure. */
 @media (min-width: 1041px) {
   .hero::after {
-    background-size: auto 115%;
+    background-size: 100% 118%;
     background-position: center bottom;
+    background-repeat: no-repeat;
   }
 }
 /* ==== ZB-BACKDROP-LINE END ==== */
