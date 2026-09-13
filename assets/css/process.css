@@ -244,18 +244,25 @@
 /* ==== ZB-CLOSE-SPACING END ==== */
 
 /* ==== ZB-FORM-FIT START ==== */
-/* THE ALIGNMENT BUG: the inputs were content-box, so in the two-column row
-   the padding and border were added on top of each 1fr column. The name and
-   email pair overflowed the form and ended further right than the fields
-   above it. */
+/* THE CAUSE: .pr-field is a <p>, so it inherits the section's paragraph
+   measure of about 44ch. The single fields were capped at that width while
+   the name/email row, being a <div>, filled the whole form. Releasing the
+   cap on form fields lines every field up on the same right edge. */
+.pr-field {
+  max-width: none;
+  margin: 0 0 1.15rem;
+}
+.pr-field label {
+  margin: 0 0 .35rem;
+}
+
 .pr-field input,
 .pr-field textarea {
   box-sizing: border-box;
   width: 100%;
+  max-width: none;
 }
 
-/* Grid tracks default to min-content, which lets a wide child push the
-   column out. This lets them shrink to their share. */
 .pr-row {
   align-items: start;
 }
@@ -263,17 +270,9 @@
   min-width: 0;
 }
 
-/* The form was unbounded, so it ran wider than the prose above it. */
+/* Keeps the whole form to the same measure as the prose above it. */
 .pr-form {
   max-width: 38rem;
-}
-
-/* Labels should sit with their field, not float between two of them. */
-.pr-field {
-  margin: 0 0 1.15rem;
-}
-.pr-field label {
-  margin: 0 0 .35rem;
 }
 
 /* The fine print was flex:1 1 16rem beside the button, which squeezed it
@@ -281,6 +280,7 @@
 .pr-formfoot {
   display: block;
   margin: 1.5rem 0 0;
+  max-width: none;
 }
 .pr-formfoot button {
   display: inline-block;
