@@ -1033,7 +1033,7 @@ footer a:has(svg),
   }
 
   .hero__figure img {
-    width: min(38vw, 800px);
+    width: min(32vw, 640px);
     height: auto;
     max-width: none;
     max-height: none;
