@@ -230,3 +230,15 @@
 /* full-bleed figures and the shelf index are the deliberate exceptions */
 .pr-shelves{ max-width:100%; }
 /* ==== ZB-MEASURE END ==== */
+
+/* ==== ZB-CLOSE-SPACING START ==== */
+/* .pr-close paragraphs had no margin rule, so the three closing paragraphs
+   ran together as one block. Every other section inherits its spacing from
+   .pr-station p, which does not reach inside .pr-close. */
+.pr-close p {
+  margin: 0 0 1.35rem;
+}
+.pr-close p:last-child {
+  margin-bottom: 0;
+}
+/* ==== ZB-CLOSE-SPACING END ==== */
