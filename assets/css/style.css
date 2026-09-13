@@ -1028,14 +1028,12 @@ footer a:has(svg),
     bottom: 0;
     height: auto;
     display: block;
-    /* Above the nav stripe so the head reads as in front of it */
     z-index: 5;
-    /* The head has to be allowed out of the box to cross the bar */
     overflow: visible;
   }
 
   .hero__figure img {
-    width: min(46vw, 980px);
+    width: min(38vw, 800px);
     height: auto;
     max-width: none;
     max-height: none;
