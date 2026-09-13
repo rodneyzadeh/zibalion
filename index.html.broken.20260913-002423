@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!--
+  ZIBALION — home page
+  ------------------------------------------------------------------
+  Every line below is plain HTML. Nothing is generated, nothing is
+  compiled. You edit this file, save it, refresh the browser, done.
+
+  Structure of the page, top to bottom:
+    <head>    settings the browser needs (title, fonts, stylesheet)
+    <header>  wordmark + the navy navigation band
+    <main>    the hero: your name, positioning, article list, photo
+    <footer>  contact line
+-->
+<html lang="en">
+<head>
+  <!-- ==== ZB-HEAD START ==== -->
+  <title>Zibalion — Rodney Zadeh</title>
+  <meta name="description" content="Operator. Builder. Writer. Technology, systems, and axioms. Writing and projects by Rodney Zadeh — hardware, software, and the reasoning beneath both.">
+  <meta name="author" content="Rodney Zadeh">
+  <link rel="canonical" href="https://zibalion.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#1E2A38">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon.png">
+  <link rel="icon" sizes="any" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zibalion">
+  <meta property="og:url" content="https://zibalion.com/">
+  <meta property="og:title" content="Zibalion — Rodney Zadeh">
+  <meta property="og:description" content="Operator. Builder. Writer. Technology, systems, and axioms.">
+  <meta property="og:image" content="https://zibalion.com/assets/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Zibalion — Rodney Zadeh">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zibalion — Rodney Zadeh">
+  <meta name="twitter:description" content="Operator. Builder. Writer. Technology, systems, and axioms.">
+  <meta name="twitter:image" content="https://zibalion.com/assets/img/og-cover.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rodney Zadeh",
+    "url": "https://zibalion.com/",
+    "jobTitle": "Operator, Builder, Writer",
+    "description": "Technology, systems, and axioms.",
+    "sameAs": ["https://github.com/rodneyzadeh"]
+  }
+  </script>
+  <!-- ==== ZB-HEAD END ==== -->
+  <meta charset="utf-8">
+  <!-- Tells phones to render at real device width instead of zooming out -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Shows in the browser tab and in Google results -->
+
+  <!-- The little icon in the browser tab -->
+
+  <!-- Typefaces. Newsreader is the editorial serif, IBM Plex Mono the
+       technical counterweight. Two families, clearly distinct. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- All styling lives in this one file -->
+  <link rel="stylesheet" href="assets/css/style.css?v=1789057108">
+
+  <!-- ==== ZB-SIGNUP-CSS START ==== -->
+  <style>
+    .zb-signup { background: #EDEAE3; padding: 3.5rem 1.5rem; }
+    .zb-signup-inner { max-width: 40rem; margin: 0 auto; }
+    .zb-signup-kicker {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+      color: #B8862B; margin: 0 0 .6rem;
+    }
+    .zb-signup h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.6rem; font-weight: 500; line-height: 1.2;
+      color: #1E2A38; margin: 0 0 .8rem;
+      border: 0; padding: 0; text-transform: none; letter-spacing: 0;
+    }
+    .zb-signup-note {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .82rem; line-height: 1.65;
+      color: #1E2A38; opacity: .7; margin: 0 0 1.6rem;
+    }
+    .zb-signup-form { display: flex; gap: .6rem; flex-wrap: wrap; }
+    .zb-signup-form input[type=email] {
+      flex: 1 1 16rem; min-width: 0;
+      font-family: 'IBM Plex Mono', monospace; font-size: .9rem;
+      padding: .85rem 1rem; color: #1E2A38; background: #FAF9F6;
+      border: 1px solid rgba(30,42,56,.25); border-radius: 0;
+    }
+    .zb-signup-form input[type=email]:focus { outline: none; border-color: #B8862B; }
+    .zb-signup-form button {
+      font-family: 'IBM Plex Mono', monospace; font-size: .8rem;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: .85rem 1.6rem; cursor: pointer;
+      color: #FAF9F6; background: #1E2A38;
+      border: 1px solid #1E2A38; border-radius: 0;
+    }
+    .zb-signup-form button:hover { background: #B8862B; border-color: #B8862B; }
+    .zb-visually-hidden {
+      position: absolute; width: 1px; height: 1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+    }
+    @media (max-width: 32rem) { .zb-signup-form button { flex: 1 1 100%; } }
+  </style>
+  <style>
+    .zb-signup h2 { font-size: 1.45rem; max-width: 32rem; }
+  </style>
+  <!-- ==== ZB-SIGNUP-CSS END ==== -->
+  <link rel="stylesheet" href="/assets/css/totop.css?v=1789057108">
+</head>
+
+<body>
+
+  <header class="masthead">
+    <!-- Header wordmark. PNG — the correct crossed-O mark has no vector source yet. -->
+    <a class="wordmark" href="/" aria-label="Zibalion home">
+      <img src="assets/img/zibalion-wordmark.png" alt="Zibalion">
+    </a>
+
+    <!-- The navy band. In the mockup it was empty decoration;
+         here it earns its place by holding the navigation. -->
+    <nav class="band" aria-label="Main">
+      <ul>
+        <li><a href="/writing/">Writing</a></li>
+        <li><a href="/#ledger-heading">Ledger</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/process/">Cockpit</a></li>
+<li><a href="/events/">Events</a></li>
+<li><a href="mailto:rodney@zibalion.com">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="hero">
+
+    <!-- LEFT COLUMN: identity, then the writing index -->
+    <div class="hero__text">
+
+      <div class="identity">
+        <h1>Rodney Zadeh</h1>
+        <p class="descriptors">Operator. Builder. Writer.</p>
+        <p class="descriptors descriptors--muted">Technology / Systems / Axioms</p>
+        <p class="statement">The world is changing beneath us, and there&#x27;s no stopping it. That part isn&#x27;t in question. What&#x27;s still open is what we put into it while it&#x27;s being built, and who ends up carrying the cost of those choices.</p>
+        <p class="statement">I&#x27;m in the middle of it like everyone else. I read. I trace claims back to where they came from. I write the questions down as precisely as I can.</p>
+        <p class="statement">I don&#x27;t claim expertise yet. I&#x27;m early, and I&#x27;m doing the work to get there. What I do have is an eye for the moment a system stops doing what it says it does, and a commitment to becoming a builder in this space. Because you can&#x27;t argue a system into behaving differently. At some point, you have to build a better one.</p>
+        <p class="statement">No system becomes trustworthy by accident. Someone has to decide to put that into the architecture, or nobody does.</p>
+        <p class="statement">And right now, the people making those decisions are moving fast, with very little scrutiny.</p>
+        <p class="statement">That&#x27;s the part that fascinates me.</p>
+    </div>
+
+    <!-- Social links. The SVGs are inline so there are no extra
+         files to load and they inherit the text colour automatically.
+         Update the href on each when the handle is confirmed. -->
+    <ul class="social">
+      <li>
+        <a href="https://github.com/rodneyzadeh" aria-label="GitHub" rel="me noopener" target="_blank">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://x.com/rodneyzadeh" aria-label="X" rel="me noopener" target="_blank">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true">
+            <path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.22-6.82-5.96 6.82H1.68l7.73-8.84L1.25 2.25h6.82l4.71 6.23 5.46-6.23Zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64Z"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://instagram.com/rahzputin" aria-label="Instagram" rel="me noopener" target="_blank">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/>
+            <circle cx="12" cy="12" r="4.2"/>
+            <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <!-- ==============================================================
+       LIVE FEEDS
+       Two fetches, no API keys, no server. Both fail silently: if a
+       request errors the section simply stays hidden, because a
+       broken feed looks worse than no feed.
+
+       NOTE: these may not run from a file:/// address in some
+       browsers. They will work once the site is hosted.
+       ============================================================== -->
+  <script>
+  (function () {
+
+    // ---- 1. GitHub: recent public pushes -------------------------
+    const GH_USER = "rodneyzadeh";
+
+    fetch(`https://api.github.com/users/${GH_USER}/events/public`)
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(events => {
+        // Keep only pushes that actually contain commits
+        const pushes = events
+          .filter(e => e.type === "PushEvent" && e.payload.commits?.length)
+          .slice(0, 4);
+
+        if (!pushes.length) return;            // nothing to show — stay hidden
+
+        const list = document.getElementById("gh-list");
+        pushes.forEach(e => {
+          const commit = e.payload.commits[e.payload.commits.length - 1];
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = `https://github.com/${e.repo.name}`;
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.textContent = e.repo.name.split("/")[1];
+          const msg = document.createElement("span");
+          msg.className = "feed__meta";
+          msg.textContent = commit.message.split("\n")[0].slice(0, 72);
+          li.append(a, msg);
+          list.appendChild(li);
+        });
+        document.getElementById("gh-feed").hidden = false;
+      })
+      .catch(() => { /* silent — section stays hidden */ });
+
+    // ---- 2. Hacker News: live discussion on ledger topics --------
+    // One search per topic, merged and ranked by points. The points
+    // filter is what keeps this signal rather than noise.
+    const TOPICS = [
+      "dating apps",
+      "sports betting",
+      "buy now pay later",
+      "social media teens",
+      "search engine ads"
+    ];
+
+    // Rolling 18-month window. Without this the points sort ranks
+    // across all of HN history and surfaces decade-old threads.
+    const HN_CUTOFF = Math.floor(Date.now() / 1000) - 60 * 60 * 24 * 547;
+
+    const searches = TOPICS.map(q =>
+      fetch("https://hn.algolia.com/api/v1/search?tags=story&numericFilters=points>50,created_at_i>" + HN_CUTOFF + "&hitsPerPage=4&query=" + encodeURIComponent(q))
+        .then(r => r.ok ? r.json() : { hits: [] })
+        .catch(() => ({ hits: [] }))
+    );
+
+    Promise.all(searches).then(results => {
+      // Flatten, drop anything without a link, dedupe by id
+      const seen = new Set();
+      const stories = results
+        .flatMap(r => r.hits || [])
+        .filter(h => h.url && h.title && !seen.has(h.objectID) && seen.add(h.objectID))
+        .sort((a, b) => b.points - a.points)
+        .slice(0, 6);
+
+      if (!stories.length) return;
+
+      const list = document.getElementById("hn-list");
+      stories.forEach(h => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = h.url;
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.textContent = h.title;
+        const meta = document.createElement("span");
+        meta.className = "feed__meta";
+        const year = new Date(h.created_at).getFullYear();
+        meta.textContent = `${h.points} points · ${year}`;
+        li.append(a, meta);
+        list.appendChild(li);
+      });
+      document.getElementById("hn-section").hidden = false;
+    });
+
+
+  })();
+  </script>
+
+<!-- ==== ZB-TOTOP START ==== -->
+<button class="zb-totop" id="zbTop" type="button" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5"/><path d="M5 12l7-7 7 7"/>
+  </svg>
+</button>
+<script>
+(function(){
+  var b = document.getElementById("zbTop");
+  if (!b) return;
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var ticking = false;
+
+  function check(){
+    b.classList.toggle("is-on", window.scrollY > window.innerHeight * 1.5);
+    ticking = false;
+  }
+  window.addEventListener("scroll", function(){
+    if (!ticking) { ticking = true; window.requestAnimationFrame(check); }
+  }, {passive:true});
+
+  b.addEventListener("click", function(){
+    window.scrollTo({top:0, behavior: reduce ? "auto" : "smooth"});
+    var h = document.querySelector("header a, header, h1");
+    if (h) { h.setAttribute("tabindex","-1"); h.focus({preventScroll:true}); }
+  });
+
+  check();
+})();
+</script>
+<!-- ==== ZB-TOTOP END ==== -->
+</body>
+</html>
