@@ -242,3 +242,32 @@
   margin-bottom: 0;
 }
 /* ==== ZB-CLOSE-SPACING END ==== */
+
+/* ==== ZB-FORM-FIT START ==== */
+/* The fine print was flex:1 1 16rem sitting beside the Send button, which
+   squeezed it into four short lines. It belongs under the button. */
+.pr-formfoot {
+  display: block;
+}
+.pr-formfoot button {
+  display: inline-block;
+}
+.pr-fine {
+  display: block;
+  flex: none;
+  margin-top: .9rem;
+  max-width: 58ch;
+}
+
+/* The form had no width cap, so the name and email row ran wider than the
+   prose above it. This lines the two up. */
+.pr-form {
+  max-width: 38rem;
+}
+
+/* Stacked fields on narrow screens need vertical space between them. */
+@media (max-width: 560px) {
+  .pr-row { row-gap: 0; }
+  .pr-row .pr-field { margin-bottom: 1.3rem; }
+}
+/* ==== ZB-FORM-FIT END ==== */
