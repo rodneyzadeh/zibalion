@@ -1013,37 +1013,6 @@ footer a:has(svg),
 }
 /* ==== ZB-MOBILE-NAV END ==== */
 
-/* ==== ZB-HERO-FIT START ==== */
-/* Seated cutout on a layout built for a standing one. Sized by width so the
-   aspect is never squashed, then lifted off the bottom so the head rises
-   through the navy stripe. */
-
-/* Decorative: never intercept a click meant for the nav it overlaps. */
-.hero__figure,
-.hero__figure img { pointer-events: none; }
-
-@media (min-width: 1041px) {
-  .hero__figure {
-    top: auto;
-    /* The lift. Raise to push the head higher, lower to sit him back down. */
-    bottom: 16rem;
-    height: auto;
-    display: block;
-    /* Above the nav stripe so the head reads as in front of it */
-    z-index: 5;
-    overflow: visible;
-  }
-
-  .hero__figure img {
-    width: min(32vw, 640px);
-    height: auto;
-    max-width: none;
-    max-height: none;
-    object-fit: fill;
-    display: block;
-  }
-}
-/* ==== ZB-HERO-FIT END ==== */
 
 /* ==== ZB-BACKDROP-LINE START ==== */
 /* The backdrop panel is `center bottom / cover`, which put the wall-to-floor
@@ -1075,3 +1044,35 @@ footer a:has(svg),
   }
 }
 /* ==== ZB-BLURB-WIDTH END ==== */
+
+/* ==== ZB-HERO-FIT START ==== */
+/* Seated cutout on a layout built for a standing one. Sized by width so the
+   aspect is never squashed, then lifted off the bottom so the head rises
+   through the navy stripe. */
+
+/* Decorative: never intercept a click meant for the nav it overlaps. */
+.hero__figure,
+.hero__figure img { pointer-events: none; }
+
+@media (min-width: 1041px) {
+  .hero__figure {
+    top: auto;
+    /* The lift. Raise to push the head higher, lower to sit him back down. */
+    bottom: 9rem;
+    height: auto;
+    display: block;
+    /* Above the nav stripe so the head reads as in front of it */
+    z-index: 5;
+    overflow: visible;
+  }
+
+  .hero__figure img {
+    width: min(32vw, 640px);
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: fill;
+    display: block;
+  }
+}
+/* ==== ZB-HERO-FIT END ==== */
