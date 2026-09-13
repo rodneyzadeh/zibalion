@@ -1095,7 +1095,7 @@ footer a:has(svg),
    room on both sides. The left-edge fade still applies. */
 @media (min-width: 1041px) {
   .hero::after {
-    width: clamp(420px, 72%, 1100px);
+    width: clamp(420px, 54%, 780px);
   }
 }
 /* ==== ZB-BACKDROP-WIDTH END ==== */
