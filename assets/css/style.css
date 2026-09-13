@@ -1014,25 +1014,32 @@ footer a:has(svg),
 /* ==== ZB-MOBILE-NAV END ==== */
 
 /* ==== ZB-HERO-FIT START ==== */
-/* The hero was built around a tall standing cutout. The seated figure is a
-   much wider shape, so height-driven sizing pushed it over the text column
-   and over the nav. These rules bound it and take it out of the click path. */
+/* The hero was built for a tall standing cutout. The seated figure is a
+   wider shape, so height-driven sizing ran it over the text and the nav. */
 
-/* Decorative. It must never intercept a click meant for the nav or a link
-   sitting underneath it. Applies at every width. */
+/* Decorative: never intercept a click meant for the nav underneath it. */
 .hero__figure,
 .hero__figure img { pointer-events: none; }
 
 @media (min-width: 1041px) {
+  /* Stop stretching the box between top and bottom. Let it be as tall as
+     the image needs, sitting on the ground band. */
+  .hero__figure {
+    top: auto;
+    bottom: 0;
+    height: auto;
+    display: block;
+  }
+
+  /* Sized by width. Height follows the image's own aspect, so nothing is
+     squashed and nothing is letterboxed. */
   .hero__figure img {
-    height: 100%;
-    width: auto;
-    /* The cap is what stops a wide figure from crossing into the text.
-       Raise 620px if he sits too small, lower it if he crowds the copy. */
-    max-width: min(38vw, 620px);
-    object-fit: contain;
-    /* Feet stay on the ground band, body centred in its own column */
-    object-position: bottom center;
+    width: min(34vw, 560px);
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: fill;
+    display: block;
   }
 }
 /* ==== ZB-HERO-FIT END ==== */
