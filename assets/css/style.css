@@ -1044,3 +1044,17 @@ footer a:has(svg),
   }
 }
 /* ==== ZB-HERO-FIT END ==== */
+
+/* ==== ZB-BACKDROP-LINE START ==== */
+/* The backdrop panel is `center bottom / cover`, which put the wall-to-floor
+   line lower than the figure sitting in front of it. Scaling the image taller
+   while keeping it pinned to the bottom raises that line up behind him.
+   Only size and position are overridden; the image, the navy fallback and the
+   left-edge fade are all left as they were. */
+@media (min-width: 1041px) {
+  .hero::after {
+    background-size: auto 130%;
+    background-position: center bottom;
+  }
+}
+/* ==== ZB-BACKDROP-LINE END ==== */
