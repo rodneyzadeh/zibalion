@@ -1053,7 +1053,7 @@ footer a:has(svg),
    left-edge fade are all left as they were. */
 @media (min-width: 1041px) {
   .hero::after {
-    background-size: auto 130%;
+    background-size: auto 150%;
     background-position: center bottom;
   }
 }
