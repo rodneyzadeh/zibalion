@@ -1026,7 +1026,7 @@ footer a:has(svg),
   .hero__figure {
     top: auto;
     /* The lift. Raise to push the head higher, lower to sit him back down. */
-    bottom: 7rem;
+    bottom: 16rem;
     height: auto;
     display: block;
     /* Above the nav stripe so the head reads as in front of it */
