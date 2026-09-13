@@ -1088,3 +1088,14 @@ footer a:has(svg),
   }
 }
 /* ==== ZB-HERO-FIT END ==== */
+
+/* ==== ZB-BACKDROP-WIDTH START ==== */
+/* The panel was clamp(420px, 54%, 780px), which put its left edge right at
+   the figure and made him read as floating at the boundary. Wider gives him
+   room on both sides. The left-edge fade still applies. */
+@media (min-width: 1041px) {
+  .hero::after {
+    width: clamp(420px, 72%, 1100px);
+  }
+}
+/* ==== ZB-BACKDROP-WIDTH END ==== */
