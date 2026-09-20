@@ -133,77 +133,88 @@
 </figure>
 
 <div class="pr-hero__title">
-  <h1>My journey</h1>
-    <p>There was no syllabus. One question I could not answer, then whatever sat underneath it, and then underneath that.</p>
-    <p>This room is where that happens. It is my lab, and it is where I go to lose my mind.</p>
+  <h1>How I work</h1>
+  <p>I did not get an education the first time around. That is its own story and it sits on the About page, but the short version is that nobody asked me what I was good at, and I went and made a living instead.</p>
+    <p>Years later I came back to it. Not to finish anything, and not on a syllabus. I started with one question I could not answer and went looking for what sat underneath it, and then underneath that.</p>
+    <p>That turned out to be the whole method. A question I cannot answer exposes a gap. The gap sends me to a book. The book raises a question I cannot answer. History came in because I wanted to know how power actually moves. Philosophy came in because history kept asking what people believed they were doing. Technology came in because that is where the same questions are being decided right now, by people who mostly are not asking them. Nothing was planned. Each one arrived because the last one ran out of answers.</p>
+    <p>The hard part was not the reading. It was learning how to learn as a grown man, which took a lot longer than I expected and which I am still getting better at.</p>
+    <p>This room is what that turned into. Each station has a job, and the jobs run in order. Books feed the cards. The cards find the question. The question becomes an essay. The bench is where ideas about machines get tested against actual machines, because an idea about technology that has never touched a soldering iron is a hunch wearing a lab coat.</p>
+    <p>I am building toward something with all of this. I have ideas I intend to build and I am learning my way there in public, which is why this page exists at all.</p>
 
   <figure class="pr-hero">
-  <img src="/assets/img/process/room-wide.jpg" alt="The room at night: blue walls, packed bookshelves, framed art, two desks with monitors and lit lamps, papers and cases stacked around a patterned rug.">
+  <img src="/assets/img/process/room-wide.jpg" alt="The room at night: blue walls, packed bookshelves, framed art including an Alexander the Man Who Knows poster, two desks with monitors and lit lamps, papers and cases stacked around a patterned rug.">
 </figure>
 
   <section class="pr-station" id="library">
     <div class="pr-station__head"><span class="pr-tab">01</span><h2>The library</h2></div>
 
-    <p>The library is an environment, not a reading list. Several books open at once, left to talk to each other. Cicero next to Weizenbaum produces things neither one produces alone.</p>
+    <p>The library is an environment, not a reading list. I do not work through it front to back. I keep several books open at once and let them talk to each other, which is where most of my questions actually come from. Cicero next to Weizenbaum produces things that neither one produces alone.</p>
+    <p>The magic collection is the one part of the room that is close to complete. Twenty-odd years of it, and it is where I learned that the way a thing is explained to you is a designed object in its own right.</p>
 
+    <p>The photograph shows one wall. The collection runs well past what fits in a frame, and it is still growing.</p>
 
     <figure class="pr-plate pr-bleed">
       <img src="/assets/img/process/library-shelves.jpg?v=22" alt="A corner of the library: two walls of black shelving packed with books, a work desk with a lamp and pegboard of tools on the left, and a patterned rug on the floor.">
       <figcaption>One wall of it.</figcaption>
     </figure>
 
+    <p>I have rules about what gets on the shelf. Penguin Classics, NYRB, Oxford, Everyman. No print on demand, no AI-generated filler, no unattributed reprints. If a book is a repackaging of someone else's thinking, I would rather have the someone else. This is slow and expensive and I think it is worth both.</p>
 
+    <p>Every book is read with a pencil. I annotate as I go and I build an index inside the back cover as I read, so a finished book arrives at the end with its own map. That map is what I work from later, and it is the raw material for the boxes.</p>
 
     <div class="pr-shelf">
-      <p>On the shelves right now: Roman history and the sources under it. Existentialism, through Buber before Sartre. Economics from opposing corners on purpose. Philosophy of technology. The history of computing. And the Culture novels.</p>
+      <p>On the shelves right now: Roman history and the primary sources under it. Existentialism, approached through Buber before Sartre. Economics read from opposing corners on purpose, Sowell against Piketty, Friedman against Mankiw. Philosophy of technology. The history of computing. And the Culture novels, which are the reason half of what I write about abundance exists at all.</p>
     </div>
   </section>
 
   <section class="pr-station" id="cards">
     <div class="pr-station__head"><span class="pr-tab">02</span><h2>The zettelkasten</h2></div>
 
-    <p>Two wooden boxes. Several thousand index cards. Colored tabs. It looks like a filing system from 1958 because it is one.</p>
+    <p>Two wooden boxes. Several thousand index cards. Colored tabs. It looks like a filing system from 1958 because it essentially is one.</p>
 
     <figure class="pr-plate pr-bleed">
       <img src="/assets/img/process/zettelkasten-boxes-wide.jpg?v=22" alt="An open card box full of index cards and a second closed box on the desk, beside a book propped open on a stand under a task lamp, with packed bookshelves behind.">
-      <figcaption>Nothing gets typed until it has been written.</figcaption>
+      <figcaption>The box, the book on the stand, and the lamp. Nothing gets typed until it has been written.</figcaption>
     </figure>
 
-    <p>It is on paper because paper is slow. Writing a card by hand forces me to say the thing in my own words. If I cannot write the card, I did not understand the passage.</p>
+    <p>The reason it is on paper is that paper is slow. A note-taking app lets you capture without understanding, and you end up with a warehouse of highlights you will never open again. Writing a card by hand forces me to say the thing in my own words before it is allowed into the box. If I cannot write the card, I did not understand the passage, and that failure is useful information on its own.</p>
 
-    <p>The shape comes from Scott Scheper's <em>Antinet Zettelkasten</em>. A card is not filed under a subject decided in advance. It goes next to whatever it continues, and the structure branches as the thinking does.</p>
+    <p>The shape of it comes from Scott Scheper's <em>Antinet Zettelkasten</em>, which makes the case for keeping the whole apparatus analog. What I took from it is the argument against categories. A card is not filed under a subject decided in advance. It goes next to whatever it continues, and the structure branches outward as the thinking does. Sorting by topic freezes your conclusions before you have any. Branching lets the box tell you later what it turned out to be about.</p>
 
+    <p>I do not run Scheper's system to the letter and would not claim to. He is far stricter about addressing than I am, and I have bent the rest to the way I read. But the case for paper is his, and it is the reason two wooden boxes sit on the desk instead of an app.</p>
 
-    <p>The output is never a draft. It is a question.</p>
+    <p>The output of the box is never a draft. It is a question. When enough cards start pointing at the same tension, that tension becomes the next essay, and the sources are already attached, because they are written on the cards.</p>
   </section>
 
   <section class="pr-station" id="desk">
     <div class="pr-station__head"><span class="pr-tab">03</span><h2>The desk</h2></div>
 
-    <p>This is my main workstation.</p>
+    <p>This is where the writing and the code happen, and it is built the way it is for one reason. I want the machine to stop asking me questions.</p>
 
     <figure class="pr-plate pr-bleed">
       <img src="/assets/img/process/cockpit-wide.jpg?v=22" alt="A wide desk with an ultrawide monitor, laptop, microphone, backlit keyboard and several macropads, lit by a lamp and colored light.">
       <figcaption>Every input surface on this desk is mapped to something I do more than ten times a day.</figcaption>
     </figure>
 
+    <p>Window management is automated. The moves I make most often are one keypress on a macropad instead of four on a keyboard. The scripts that need to run on a schedule run on a schedule, without me. None of this makes me faster in a way I could put a number on. What it does is remove the small decisions, and small decisions are what eat a working session alive.</p>
 
+    <p>There is a version of this setup that is pure aesthetics, and I am aware the colored light does not help me think. But nothing sits on the desk that has not earned a place there.</p>
 
   </section>
 
   <section class="pr-station" id="bench">
     <div class="pr-station__head"><span class="pr-tab">04</span><h2>The bench</h2></div>
 
-    <p>The newest station and the least finished.</p>
+    <p>The bench is the newest station and the least finished, which is the honest description of it.</p>
 
     <figure class="pr-plate pr-bleed">
       <img src="/assets/img/process/workbench.jpg?v=22" alt="An electronics workbench under a strip light, with a pegboard of pliers and cutters, component drawers, stacked notebooks, and an open technical reference book on a stand.">
-      <figcaption>That is usually where the evening starts.</figcaption>
+      <figcaption>Reference book open on the right. That is usually where the evening starts.</figcaption>
     </figure>
 
-    <p>I write about technology and did not want to do it entirely from the outside. A Raspberry Pi 5 is running. A six-node cluster is next. Alongside it, a rack of Android devices driven from one terminal, which exists because I want to know what breaks when you scale that.</p>
+    <p>I write about technology. I did not want to be someone who writes about technology entirely from the outside, so the hardware ladder is going up in parallel with the reading. A Raspberry Pi 5 is running. A six-node cluster is the next rung. Alongside it there is a rack of Android devices driven from a single terminal, which has no commercial purpose and exists because I want to know what actually breaks when you scale that.</p>
 
-    <p>I am publishing the ladder, not the summit.</p>
+    <p>None of it is finished. I am publishing the ladder rather than the summit deliberately. A page showing only completed projects would be a different kind of dishonesty than the one I am trying to avoid.</p>
   </section>
 
 
@@ -212,20 +223,21 @@
 
     <h3 class="pr-h3">The annotation system</h3>
 
-    <p>Nothing goes on the shelf untouched. Three layers.</p>
+    <p>Nothing goes on the shelf untouched. Every book I own is read with a pencil, and the marking happens in three layers.</p>
 
-    <p>Marginalia. Underline what lands, write the reaction beside it. Not "important," which is useless six months later.</p>
+    <p>The first is marginalia. I underline what lands and write the reaction beside it in my own words. Not "important" or "good point," which are useless six months later, but why it landed and what it collides with. Ugly handwriting is fine. Illegible handwriting is not.</p>
 
-    <p>The index. The inside back cover becomes a map of the book: a page number and three words. By the last page I have an index of what mattered to me.</p>
+    <p>The second is the index. The inside back cover of every book becomes a map of that book: a page number and three words, nothing more. By the last page I have an index of what mattered to me rather than what mattered to the publisher's indexer. It costs almost nothing and it is the part of the practice I would give up last.</p>
 
-    <p>The commonplace book. The few passages that survive get copied out by hand with the date, source, page, and a line on why. Copying by hand is the point.</p>
+    <p>The third is the commonplace book. At the end of a book, or once a week, the few passages that survived get copied out by hand into a notebook with the date, the source, the page, and a line on why. Copying by hand is the whole point. It is slow, and the slowness is what makes the sentence yours. Typing it does not.</p>
 
-    <p>Tabs go on reference books only. Novels never get them.</p>
+    <p>Tabs go only on reference books, the ones I return to for a specific chapter. Novels never get them. That is what the back cover is for. I keep a running list of words I did not know, which is less a vocabulary exercise than a record of where my reading outran me.</p>
 
+    <p>This is what feeds the boxes. A passage has to survive the pencil, then the index, then the notebook, before it is worth a card. Most do not.</p>
 
-    <p>What follows is an index of the library by subject. Two notes. I have not read all of these, and this is not the whole room. It is what I have written down.</p>
+    <p>What follows is an index of the library, grouped by subject. Two honest notes before you open it. I have not read all of these. Some I have worked through closely, some I have read in fragments, and some are waiting. And this is not the whole room either. It is what I have got written down, which is a different thing from what is on the shelves.</p>
 
-    <p>Every title links to its Goodreads page.</p>
+    <p>Every title links to its Goodreads page, where you can see what other readers made of it and find a copy if you want one.</p>
 
     <div class="pr-shelves">
 <details class="pr-shelfgroup">
