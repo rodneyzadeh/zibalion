@@ -9,7 +9,7 @@
 }
 .pr-hero__title{
   max-width:52rem;margin:0 auto;
-  padding:2.4rem 1.5rem 0;
+  padding:2.4rem 1.5rem 2rem;
 }
 .pr-hero__title h1{
   font-family:"Newsreader",Georgia,serif;
@@ -197,7 +197,7 @@
     width:auto;margin-left:0;transform:none;padding:0;
   }
   .pr-wrap{padding:0 1.25rem;}
-  .pr-hero__title{padding:1.8rem 1.25rem 0;}
+  .pr-hero__title{padding:1.8rem 1.25rem 1.5rem;}
 }
 
 /* the button and its fine print were fighting for one row */
