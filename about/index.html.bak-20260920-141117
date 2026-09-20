@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About &mdash; Zibalion</title>
+<meta name="description" content="Structure over appearance. How art, magic, business and code became one method for reading systems. Rodney Zadeh.">
+<link rel="canonical" href="https://zibalion.com/about/">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Zibalion">
+<meta property="og:url" content="https://zibalion.com/about/">
+<meta property="og:title" content="About &mdash; Rodney Zadeh">
+<meta property="og:description" content="Structure over appearance. How art, magic, business and code became one method for reading systems.">
+<meta property="og:image" content="https://zibalion.com/assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=1789329010">
+
+  <style>
+    .about { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
+    .ab-kicker {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+      color: #B8862B; margin: 0 0 .75rem;
+    }
+    .about h1 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 3rem); line-height: 1.05;
+      font-weight: 500; margin: 0 0 2.5rem; color: #1E2A38;
+    }
+    .about h2 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .78rem; letter-spacing: .16em; text-transform: uppercase;
+      color: #1E2A38; opacity: .55;
+      margin: 3.5rem 0 1.25rem; padding-bottom: .6rem;
+      border-bottom: 1px solid rgba(30,42,56,.14);
+    }
+    .about p {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.15rem; line-height: 1.72; color: #1E2A38;
+      margin: 0 0 1.4rem;
+    }
+    .about .lede { font-size: 1.3rem; line-height: 1.62; }
+    .about .ab-q { margin-bottom: 1.9rem; }
+    .about .ab-q strong {
+      font-weight: 600; border-bottom: 2px solid rgba(184,134,43,.4);
+    }
+</style>
+
+<style id="about-page-style">
+  .about-portrait{
+    margin: 0 0 1.5rem;
+    width: 100%;
+    max-width: none;
+  }
+  .about-portrait img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+  }
+
+  .about-name{
+    font-size:clamp(1.45rem,1.15rem + 1vw,1.95rem);
+    line-height:1.06;letter-spacing:-.015em;
+    margin:0 0 1.6rem;
+  }
+</style>
+  <link rel="stylesheet" href="/assets/css/totop.css?v=1789329010">
+<style id="about-type-fix">
+  /* last in the cascade on purpose: these override whatever came before */
+  main .about-portrait,
+  figure.about-portrait{
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 0 1.4rem !important;
+  }
+  main .about-portrait img,
+  figure.about-portrait img{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    border-radius:2px;
+  }
+  h1.about-name{
+    font-size:clamp(1.15rem, 1rem + 0.55vw, 1.45rem) !important;
+    line-height:1.12;
+    letter-spacing:-0.005em;
+    margin:0 0 1.5rem !important;
+  }
+</style>
+</head>
+<body>
+<header class="masthead">
+    
+    <a class="wordmark" href="/" aria-label="Zibalion home">
+      <img src="/assets/img/zibalion-wordmark.png" alt="Zibalion">
+    </a>
+
+    
+    <nav class="band" aria-label="Main">
+      <ul>
+        <li><a href="/writing/">Writing</a></li>
+        <li><a href="/#ledger-heading">Ledger</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/process/">Cockpit</a></li>
+<li><a href="/events/">Events</a></li>
+<li><a href="mailto:rodney@zibalion.com">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about">
+<h1 class="about-name">Rodney Zadeh</h1>
+  <p>In 1864, Dostoevsky imagined what might happen if human behavior could finally be worked out in advance. Human wants tabulated. Human actions calculated. A life reduced to something that could be explained by a table rather than lived as an open question.</p>
+  <p>His objection was not that the calculations might be wrong. It was that they might be right. If everything a person will do can be calculated ahead of time, then even an irrational choice becomes a kind of declaration of independence, a way of proving he is not a piano key being played by forces outside himself. Dostoevsky put it more mischievously. Twice two makes four is an excellent thing, but twice two makes five can be charming too.</p>
+  <p>The underground man does not defeat the table. He refuses to belong to it.</p>
+  <p>More than a century later, Joseph Weizenbaum arrived at a related problem from inside the machine. At MIT he built ELIZA, an early program that could imitate certain kinds of conversation, and he knew exactly how limited it was. The people using it often behaved as though it were not limited at all. They confided in it. His own secretary, who knew he had written the program, asked him to leave the room so she could continue her conversation with it in private. What unsettled him was not that the machine had secretly become intelligent. It was how readily people supplied the intelligence themselves. In 1976 he published a book arguing for a distinction that has only grown more important: what a machine is capable of doing is not the same question as what we should allow it to decide.</p>
+  <p>Neither man was making a prediction. Both were describing something already visible in their own time. One imagined a person refusing the table. The other watched people lean willingly toward it. What interests me is not that they saw the future. It is that the problem was visible this early, this clearly, and the building continued anyway. Faster each decade, and it is continuing still.</p>
+  <p>Taking things apart is my default. Objects, people, systems, claims, motives, arrangements, explanations. I want to know what something depends on, what governs it, what is producing the behavior, and what remains when one of its assumptions is removed.</p>
+  <p>That habit was installed early.</p>
+<!-- ==== ZB-ABOUT-PHOTO START ==== -->
+<figure class="about-portrait">
+  <img src="/assets/img/rodney-about.jpg?v=2" width="1200" height="1202"
+       alt="Rodney Zadeh at his desk, an Alexander the Man Who Knows poster on the wall behind him, books and an open notebook beside a lit lamp.">
+</figure>
+<!-- ==== ZB-ABOUT-PHOTO END ==== -->
+  <p>My grandmother&#x27;s family left Russia under Stalin, when their money had become a liability. A generation later, revolution in Iran moved us again. Different countries, different circumstances, the same experience of ordinary people carrying decisions they had no part in making.</p>
+  <p>I was six years old in 1979. As Iran came apart, my father sent us to Israel. We were there a while before coming to the United States, where he had family.</p>
+  <p>We came to Los Angeles, stayed with relatives here and there, and eventually settled in Reseda. I grew up mostly outdoors and mostly unsupervised. My mother was young, my father was working, and nobody was particularly keeping track of me. I found trouble the way kids do when nobody is watching.</p>
+  <p>Inside school, I was the opposite kind of kid. I sat without speaking. I did not have the language yet, and nobody came to help me find it. The teachers were not cruel. They simply were not going to get up for a kid who required more than the job seemed to ask of them. The other kids were rougher than I expected, a lot of fighting and a lot of bullying. I do not think children here were meaner by nature. Something about the arrangement rewarded it.</p>
+  <p>So I learned outside instead. I was reading rooms years before I could comfortably read a page of English, and that never left me.</p>
+  <p>By the time I was ten I had seen two kinds of systems up close. One that could break and carry everyone inside it along, and one that could appear to be functioning normally while leaving certain people sitting silently at the back of the room. It never sat right with me, and I have been looking at that kind of thing ever since.</p>
+  <p>It also settled something early. Whatever a system says it is doing, the thing actually driving it is usually somewhere else. I have never had the luxury of assuming otherwise.</p>
+  <p>What was available to me in that back row was a pencil. Drawing came before everything else. It was one of the first things I found that seemed to belong entirely to me. Later came painting, sculpture, poetry, songs, a few instruments. But drawing was the beginning.</p>
+  <p>Years later, life drawing taught me something I only understood fully afterward: how difficult it is to see what is actually in front of you rather than the idea you already have of it. The task was not to draw a hand. It was to see this hand. The moment the general replaced the particular, the drawing began to fail. That lesson stayed with me far beyond drawing.</p>
+  <p>Magic came later. I remember the day a close-up magician performed an effect a few feet in front of me, a beautiful coin trick, and I was completely blown away. I had been watching closely. I still had no idea what had happened. I needed to know the method, so I began learning magic.</p>
+  <p>At first I was interested in the machinery. Sleights, timing, misdirection, the small physical decisions that allow an impossible moment to exist. The further I went, the more interesting the other half became. A magician does not have to conceal everything that happened. He has to shape your account of what happened. We notice selectively, we infer continuity, we complete what is incomplete, and given an explanation coherent enough we tend to stop looking for another one.</p>
+  <p>Art had taught me to question what I bring to perception. Magic taught me how easily perception can be shaped from outside. Together they became something like a method. Look carefully. Then ask what your way of looking has already decided for you.</p>
+  <p>None of it turned into a conventional education. Immigrant kids go and make money. That is the assignment, and you take it. The kids whose families had been here a few generations got asked what they loved. There is logic in the other arrangement, and there is also a problem: when you are young you often know what fascinates you long before you know what to do with it, and practicality can drown out the quieter question of what you might actually be good at.</p>
+  <p>So business came first. I came up through the Valley in the eighties and nineties, and by the time I was an adult I was running businesses. In 2008 I started a bookselling business with a close friend and ran it for nearly ten years. For a while we were one of the top booksellers on Amazon.</p>
+  <p>The remarkable part is that we built anything at all. We treated the whole period like one long party, and the business happened somewhere inside it. Books came in, books went out, money changed hands, and the thing kept growing while the two people responsible for it were still figuring out how to be responsible for anything. We were having a tremendous amount of fun. Possibly too much. We had built something real before either of us was ready to hold on to it, and in the great tradition of people who get what they want before they know what to do with it, we more or less burned the place down.</p>
+  <p>What remained was a very expensive education. Building a thing and holding a thing turn out to be different problems, and nothing about succeeding at the first prepares you for the second. A system can work and still not hold, because holding is a property somebody has to build in on purpose. I learned that the expensive way, on something I had made myself.</p>
+  <p>Afterward I went back and built the education I had never really had, by following questions rather than a curriculum. One book led to another, one subject exposed a gap somewhere else, and I kept going backward to learn what sat underneath. That is a longer story, and it lives on its own page.</p>
+  <p>What that reading eventually turned up was that other people had spent entire careers inside questions I had been circling without the vocabulary. Ellul wrote about technique not as machinery but as a way of organizing a society around efficiency. Illich examined the point where a tool stops extending human capacity and starts requiring people to organize themselves around it. Winner asked whether artifacts have politics, whether a technology can carry an arrangement of power in its design rather than only in how someone chooses to use it. Postman wrote about cultures that stop merely using a technology and start letting it set the terms by which everything else is judged. They disagree with each other in places, which is worth knowing before anyone tells you the question is simple.</p>
+  <p>Melvin Kranzberg put the part they share in a single line. Technology is neither good nor bad, nor is it neutral. A thing can be built with no bad intent behind it and still arrive carrying an arrangement that decides something for you.</p>
+  <p>Which brings it to now. Money moves things. Influence moves things. Incentives move things. None of that is new. What is new is the instrument. We are building systems that increasingly sit between people and the decisions they make, and they are not being built outside human nature. They are built by people, inside institutions, under pressure from the same familiar forces. That is why integrity in these systems interests me. Not as decoration. As structure.</p>
+  <p>Orwell gets invoked constantly in these conversations, and the comparison is incomplete in a way that matters. What he imagined depended on centralized power and open coercion. Much of what we are building arrives instead through convenience, personalization, participation, devices people carry willingly and services they genuinely enjoy. Nobody has to force most of us to bring the machine into the room. We buy it ourselves, which makes the problem harder to name and harder to refuse.</p>
+  <p>Programming came relatively late, but the questions did not. It did not introduce me to systems. It gave me a new way to work on ones I had been asking about most of my life. Code occupies a strange territory between thought and force. An idea becomes a rule. A preference becomes a default. An assumption can be embedded in a system and repeated millions of times without ever having to present itself as an assumption again. An assumption in the mind is still only an idea. An assumption inside a system becomes a condition, and other people have to live inside it.</p>
+  <p>That distinction is most of what I write about here. Technology, people, interfaces, incentives, business models, and the assumptions buried inside them. I return to the same questions. What is this actually doing? What must its makers believe about the person using it? What has been made easy, and what has been made difficult? What behavior is being rewarded? And where have the costs been moved so that they disappear from view?</p>
+  <p>I have little interest in performing certainty. Certainty can be the result of serious inquiry. It can also be what appears when inquiry stops too soon. Some questions resolve. Others become more precise. Precision is also progress.</p>
+  <p>None of which means the trajectory is doomed. The same systems capable of distorting behavior can raise human capability at a scale that would have been hard to imagine not long ago. The question is what gets built into them. I think integrity will prove to be more than a moral preference. It will be a design advantage. Build something people can understand. Test what it actually does. Know where it fails and say so. Do not quietly move the cost somewhere the user cannot see it. Make the thing hold.</p>
+  <p>And if this is the period when those decisions are being made, I want a hand in making them. Not commenting from the edge. In it.</p>
+  <p>Which is also why I think the creative part matters more than it usually gets credit for. Building good systems is not only an engineering problem. It takes people who can imagine what is not there yet, who notice what everyone else has stopped noticing, who are willing to ask whether an arrangement everyone accepts was ever necessary in the first place. Criticism can tell you what is wrong. Construction asks the harder question: what else is possible? Sometimes what looks inevitable is merely familiar. Sometimes what looks like a constraint is only a convention nobody has bothered to challenge.</p>
+  <p>So I build as well as write. Software, hardware, experiments, prototypes that work and prototypes that do not. I also have ideas I intend to build, not corrections to what already exists but arrangements I suspect are possible and have not yet seen anyone attempt. Some will turn out to be wrong in ways I cannot see from here. That is the price of finding out, and it seems reasonable. A principle that survives construction has earned the right to be taken more seriously. One that does not has still taught me something.</p>
+  <p>I see code now much the way I once saw a pencil, and later a deck of cards. Another set of tools for the same impulse. To look closely. To understand what is producing the effect. And when possible, to make something that did not exist before.</p>
+  <p>I do not claim expertise yet. I am early, and I am doing the work to get there. But I am no longer confused about why I am doing it. The subjects changed, the tools changed, the question underneath them never really did. What is actually happening here, and what happens if we build it differently?</p>
+  <p>It feels like this has come full circle, and I am grateful for that. What I want to build now are things that benefit people without costing them themselves, and that open ground they never had access to before.</p>
+  <p>This site is where I document the thinking and the products.</p>
+</main>
+
+<footer class="footer">
+    <div class="footer__meta">
+      <p>Los Angeles</p>
+      <p><a href="mailto:rodney@zibalion.com">rodney@zibalion.com</a></p>
+    </div>
+
+    
+    <ul class="social">
+      <li>
+        <a href="https://github.com/rodneyzadeh" aria-label="GitHub" rel="me noopener" target="_blank">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://x.com/rodneyzadeh" aria-label="X" rel="me noopener" target="_blank">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true">
+            <path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.22-6.82-5.96 6.82H1.68l7.73-8.84L1.25 2.25h6.82l4.71 6.23 5.46-6.23Zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64Z"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://instagram.com/rahzputin" aria-label="Instagram" rel="me noopener" target="_blank">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/>
+            <circle cx="12" cy="12" r="4.2"/>
+            <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </footer>
+<!-- ==== ZB-TOTOP START ==== -->
+<button class="zb-totop" id="zbTop" type="button" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5"/><path d="M5 12l7-7 7 7"/>
+  </svg>
+</button>
+<script>
+(function(){
+  var b = document.getElementById("zbTop");
+  if (!b) return;
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var ticking = false;
+
+  function check(){
+    b.classList.toggle("is-on", window.scrollY > window.innerHeight * 1.5);
+    ticking = false;
+  }
+  window.addEventListener("scroll", function(){
+    if (!ticking) { ticking = true; window.requestAnimationFrame(check); }
+  }, {passive:true});
+
+  b.addEventListener("click", function(){
+    window.scrollTo({top:0, behavior: reduce ? "auto" : "smooth"});
+    var h = document.querySelector("header a, header, h1");
+    if (h) { h.setAttribute("tabindex","-1"); h.focus({preventScroll:true}); }
+  });
+
+  check();
+})();
+</script>
+<!-- ==== ZB-TOTOP END ==== -->
+</body>
+</html>
