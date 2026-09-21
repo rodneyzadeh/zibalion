@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  
+  <meta name="author" content="Rodney Zadeh">
+  
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#1E2A38">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon.png">
+  <link rel="icon" sizes="any" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zibalion">
+  
+  
+  
+  <meta property="og:image" content="https://zibalion.com/assets/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Zibalion — Rodney Zadeh">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The library — Zibalion">
+  <meta name="twitter:description" content="Books on the shelves, grouped by subject.">
+  <meta name="twitter:image" content="https://zibalion.com/assets/img/og-cover.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rodney Zadeh",
+    "url": "https://zibalion.com/",
+    "jobTitle": "Operator, Builder, Writer",
+    "description": "Technology, systems, and axioms.",
+    "sameAs": ["https://github.com/rodneyzadeh"]
+  }
+  </script>
+  
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="/assets/css/style.css?v=1789329010">
+
+  
+  <style>
+    .zb-signup { background: #EDEAE3; padding: 3.5rem 1.5rem; }
+    .zb-signup-inner { max-width: 40rem; margin: 0 auto; }
+    .zb-signup-kicker {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+      color: #B8862B; margin: 0 0 .6rem;
+    }
+    .zb-signup h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.6rem; font-weight: 500; line-height: 1.2;
+      color: #1E2A38; margin: 0 0 .8rem;
+      border: 0; padding: 0; text-transform: none; letter-spacing: 0;
+    }
+    .zb-signup-note {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .82rem; line-height: 1.65;
+      color: #1E2A38; opacity: .7; margin: 0 0 1.6rem;
+    }
+    .zb-signup-form { display: flex; gap: .6rem; flex-wrap: wrap; }
+    .zb-signup-form input[type=email] {
+      flex: 1 1 16rem; min-width: 0;
+      font-family: 'IBM Plex Mono', monospace; font-size: .9rem;
+      padding: .85rem 1rem; color: #1E2A38; background: #FAF9F6;
+      border: 1px solid rgba(30,42,56,.25); border-radius: 0;
+    }
+    .zb-signup-form input[type=email]:focus { outline: none; border-color: #B8862B; }
+    .zb-signup-form button {
+      font-family: 'IBM Plex Mono', monospace; font-size: .8rem;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: .85rem 1.6rem; cursor: pointer;
+      color: #FAF9F6; background: #1E2A38;
+      border: 1px solid #1E2A38; border-radius: 0;
+    }
+    .zb-signup-form button:hover { background: #B8862B; border-color: #B8862B; }
+    .zb-visually-hidden {
+      position: absolute; width: 1px; height: 1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+    }
+    @media (max-width: 32rem) { .zb-signup-form button { flex: 1 1 100%; } }
+  </style>
+  <style>
+    .zb-signup h2 { font-size: 1.45rem; max-width: 32rem; }
+  </style>
+
+<title>The library — Zibalion</title>
+<meta name="description" content="Books on the shelves, grouped by subject.">
+<link rel="canonical" href="https://zibalion.com/library/">
+<meta property="og:url" content="https://zibalion.com/process/">
+<meta property="og:title" content="The library — Zibalion">
+<meta property="og:description" content="Books on the shelves, grouped by subject.">
+<meta property="og:image" content="https://zibalion.com/assets/img/process/library-shelves.jpg">
+<link rel="stylesheet" href="/assets/css/conjuring.css">
+  <link rel="stylesheet" href="/assets/css/totop.css?v=1789329010">
+</head>
+
+<body>
+<header class="masthead">
+    
+    <a class="wordmark" href="/" aria-label="Zibalion home">
+      <img src="/assets/img/zibalion-wordmark.png" alt="Zibalion">
+    </a>
+
+    
+    <nav class="band" aria-label="Main">
+      <ul>
+        <li><a href="/writing/">Writing</a></li>
+        <li><a href="/#ledger-heading">Ledger</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/process/">Cockpit</a></li>
+<li><a href="/events/">Events</a></li>
+<li><a href="mailto:rodney@zibalion.com">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<main class="cj-wrap">
+  <h1>The library</h1>
+  <p class="cj-lede">Books on the shelves, grouped by subject.</p>
+  <section class="cj-group">
+    <h2>Technology and Computing</h2>
+    <div class="cj-rule"></div>
+    <h3 class="cj-h3">Python</h3>
+    <ul class="cj-list">
+      <li><a href="/library/python-for-everybody/">Python for Everybody</a> <span class="cj-by">Charles Severance</span></li>
+      <li><a href="/library/python-crash-course/">Python Crash Course</a> <span class="cj-by">Eric Matthes</span></li>
+      <li><a href="/library/automate-the-boring-stuff-with-python-workbook/">Automate the Boring Stuff with Python + Workbook</a> <span class="cj-by">Al Sweigart</span></li>
+      <li><a href="/library/fluent-python/">Fluent Python</a> <span class="cj-by">Luciano Ramalho</span></li>
+      <li><a href="/library/powerful-python/">Powerful Python</a> <span class="cj-by">Aaron Maxwell</span></li>
+      <li><a href="/library/python-cookbook-oreilly/">Python Cookbook (O&#x27;Reilly)</a></li>
+      <li><a href="/library/high-performance-python-oreilly/">High Performance Python (O&#x27;Reilly)</a></li>
+      <li><a href="/library/python-testing-with-pytest/">Python Testing with pytest</a> <span class="cj-by">Brian Okken</span></li>
+      <li><a href="/library/think-like-a-programmer/">Think Like a Programmer</a> <span class="cj-by">V. Anton Spraul</span></li>
+    </ul>
+    <h3 class="cj-h3">Web and Django</h3>
+    <ul class="cj-list">
+      <li><a href="/library/django-for-beginners-5th-ed/">Django for Beginners, 5th ed.</a> <span class="cj-by">William Vincent</span></li>
+      <li><a href="/library/django-for-apis-5th-ed/">Django for APIs, 5th ed.</a> <span class="cj-by">William Vincent</span></li>
+      <li><a href="/library/django-5-by-example/">Django 5 by Example</a> <span class="cj-by">Antonio Melé</span></li>
+      <li><a href="/library/two-scoops-of-django/">Two Scoops of Django</a> <span class="cj-by">Feldroy</span></li>
+      <li><a href="/library/learning-web-design/">Learning Web Design</a> <span class="cj-by">Jennifer Robbins</span></li>
+    </ul>
+    <h3 class="cj-h3">Web scraping</h3>
+    <ul class="cj-list">
+      <li><a href="/library/web-scraping-with-python-oreilly/">Web Scraping with Python (O&#x27;Reilly)</a></li>
+      <li><a href="/library/hands-on-web-scraping-cookbook/">Hands-On Web Scraping Cookbook</a> <span class="cj-by">Chapagain</span></li>
+      <li><a href="/library/python-web-scraping/">Python Web Scraping</a> <span class="cj-by">Chapagain</span></li>
+    </ul>
+    <h3 class="cj-h3">SQL, data, and data engineering</h3>
+    <ul class="cj-list">
+      <li><a href="/library/learning-sql-oreilly/">Learning SQL (O&#x27;Reilly)</a></li>
+      <li><a href="/library/sql-cookbook-oreilly/">SQL Cookbook (O&#x27;Reilly)</a></li>
+      <li><a href="/library/python-for-data-analysis/">Python for Data Analysis</a> <span class="cj-by">Wes McKinney</span></li>
+      <li><a href="/library/storytelling-with-data/">Storytelling with Data</a> <span class="cj-by">Cole Nussbaumer Knaflic</span></li>
+      <li><a href="/library/data-science-for-business/">Data Science for Business</a> <span class="cj-by">Provost &amp; Fawcett</span></li>
+      <li><a href="/library/designing-data-intensive-applications/">Designing Data-Intensive Applications</a> <span class="cj-by">Martin Kleppmann</span></li>
+      <li><a href="/library/fundamentals-of-data-engineering-oreilly/">Fundamentals of Data Engineering (O&#x27;Reilly)</a></li>
+      <li><a href="/library/microsoft-excel-data-analysis-and-business-modeling/">Microsoft Excel Data Analysis and Business Modeling</a> <span class="cj-by">Winston</span></li>
+    </ul>
+    <h3 class="cj-h3">Math and statistics for computing</h3>
+    <ul class="cj-list">
+      <li><a href="/library/naked-statistics/">Naked Statistics</a> <span class="cj-by">Charles Wheelan</span></li>
+      <li><a href="/library/the-manga-guide-to-statistics-takahashi/">The Manga Guide to Statistics (Takahashi)</a></li>
+      <li><a href="/library/the-manga-guide-to-linear-algebra/">The Manga Guide to Linear Algebra</a></li>
+      <li><a href="/library/the-manga-guide-to-calculus/">The Manga Guide to Calculus</a></li>
+      <li><a href="/library/essential-math-for-data-science-oreilly/">Essential Math for Data Science (O&#x27;Reilly)</a></li>
+      <li><a href="/library/mathematics-for-machine-learning-cambridge/">Mathematics for Machine Learning (Cambridge)</a></li>
+      <li><a href="/library/practical-statistics-for-data-scientists-oreilly/">Practical Statistics for Data Scientists (O&#x27;Reilly)</a></li>
+      <li><a href="/library/math-for-programmers/">Math for Programmers</a> <span class="cj-by">Paul Orland</span></li>
+    </ul>
+    <h3 class="cj-h3">Machine learning and AI</h3>
+    <ul class="cj-list">
+      <li><a href="/library/data-science-from-scratch/">Data Science from Scratch</a> <span class="cj-by">Joel Grus</span></li>
+      <li><a href="/library/hands-on-machine-learning-with-scikit-learn-keras-tensorflow/">Hands-On Machine Learning with Scikit-Learn, Keras &amp; TensorFlow</a> <span class="cj-by">Aurélien Géron</span></li>
+      <li><a href="/library/statquest-illustrated-guide-to-neural-networks-and-ai/">StatQuest Illustrated Guide to Neural Networks and AI</a> <span class="cj-by">Josh Starmer</span></li>
+      <li><a href="/library/practical-deep-learning-for-cloud-mobile-and-edge/">Practical Deep Learning for Cloud, Mobile and Edge</a> <span class="cj-by">Howard &amp; Gugger</span></li>
+      <li><a href="/library/natural-language-processing-with-transformers/">Natural Language Processing with Transformers</a> <span class="cj-by">Tunstall et al.</span></li>
+      <li><a href="/library/build-a-large-language-model-from-scratch/">Build a Large Language Model from Scratch</a> <span class="cj-by">Sebastian Raschka</span></li>
+      <li><a href="/library/ai-engineering/">AI Engineering</a> <span class="cj-by">Chip Huyen</span></li>
+      <li><a href="/library/generative-ai-design-patterns/">Generative AI Design Patterns</a> <span class="cj-by">Lakshmanan &amp; Hapke</span></li>
+      <li><a href="/library/building-data-driven-applications-with-llamaindex/">Building Data-Driven Applications with LlamaIndex</a> <span class="cj-by">Gheorghiu</span></li>
+      <li><a href="/library/natural-language-processing-with-python/">Natural Language Processing with Python</a></li>
+      <li><a href="/library/building-machine-learning-powered-applications/">Building Machine Learning Powered Applications</a></li>
+    </ul>
+    <h3 class="cj-h3">Software engineering and architecture</h3>
+    <ul class="cj-list">
+      <li><a href="/library/clean-code/">Clean Code</a> <span class="cj-by">Robert C. Martin</span></li>
+      <li><a href="/library/the-pragmatic-programmer/">The Pragmatic Programmer</a> <span class="cj-by">Thomas &amp; Hunt</span></li>
+      <li><a href="/library/a-philosophy-of-software-design/">A Philosophy of Software Design</a> <span class="cj-by">John Ousterhout</span></li>
+      <li><a href="/library/modern-software-engineering/">Modern Software Engineering</a> <span class="cj-by">David Farley</span></li>
+      <li><a href="/library/architecture-patterns-with-python/">Architecture Patterns with Python</a> <span class="cj-by">Percival &amp; Gregory</span></li>
+      <li><a href="/library/design-patterns/">Design Patterns</a> <span class="cj-by">Gang of Four</span></li>
+      <li><a href="/library/fundamentals-of-software-architecture/">Fundamentals of Software Architecture</a> <span class="cj-by">Richards &amp; Ford</span></li>
+      <li><a href="/library/software-architecture-the-hard-parts/">Software Architecture: The Hard Parts</a> <span class="cj-by">Ford et al.</span></li>
+      <li><a href="/library/building-microservices/">Building Microservices</a> <span class="cj-by">Sam Newman</span></li>
+    </ul>
+    <h3 class="cj-h3">Systems and computer science</h3>
+    <ul class="cj-list">
+      <li><a href="/library/system-design-interview-vols-1-and-2/">System Design Interview, Vols. 1 and 2</a> <span class="cj-by">Alex Xu &amp; Sahn Lam</span></li>
+      <li><a href="/library/generative-ai-system-design-interview/">Generative AI System Design Interview</a> <span class="cj-by">Aminian &amp; Sheng</span></li>
+      <li><a href="/library/computer-science-an-interdisciplinary-approach/">Computer Science: An Interdisciplinary Approach</a> <span class="cj-by">Sedgewick &amp; Wayne</span></li>
+      <li><a href="/library/the-algorithm-design-manual/">The Algorithm Design Manual</a> <span class="cj-by">Steven Skiena</span></li>
+      <li><a href="/library/grokking-algorithms/">Grokking Algorithms</a> <span class="cj-by">Aditya Bhargava</span></li>
+      <li><a href="/library/cracking-the-coding-interview/">Cracking the Coding Interview</a> <span class="cj-by">Gayle Laakmann McDowell</span></li>
+      <li><a href="/library/hackers-delight/">Hacker&#x27;s Delight</a> <span class="cj-by">Henry S. Warren Jr.</span></li>
+      <li><a href="/library/the-art-of-computer-programming/">The Art of Computer Programming</a> <span class="cj-by">Donald Knuth</span></li>
+    </ul>
+    <h3 class="cj-h3">Security</h3>
+    <ul class="cj-list">
+      <li><a href="/library/black-hat-python/">Black Hat Python</a> <span class="cj-by">Justin Seitz</span></li>
+      <li><a href="/library/hacking-the-art-of-exploitation/">Hacking: The Art of Exploitation</a> <span class="cj-by">Jon Erickson</span></li>
+      <li><a href="/library/penetration-testing/">Penetration Testing</a> <span class="cj-by">Georgia Weidman</span></li>
+      <li><a href="/library/the-web-application-hackers-handbook/">The Web Application Hacker&#x27;s Handbook</a></li>
+      <li><a href="/library/the-hacker-playbook-2-and-3/">The Hacker Playbook 2 and 3</a> <span class="cj-by">Peter Kim</span></li>
+    </ul>
+    <h3 class="cj-h3">Dev tools</h3>
+    <ul class="cj-list">
+      <li><a href="/library/pro-git/">Pro Git</a> <span class="cj-by">Chacon &amp; Straub</span></li>
+      <li><a href="/library/the-linux-command-line/">The Linux Command Line</a> <span class="cj-by">William Shotts</span></li>
+      <li><a href="/library/practical-vim/">Practical Vim</a> <span class="cj-by">Drew Neil</span></li>
+      <li><a href="/library/mastering-vim/">Mastering Vim</a></li>
+    </ul>
+    <h3 class="cj-h3">Mobile and frontend</h3>
+    <ul class="cj-list">
+      <li><a href="/library/react-native-in-action/">React Native in Action</a> <span class="cj-by">Nader Dabit</span></li>
+      <li><a href="/library/flutter-for-beginners/">Flutter for Beginners</a> <span class="cj-by">Bailey &amp; Biessek</span></li>
+      <li><a href="/library/flutter-complete-reference-20/">Flutter Complete Reference 2.0</a> <span class="cj-by">Miola</span></li>
+    </ul>
+    <h3 class="cj-h3">How machines work — the history and theory shelf</h3>
+    <ul class="cj-list">
+      <li><a href="/library/code-the-hidden-language-of-computer-hardware-and-software/">Code: The Hidden Language of Computer Hardware and Software</a> <span class="cj-by">Charles Petzold</span></li>
+      <li><a href="/library/the-annotated-turing/">The Annotated Turing</a> <span class="cj-by">Charles Petzold</span></li>
+      <li><a href="/library/turings-vision/">Turing&#x27;s Vision</a> <span class="cj-by">Chris Bernhardt</span></li>
+      <li><a href="/library/the-innovators/">The Innovators</a> <span class="cj-by">Walter Isaacson</span></li>
+      <li><a href="/library/leonardo-da-vinci/">Leonardo da Vinci</a> <span class="cj-by">Walter Isaacson</span></li>
+    </ul>
+    <h3 class="cj-h3">Digital logic and electronics</h3>
+    <ul class="cj-list">
+      <li><a href="/library/boolean-algebra-programmed-instruction-volume/">Boolean algebra, programmed-instruction volume</a> <span class="cj-by">Hoernes &amp; Heilweil</span></li>
+      <li><a href="/library/digital-fundamentals/">Digital Fundamentals</a> <span class="cj-by">Thomas Floyd</span></li>
+      <li><a href="/library/boolean-algebra-and-its-applications/">Boolean Algebra and Its Applications</a> <span class="cj-by">J. Eldon Whitesitt</span></li>
+      <li><a href="/library/digital-computer-electronics-3rd-ed/">Digital Computer Electronics, 3rd ed.</a> <span class="cj-by">Albert Malvino</span></li>
+      <li><a href="/library/make-electronics/">Make: Electronics</a> <span class="cj-by">Charles Platt</span></li>
+      <li><a href="/library/make-more-electronics/">Make: More Electronics</a> <span class="cj-by">Charles Platt</span></li>
+      <li><a href="/library/encyclopedia-of-electronic-components/">Encyclopedia of Electronic Components</a> <span class="cj-by">Charles Platt</span></li>
+      <li><a href="/library/practical-electronics-for-inventors-4th-ed/">Practical Electronics for Inventors, 4th ed.</a> <span class="cj-by">Paul Scherz</span></li>
+      <li><a href="/library/physical-computing/">Physical Computing</a> <span class="cj-by">Tom Igoe</span></li>
+      <li><a href="/library/making-things-talk/">Making Things Talk</a> <span class="cj-by">Tom Igoe</span></li>
+      <li><a href="/library/ingenious-mechanisms-for-designers-and-inventors-four-volume-set/">Ingenious Mechanisms for Designers and Inventors (four-volume set)</a></li>
+    </ul>
+    <h3 class="cj-h3">Hardware, manufacturing, and making</h3>
+    <ul class="cj-list">
+      <li><a href="/library/product-design-and-development-3rd-ed/">Product Design and Development, 3rd ed.</a> <span class="cj-by">Ulrich &amp; Eppinger</span></li>
+      <li><a href="/library/design-for-manufacturability/">Design for Manufacturability</a> <span class="cj-by">David Anderson</span></li>
+      <li><a href="/library/poorly-made-in-china/">Poorly Made in China</a> <span class="cj-by">Paul Midler</span></li>
+      <li><a href="/library/the-goal/">The Goal</a> <span class="cj-by">Eliyahu Goldratt</span></li>
+      <li><a href="/library/the-hardware-hacker/">The Hardware Hacker</a> <span class="cj-by">Bunnie Huang</span></li>
+      <li><a href="/library/the-hardware-startup/">The Hardware Startup</a></li>
+    </ul>
+    <h3 class="cj-h3">Computers, AI, and the human question</h3>
+    <ul class="cj-list">
+      <li><a href="/library/computer-power-and-human-reason/">Computer Power and Human Reason</a> <span class="cj-by">Joseph Weizenbaum</span></li>
+      <li><a href="/library/islands-in-the-cyberstream/">Islands in the Cyberstream</a> <span class="cj-by">Joseph Weizenbaum</span></li>
+      <li><a href="/library/the-technological-condition-an-anthology/">The Technological Condition: An Anthology</a> <span class="cj-by">Scharff &amp; Dusek (eds.)</span></li>
+      <li><a href="/library/the-question-concerning-technology-and-other-essays/">The Question Concerning Technology and Other Essays</a> <span class="cj-by">Martin Heidegger</span></li>
+      <li><a href="/library/technological-slavery/">Technological Slavery</a> <span class="cj-by">Theodore Kaczynski</span></li>
+      <li><a href="/library/genius-makers/">Genius Makers</a> <span class="cj-by">Cade Metz</span></li>
+      <li><a href="/library/amusing-ourselves-to-death/">Amusing Ourselves to Death</a> <span class="cj-by">Neil Postman</span></li>
+      <li><a href="/library/the-age-of-surveillance-capitalism/">The Age of Surveillance Capitalism</a> <span class="cj-by">Shoshana Zuboff</span></li>
+      <li><a href="/library/what-computers-still-cant-do/">What Computers Still Can&#x27;t Do</a> <span class="cj-by">Hubert Dreyfus</span></li>
+      <li><a href="/library/godel-escher-bach/">Gödel, Escher, Bach</a> <span class="cj-by">Douglas Hofstadter</span></li>
+      <li><a href="/library/the-sciences-of-the-artificial/">The Sciences of the Artificial</a> <span class="cj-by">Herbert Simon</span></li>
+    </ul>
+  </section>
+  <section class="cj-group">
+    <h2>Philosophy</h2>
+    <div class="cj-rule"></div>
+    <h3 class="cj-h3">Existentialism and meaning</h3>
+    <ul class="cj-list">
+      <li><a href="/library/i-and-thou-kaufmann-scribner/">I and Thou (Kaufmann, Scribner)</a> <span class="cj-by">Martin Buber</span></li>
+      <li><a href="/library/penguin-existentialism-anthology/">Penguin existentialism anthology</a> <span class="cj-by">Jonathan Webber (ed.)</span></li>
+      <li><a href="/library/existentialism-is-a-humanism-yale-macomber/">Existentialism Is a Humanism (Yale, Macomber)</a> <span class="cj-by">Jean-Paul Sartre</span></li>
+      <li><a href="/library/being-and-time-macquarrie-robinson/">Being and Time (Macquarrie &amp; Robinson)</a> <span class="cj-by">Martin Heidegger</span></li>
+      <li><a href="/library/the-myth-of-sisyphus-vintage-ward/">The Myth of Sisyphus (Vintage, Ward)</a> <span class="cj-by">Albert Camus</span></li>
+      <li><a href="/library/mans-search-for-meaning/">Man&#x27;s Search for Meaning</a> <span class="cj-by">Viktor Frankl</span></li>
+      <li><a href="/library/the-denial-of-death-50th-anniversary-ed/">The Denial of Death (50th Anniversary ed.)</a> <span class="cj-by">Ernest Becker</span></li>
+    </ul>
+    <h3 class="cj-h3">Stoicism and the ancients</h3>
+    <ul class="cj-list">
+      <li><a href="/library/discourses-fragments-handbook-robin-hard-owc/">Discourses, Fragments, Handbook (Robin Hard, OWC)</a> <span class="cj-by">Epictetus</span></li>
+      <li><a href="/library/letters-from-a-stoic-penguin/">Letters from a Stoic (Penguin)</a> <span class="cj-by">Seneca</span></li>
+      <li><a href="/library/meditations/">Meditations</a> <span class="cj-by">Marcus Aurelius</span></li>
+      <li><a href="/library/courage-under-fire/">Courage Under Fire</a> <span class="cj-by">James Stockdale</span></li>
+      <li><a href="/library/cyropaedia-ambler-cornell-up/">Cyropaedia (Ambler, Cornell UP)</a> <span class="cj-by">Xenophon</span></li>
+      <li><a href="/library/elements-green-lion/">Elements (Green Lion)</a> <span class="cj-by">Euclid</span></li>
+    </ul>
+    <h3 class="cj-h3">Strategy and the warrior tradition</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-prince-penguin-bull/">The Prince (Penguin, Bull)</a> <span class="cj-by">Machiavelli</span></li>
+      <li><a href="/library/the-art-of-war-illustrated-trapp/">The Art of War Illustrated (Trapp)</a> <span class="cj-by">Sun Tzu</span></li>
+      <li><a href="/library/the-complete-musashi-bennett/">The Complete Musashi (Bennett)</a> <span class="cj-by">Musashi</span></li>
+      <li><a href="/library/hagakure-bennett/">Hagakure (Bennett)</a></li>
+      <li><a href="/library/on-war-princeton-howard-paret/">On War (Princeton, Howard &amp; Paret)</a> <span class="cj-by">Clausewitz</span></li>
+      <li><a href="/library/the-strategy-of-conflict-harvard-up/">The Strategy of Conflict (Harvard UP)</a> <span class="cj-by">Thomas Schelling</span></li>
+      <li><a href="/library/strategy/">Strategy</a> <span class="cj-by">B. H. Liddell Hart</span></li>
+      <li><a href="/library/boyd/">Boyd</a> <span class="cj-by">Robert Coram</span></li>
+      <li><a href="/library/the-art-of-worldly-wisdom-maurer-doubleday/">The Art of Worldly Wisdom (Maurer, Doubleday)</a> <span class="cj-by">Baltasar Gracián</span></li>
+    </ul>
+    <h3 class="cj-h3">Logic and argument</h3>
+    <ul class="cj-list">
+      <li><a href="/library/logically-fallacious/">Logically Fallacious</a> <span class="cj-by">Bo Bennett</span></li>
+      <li><a href="/library/being-logical/">Being Logical</a> <span class="cj-by">D. Q. McInerny</span></li>
+      <li><a href="/library/an-illustrated-book-of-bad-arguments/">An Illustrated Book of Bad Arguments</a> <span class="cj-by">Ali Almossawi</span></li>
+    </ul>
+    <h3 class="cj-h3">Jewish thought, scripture, and mysticism</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-hebrew-bible/">The Hebrew Bible</a> <span class="cj-by">Robert Alter</span></li>
+      <li><a href="/library/tanakh/">Tanakh</a></li>
+      <li><a href="/library/tales-of-the-hasidim/">Tales of the Hasidim</a> <span class="cj-by">Martin Buber</span></li>
+      <li><a href="/library/tales-of-the-dervishes-arkanapenguin/">Tales of the Dervishes (Arkana/Penguin)</a> <span class="cj-by">Idries Shah</span></li>
+      <li><a href="/library/the-sabbath/">The Sabbath</a> <span class="cj-by">Abraham Joshua Heschel</span></li>
+      <li><a href="/library/god-a-biography/">God: A Biography</a> <span class="cj-by">Jack Miles</span></li>
+      <li><a href="/library/physician-of-the-soul-healer-of-the-cosmos/">Physician of the Soul, Healer of the Cosmos</a> <span class="cj-by">Lawrence Fine</span></li>
+      <li><a href="/library/shaar-hagilgulim-vol-1-digital/">Sha&#x27;ar HaGilgulim, Vol. 1 (digital)</a> <span class="cj-by">Winston (trans.)</span></li>
+      <li><a href="/library/the-jewish-annotated-new-testament-oxford-2nd-ed/">The Jewish Annotated New Testament (Oxford, 2nd ed.)</a></li>
+      <li><a href="/library/a-river-flows-from-eden/">A River Flows from Eden</a> <span class="cj-by">Melila Hellner-Eshed</span></li>
+    </ul>
+    <h3 class="cj-h3">Myth and pattern</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-hero-with-a-thousand-faces/">The Hero with a Thousand Faces</a> <span class="cj-by">Joseph Campbell</span></li>
+    </ul>
+  </section>
+  <section class="cj-group">
+    <h2>History</h2>
+    <div class="cj-rule"></div>
+    <h3 class="cj-h3">World and big history</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-times-complete-history-of-the-world/">The Times Complete History of the World</a> <span class="cj-by">Richard Overy (ed.)</span></li>
+      <li><a href="/library/the-penguin-history-of-the-world/">The Penguin History of the World</a> <span class="cj-by">Roberts &amp; Westad</span></li>
+      <li><a href="/library/sapiens-10th-anniversary-ed/">Sapiens (10th Anniversary ed.)</a> <span class="cj-by">Yuval Noah Harari</span></li>
+      <li><a href="/library/the-lessons-of-history/">The Lessons of History</a> <span class="cj-by">Will &amp; Ariel Durant</span></li>
+      <li><a href="/library/the-dawn-of-everything/">The Dawn of Everything</a> <span class="cj-by">Graeber &amp; Wengrow</span></li>
+    </ul>
+    <h3 class="cj-h3">America</h3>
+    <ul class="cj-list">
+      <li><a href="/library/these-truths/">These Truths</a> <span class="cj-by">Jill Lepore</span></li>
+      <li><a href="/library/land-of-hope/">Land of Hope</a> <span class="cj-by">Wilfred McClay</span></li>
+      <li><a href="/library/the-paypal-wars/">The PayPal Wars</a> <span class="cj-by">Eric Jackson</span></li>
+      <li><a href="/library/bicentennial-illustrated-history-set-decorative-rather-than-scholarly/">Bicentennial illustrated history set (decorative rather than scholarly)</a></li>
+    </ul>
+    <h3 class="cj-h3">Rome and the ancient world</h3>
+    <ul class="cj-list">
+      <li><a href="/library/rubicon/">Rubicon</a> <span class="cj-by">Tom Holland</span></li>
+      <li><a href="/library/lives-vol-1-modern-library-dryden/">Lives, Vol. 1 (Modern Library, Dryden)</a> <span class="cj-by">Plutarch</span></li>
+      <li><a href="/library/selected-works-penguin-grant/">Selected Works (Penguin, Grant)</a> <span class="cj-by">Cicero</span></li>
+      <li><a href="/library/selected-political-speeches-penguin-grant/">Selected Political Speeches (Penguin, Grant)</a> <span class="cj-by">Cicero</span></li>
+      <li><a href="/library/spqr/">SPQR</a> <span class="cj-by">Mary Beard</span></li>
+      <li><a href="/library/jews-vs-rome-two-centuries-of-rebellion-against-the-worlds-mightiest-empire/">Jews vs. Rome: Two Centuries of Rebellion Against the World’s Mightiest Empire</a> <span class="cj-by">Barry Strauss</span></li>
+    </ul>
+    <h3 class="cj-h3">Persia, Iran, and the Jewish world</h3>
+    <ul class="cj-list">
+      <li><a href="/library/shahnameh-dick-davis-penguin/">Shahnameh (Dick Davis, Penguin)</a> <span class="cj-by">Ferdowsi</span></li>
+      <li><a href="/library/a-history-of-iran-empire-of-the-mind/">A History of Iran: Empire of the Mind</a> <span class="cj-by">Michael Axworthy</span></li>
+      <li><a href="/library/two-centuries-of-silence/">Two Centuries of Silence</a> <span class="cj-by">Abdolhossein Zarrinkoub</span></li>
+      <li><a href="/library/esthers-children-a-portrait-of-iranian-jews-hardcover/">Esther&#x27;s Children: A Portrait of Iranian Jews (hardcover)</a> <span class="cj-by">Houman Sarshar (ed.)</span></li>
+      <li><a href="/library/the-jews-of-arab-lands-in-modern-times/">The Jews of Arab Lands in Modern Times</a> <span class="cj-by">Norman Stillman</span></li>
+      <li><a href="/library/the-jews-of-islam/">The Jews of Islam</a> <span class="cj-by">Bernard Lewis</span></li>
+      <li><a href="/library/journey-from-the-land-of-no/">Journey from the Land of No</a> <span class="cj-by">Roya Hakakian</span></li>
+    </ul>
+    <h3 class="cj-h3">Exploration and the unexplained</h3>
+    <ul class="cj-list">
+      <li><a href="/library/endurance/">Endurance</a> <span class="cj-by">Alfred Lansing</span></li>
+      <li><a href="/library/missing-411-six-book-slipcase-set/">Missing 411 (six-book slipcase set)</a> <span class="cj-by">David Paulides</span></li>
+    </ul>
+  </section>
+  <section class="cj-group">
+    <h2>Psychology</h2>
+    <div class="cj-rule"></div>
+    <h3 class="cj-h3">Jung</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-red-book/">The Red Book</a> <span class="cj-by">C. G. Jung</span></li>
+      <li><a href="/library/man-and-his-symbols/">Man and His Symbols</a> <span class="cj-by">C. G. Jung</span></li>
+      <li><a href="/library/modern-man-in-search-of-a-soul/">Modern Man in Search of a Soul</a> <span class="cj-by">C. G. Jung</span></li>
+      <li><a href="/library/synchronicity-princetonbollingen/">Synchronicity (Princeton/Bollingen)</a> <span class="cj-by">C. G. Jung</span></li>
+      <li><a href="/library/the-essential-jung-selected-writings/">The Essential Jung: Selected Writings</a> <span class="cj-by">Anthony Storr (ed.)</span></li>
+      <li><a href="/library/the-freudjung-letters-princetonbollingen/">The Freud/Jung Letters (Princeton/Bollingen)</a></li>
+    </ul>
+    <h3 class="cj-h3">Freud</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-freud-reader/">The Freud Reader</a> <span class="cj-by">Peter Gay (ed.)</span></li>
+    </ul>
+    <h3 class="cj-h3">Depth psychology and the masculine</h3>
+    <ul class="cj-list">
+      <li><a href="/library/king-warrior-magician-lover/">King, Warrior, Magician, Lover</a> <span class="cj-by">Moore &amp; Gillette</span></li>
+      <li><a href="/library/the-anatomy-of-human-destructiveness/">The Anatomy of Human Destructiveness</a> <span class="cj-by">Erich Fromm</span></li>
+    </ul>
+    <h3 class="cj-h3">Clinical and mood</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-body-keeps-the-score/">The Body Keeps the Score</a> <span class="cj-by">Bessel van der Kolk</span></li>
+      <li><a href="/library/feeling-good/">Feeling Good</a> <span class="cj-by">David Burns</span></li>
+    </ul>
+    <h3 class="cj-h3">Influence and decision under uncertainty</h3>
+    <ul class="cj-list">
+      <li><a href="/library/influence/">Influence</a> <span class="cj-by">Robert Cialdini</span></li>
+      <li><a href="/library/thinking-in-bets/">Thinking in Bets</a> <span class="cj-by">Annie Duke</span></li>
+    </ul>
+  </section>
+  <section class="cj-group">
+    <h2>Business and Economics</h2>
+    <div class="cj-rule"></div>
+    <h3 class="cj-h3">Economics, read from opposing corners</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-worldly-philosophers-7th-ed/">The Worldly Philosophers, 7th ed.</a> <span class="cj-by">Robert Heilbroner</span></li>
+      <li><a href="/library/the-wealth-of-nations-glasgowliberty-fund/">The Wealth of Nations (Glasgow/Liberty Fund)</a> <span class="cj-by">Adam Smith</span></li>
+      <li><a href="/library/basic-economics-5th-ed/">Basic Economics, 5th ed.</a> <span class="cj-by">Thomas Sowell</span></li>
+      <li><a href="/library/a-conflict-of-visions/">A Conflict of Visions</a> <span class="cj-by">Thomas Sowell</span></li>
+      <li><a href="/library/black-rednecks-and-white-liberals/">Black Rednecks and White Liberals</a> <span class="cj-by">Thomas Sowell</span></li>
+      <li><a href="/library/discrimination-and-disparities-revised-ed/">Discrimination and Disparities (revised ed.)</a> <span class="cj-by">Thomas Sowell</span></li>
+      <li><a href="/library/capital-in-the-twenty-first-century/">Capital in the Twenty-First Century</a> <span class="cj-by">Thomas Piketty</span></li>
+      <li><a href="/library/capitalism-and-freedom/">Capitalism and Freedom</a> <span class="cj-by">Milton Friedman</span></li>
+      <li><a href="/library/capitalism-socialism-and-democracy-3rd-ed/">Capitalism, Socialism and Democracy, 3rd ed.</a> <span class="cj-by">Joseph Schumpeter</span></li>
+      <li><a href="/library/principles-of-economics-3rd-ed/">Principles of Economics, 3rd ed.</a> <span class="cj-by">N. Gregory Mankiw</span></li>
+    </ul>
+    <h3 class="cj-h3">Strategy and positioning</h3>
+    <ul class="cj-list">
+      <li><a href="/library/competitive-strategy/">Competitive Strategy</a> <span class="cj-by">Michael Porter</span></li>
+      <li><a href="/library/good-strategy-bad-strategy/">Good Strategy Bad Strategy</a> <span class="cj-by">Richard Rumelt</span></li>
+      <li><a href="/library/positioning/">Positioning</a> <span class="cj-by">Ries &amp; Trout</span></li>
+      <li><a href="/library/obviously-awesome/">Obviously Awesome</a> <span class="cj-by">April Dunford</span></li>
+      <li><a href="/library/purple-cow/">Purple Cow</a> <span class="cj-by">Seth Godin</span></li>
+      <li><a href="/library/play-bigger/">Play Bigger</a></li>
+      <li><a href="/library/crossing-the-chasm-3rd-ed/">Crossing the Chasm, 3rd ed.</a> <span class="cj-by">Geoffrey Moore</span></li>
+    </ul>
+    <h3 class="cj-h3">Startups, product, and SaaS</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-mom-test/">The Mom Test</a> <span class="cj-by">Rob Fitzpatrick</span></li>
+      <li><a href="/library/running-lean-3rd-ed/">Running Lean, 3rd ed.</a> <span class="cj-by">Ash Maurya</span></li>
+      <li><a href="/library/the-startup-owners-manual/">The Startup Owner&#x27;s Manual</a> <span class="cj-by">Blank &amp; Dorf</span></li>
+      <li><a href="/library/the-saas-playbook/">The SaaS Playbook</a> <span class="cj-by">Rob Walling</span></li>
+      <li><a href="/library/never-enough/">Never Enough</a> <span class="cj-by">Andrew Wilkinson</span></li>
+      <li><a href="/library/rework/">Rework</a> <span class="cj-by">Fried &amp; Hansson</span></li>
+      <li><a href="/library/lean-analytics/">Lean Analytics</a> <span class="cj-by">Croll &amp; Yoskovitz</span></li>
+      <li><a href="/library/traction/">Traction</a> <span class="cj-by">Weinberg &amp; Mares</span></li>
+      <li><a href="/library/lean-b2b/">Lean B2B</a></li>
+      <li><a href="/library/subscribed/">Subscribed</a> <span class="cj-by">Tien Tzuo</span></li>
+      <li><a href="/library/the-automatic-customer/">The Automatic Customer</a> <span class="cj-by">John Warrillow</span></li>
+      <li><a href="/library/the-cfo-guide-to-saas/">The CFO Guide to SaaS</a></li>
+      <li><a href="/library/demand-side-sales/">Demand-Side Sales</a> <span class="cj-by">Bob Moesta</span></li>
+      <li><a href="/library/monetizing-innovation/">Monetizing Innovation</a> <span class="cj-by">Ramanujam &amp; Tacke</span></li>
+      <li><a href="/library/hooked/">Hooked</a> <span class="cj-by">Nir Eyal</span></li>
+      <li><a href="/library/hacking-growth/">Hacking Growth</a> <span class="cj-by">Ellis &amp; Brown</span></li>
+    </ul>
+    <h3 class="cj-h3">Marketing and SEO</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-art-of-seo-oreilly/">The Art of SEO (O&#x27;Reilly)</a></li>
+      <li><a href="/library/seo-for-growth/">SEO for Growth</a></li>
+      <li><a href="/library/product-led-seo/">Product-Led SEO</a> <span class="cj-by">Eli Schwartz</span></li>
+      <li><a href="/library/data-driven-seo-with-python/">Data-Driven SEO with Python</a> <span class="cj-by">Chapagain</span></li>
+      <li><a href="/library/digital-marketing-strategy/">Digital Marketing Strategy</a></li>
+    </ul>
+    <h3 class="cj-h3">Finance and investing</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-intelligent-investor/">The Intelligent Investor</a> <span class="cj-by">Benjamin Graham</span></li>
+      <li><a href="/library/financial-intelligence-for-entrepreneurs/">Financial Intelligence for Entrepreneurs</a> <span class="cj-by">Berman &amp; Knight</span></li>
+      <li><a href="/library/the-paytech-book/">The Paytech Book</a></li>
+      <li><a href="/library/practical-business-math/">Practical Business Math</a> <span class="cj-by">Slater</span></li>
+      <li><a href="/library/same-as-ever/">Same as Ever</a> <span class="cj-by">Morgan Housel</span></li>
+    </ul>
+    <h3 class="cj-h3">Mental models and decision-making</h3>
+    <ul class="cj-list">
+      <li><a href="/library/poor-charlies-almanack-kaufman-ed/">Poor Charlie&#x27;s Almanack (Kaufman ed.)</a> <span class="cj-by">Charles Munger</span></li>
+      <li><a href="/library/the-great-mental-models-vol-1/">The Great Mental Models, Vol. 1</a> <span class="cj-by">Shane Parrish</span></li>
+      <li><a href="/library/super-thinking/">Super Thinking</a> <span class="cj-by">Weinberg &amp; McCann</span></li>
+      <li><a href="/library/the-personal-mba/">The Personal MBA</a> <span class="cj-by">Josh Kaufman</span></li>
+    </ul>
+  </section>
+  <section class="cj-group">
+    <h2>Literature</h2>
+    <div class="cj-rule"></div>
+    <h3 class="cj-h3">The Russians</h3>
+    <ul class="cj-list">
+      <li><a href="/library/notes-from-underground-pv-vintage/">Notes from Underground (P&amp;V, Vintage)</a> <span class="cj-by">Dostoevsky</span></li>
+      <li><a href="/library/crime-and-punishment-pv-vintage/">Crime and Punishment (P&amp;V, Vintage)</a> <span class="cj-by">Dostoevsky</span></li>
+      <li><a href="/library/the-idiot-pv-vintage/">The Idiot (P&amp;V, Vintage)</a> <span class="cj-by">Dostoevsky</span></li>
+      <li><a href="/library/demons-pv-vintage/">Demons (P&amp;V, Vintage)</a> <span class="cj-by">Dostoevsky</span></li>
+      <li><a href="/library/the-brothers-karamazov-pv-vintage/">The Brothers Karamazov (P&amp;V, Vintage)</a> <span class="cj-by">Dostoevsky</span></li>
+      <li><a href="/library/short-fiction-norton-critical-katz-2nd-ed/">Short Fiction (Norton Critical, Katz, 2nd ed.)</a> <span class="cj-by">Tolstoy</span></li>
+      <li><a href="/library/hadji-murad-modern-library-maude-nafisi-intro/">Hadji Murad (Modern Library, Maude, Nafisi intro)</a> <span class="cj-by">Tolstoy</span></li>
+      <li><a href="/library/cancer-ward-fsg-classics/">Cancer Ward (FSG Classics)</a> <span class="cj-by">Solzhenitsyn</span></li>
+      <li><a href="/library/dead-souls-nyrb-rayfield/">Dead Souls (NYRB, Rayfield)</a> <span class="cj-by">Gogol</span></li>
+    </ul>
+    <h3 class="cj-h3">French</h3>
+    <ul class="cj-list">
+      <li><a href="/library/les-miserables-penguin-classics-deluxe-denny/">Les Misérables (Penguin Classics Deluxe, Denny)</a> <span class="cj-by">Victor Hugo</span></li>
+      <li><a href="/library/the-stranger-vintage-international-ward/">The Stranger (Vintage International, Ward)</a> <span class="cj-by">Albert Camus</span></li>
+      <li><a href="/library/the-plague-vintage-international/">The Plague (Vintage International)</a> <span class="cj-by">Albert Camus</span></li>
+      <li><a href="/library/candide-penguin-classics-theo-cuffe-and-the-norton-critical-edition/">Candide (Penguin Classics, Theo Cuffe) and the Norton Critical edition</a> <span class="cj-by">Voltaire</span></li>
+    </ul>
+    <h3 class="cj-h3">German and Central European</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-magic-mountain-oxford-worlds-classics-simon-pare/">The Magic Mountain (Oxford World&#x27;s Classics, Simon Pare)</a> <span class="cj-by">Thomas Mann</span></li>
+      <li><a href="/library/demian/">Demian</a> <span class="cj-by">Hermann Hesse</span></li>
+      <li><a href="/library/the-world-of-yesterday-anthea-bell/">The World of Yesterday (Anthea Bell)</a> <span class="cj-by">Stefan Zweig</span></li>
+      <li><a href="/library/the-metamorphosis-norton-bernofsky/">The Metamorphosis (Norton, Bernofsky)</a> <span class="cj-by">Franz Kafka</span></li>
+      <li><a href="/library/satantango-new-directions-szirtes/">Satantango (New Directions, Szirtes)</a> <span class="cj-by">László Krasznahorkai</span></li>
+    </ul>
+    <h3 class="cj-h3">English and American</h3>
+    <ul class="cj-list">
+      <li><a href="/library/lolita-vintage/">Lolita (Vintage)</a> <span class="cj-by">Vladimir Nabokov</span></li>
+      <li><a href="/library/for-whom-the-bell-tolls-scribner/">For Whom the Bell Tolls (Scribner)</a> <span class="cj-by">Ernest Hemingway</span></li>
+      <li><a href="/library/the-old-man-and-the-sea/">The Old Man and the Sea</a> <span class="cj-by">Ernest Hemingway</span></li>
+      <li><a href="/library/the-complete-short-stories-finca-vigia-ed/">The Complete Short Stories (Finca Vigía ed.)</a> <span class="cj-by">Ernest Hemingway</span></li>
+      <li><a href="/library/the-road-vintage-international/">The Road (Vintage International)</a> <span class="cj-by">Cormac McCarthy</span></li>
+      <li><a href="/library/sabbaths-theater-vintage-international/">Sabbath&#x27;s Theater (Vintage International)</a> <span class="cj-by">Philip Roth</span></li>
+      <li><a href="/library/a-little-life-anchor/">A Little Life (Anchor)</a> <span class="cj-by">Hanya Yanagihara</span></li>
+      <li><a href="/library/the-goldfinch/">The Goldfinch</a> <span class="cj-by">Donna Tartt</span></li>
+      <li><a href="/library/house-of-leaves/">House of Leaves</a> <span class="cj-by">Mark Z. Danielewski</span></li>
+      <li><a href="/library/middlemarch-penguin-classics-deluxe/">Middlemarch (Penguin Classics Deluxe)</a> <span class="cj-by">George Eliot</span></li>
+      <li><a href="/library/wuthering-heights-penguin-classics/">Wuthering Heights (Penguin Classics)</a> <span class="cj-by">Emily Brontë</span></li>
+      <li><a href="/library/the-picture-of-dorian-gray-harvard-belknap-frankel/">The Picture of Dorian Gray (Harvard Belknap, Frankel)</a> <span class="cj-by">Oscar Wilde</span></li>
+      <li><a href="/library/the-return-of-the-native/">The Return of the Native</a> <span class="cj-by">Thomas Hardy</span></li>
+    </ul>
+    <h3 class="cj-h3">Epic, classical, and drama</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-divine-comedy-hollander-three-volumes/">The Divine Comedy (Hollander, three volumes)</a> <span class="cj-by">Dante</span></li>
+      <li><a href="/library/paradise-lost-penguin-classics-john-leonard/">Paradise Lost (Penguin Classics, John Leonard)</a> <span class="cj-by">Milton</span></li>
+      <li><a href="/library/the-iliad-and-the-odyssey-fagles/">The Iliad and The Odyssey (Fagles)</a> <span class="cj-by">Homer</span></li>
+      <li><a href="/library/the-aeneid-fagles-penguin-classics-deluxe/">The Aeneid (Fagles, Penguin Classics Deluxe)</a> <span class="cj-by">Virgil</span></li>
+      <li><a href="/library/the-riverside-shakespeare-2nd-ed/">The Riverside Shakespeare, 2nd ed.</a></li>
+      <li><a href="/library/metamorphoses/">Metamorphoses</a> <span class="cj-by">Ovid</span></li>
+      <li><a href="/library/rhetoric-penguin-classics-lawson-tancred/">Rhetoric (Penguin Classics, Lawson-Tancred)</a> <span class="cj-by">Aristotle</span></li>
+    </ul>
+    <h3 class="cj-h3">Latin American</h3>
+    <ul class="cj-list">
+      <li><a href="/library/collected-fictions-hurley-penguin-deluxe/">Collected Fictions (Hurley, Penguin Deluxe)</a> <span class="cj-by">Jorge Luis Borges</span></li>
+      <li><a href="/library/selected-non-fictions-weinberger-penguin-deluxe/">Selected Non-Fictions (Weinberger, Penguin Deluxe)</a> <span class="cj-by">Jorge Luis Borges</span></li>
+    </ul>
+    <h3 class="cj-h3">Crime, mystery, and the propulsive shelf</h3>
+    <ul class="cj-list">
+      <li><a href="/library/in-the-woods-penguin/">In the Woods (Penguin)</a> <span class="cj-by">Tana French</span></li>
+      <li><a href="/library/stones-fall/">Stone&#x27;s Fall</a> <span class="cj-by">Iain Pears</span></li>
+      <li><a href="/library/wrong-place-wrong-time/">Wrong Place Wrong Time</a> <span class="cj-by">Gillian McAllister</span></li>
+      <li><a href="/library/carter-beats-the-devil/">Carter Beats the Devil</a> <span class="cj-by">Glen David Gold</span></li>
+    </ul>
+    <h3 class="cj-h3">Science fiction</h3>
+    <ul class="cj-list">
+      <li><a href="/library/the-culture-novels/">the Culture novels</a> <span class="cj-by">Iain M. Banks</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__meta">
+      <p>Los Angeles</p>
+      <p><a href="mailto:rodney@zibalion.com">rodney@zibalion.com</a></p>
+    </div>
+
+    
+    <ul class="social">
+      <li>
+        <a href="https://github.com/rodneyzadeh" aria-label="GitHub" rel="me noopener" target="_blank">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://x.com/rodneyzadeh" aria-label="X" rel="me noopener" target="_blank">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true">
+            <path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.22-6.82-5.96 6.82H1.68l7.73-8.84L1.25 2.25h6.82l4.71 6.23 5.46-6.23Zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64Z"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://instagram.com/rahzputin" aria-label="Instagram" rel="me noopener" target="_blank">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/>
+            <circle cx="12" cy="12" r="4.2"/>
+            <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </footer>
+<!-- ==== ZB-TOTOP START ==== -->
+<button class="zb-totop" id="zbTop" type="button" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5"/><path d="M5 12l7-7 7 7"/>
+  </svg>
+</button>
+<script>
+(function(){
+  var b = document.getElementById("zbTop");
+  if (!b) return;
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var ticking = false;
+
+  function check(){
+    b.classList.toggle("is-on", window.scrollY > window.innerHeight * 1.5);
+    ticking = false;
+  }
+  window.addEventListener("scroll", function(){
+    if (!ticking) { ticking = true; window.requestAnimationFrame(check); }
+  }, {passive:true});
+
+  b.addEventListener("click", function(){
+    window.scrollTo({top:0, behavior: reduce ? "auto" : "smooth"});
+    var h = document.querySelector("header a, header, h1");
+    if (h) { h.setAttribute("tabindex","-1"); h.focus({preventScroll:true}); }
+  });
+
+  check();
+})();
+</script>
+<!-- ==== ZB-TOTOP END ==== -->
+</body>
+</html>

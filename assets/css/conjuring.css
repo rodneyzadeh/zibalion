@@ -129,3 +129,20 @@
 }
 .cj-credit a{color:#8A93A0;border-bottom:1px solid rgba(184,134,43,.35);text-decoration:none;}
 .cj-credit a:hover{color:#4A5666;}
+
+.cj-sub{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:.95rem;color:#8A93A0;margin:-1.75rem 0 2.5rem;
+}
+.cj-h3{
+  font-family:"Newsreader",Georgia,serif;
+  font-weight:600;font-size:1.05rem;color:#4A5666;
+  margin:1.75rem 0 .5rem;
+}
+.cj-h3:first-of-type{margin-top:0;}
+.cj-out{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:.95rem;margin:2rem 0 0;
+}
+.cj-out a{color:#4A5666;border-bottom:1px solid rgba(184,134,43,.4);text-decoration:none;}
+.cj-out a:hover{color:#1E2A38;border-bottom-color:#B8862B;}
