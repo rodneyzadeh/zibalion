@@ -179,7 +179,7 @@ def build_book(b, head, tail):
         out.append("  </div>\n")
 
     fields = [("publisher", "Publisher"), ("imprint", "Imprint"),
-              ("year", "Year"), ("edition", "Edition"),
+              ("year", "First published"), ("edition", "Edition"),
               ("pages", "Pages"), ("format", "Format"),
               ("illustrator", "Illustrations"), ("editor", "Editor"),
               ("isbn", "ISBN")]
