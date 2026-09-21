@@ -297,3 +297,6 @@
   .pr-row .pr-field { margin-bottom: 1.15rem; }
 }
 /* ==== ZB-FORM-FIT END ==== */
+
+/* ZB-SHELVES-SPACING: the annotation paragraphs were running together */
+#shelves > p{margin:0 0 1.25rem;}

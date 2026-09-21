@@ -231,7 +231,7 @@ def main():
     print(f"  {pubs} have publisher details")
     print(f"  {notes} have your own notes")
     if imgs < len(rows):
-        print(f"\nDrop photos in assets/img/conjuring/ named <slug>.jpg to add covers.")
+        print(f"\nDrop photos in assets/img/library/ named <slug>.jpg to add covers.")
         missing = [r["slug"] for r in rows if not r["img"]][:5]
         print("  e.g. " + ", ".join(s + ".jpg" for s in missing))
 
