@@ -304,3 +304,11 @@
 /* ZB-STATION-SPACING: paragraphs in every station get the same gap */
 .pr-station > p{margin:0 0 1.25rem;}
 .pr-station > p:last-child{margin-bottom:0;}
+
+/* ZB-HERO-GAP: the room photo is nested inside the title block,
+   so the gap has to live on the photo, not on the block */
+.pr-hero__title .pr-hero{margin-top:2.5rem;}
+.pr-hero__title p + p{margin-top:1rem;}
+@media (max-width:760px){
+  .pr-hero__title .pr-hero{margin-top:1.75rem;}
+}
