@@ -1,0 +1,131 @@
+/* conjuring.css — the conjuring arts library. Site tokens only: bone, navy, sand, brass. */
+
+.cj-wrap{max-width:44rem;margin:0 auto;padding:4rem 1.5rem 2rem;}
+
+.cj-wrap h1{
+  font-family:"Newsreader",Georgia,serif;
+  font-weight:600;
+  font-size:clamp(2.4rem,1.6rem + 3.4vw,4.2rem);
+  line-height:1.02;letter-spacing:-.015em;
+  color:#1E2A38;
+  margin:0 0 1rem;
+}
+.cj-lede{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:1.15rem;line-height:1.7;
+  color:#4A5666;max-width:44ch;margin:0 0 3.5rem;
+}
+
+/* ---------- index ---------- */
+
+.cj-group{margin:0 0 3rem;}
+.cj-group h2{
+  font-family:"Newsreader",Georgia,serif;
+  font-weight:600;font-size:1.35rem;
+  color:#1E2A38;margin:0 0 .25rem;
+}
+.cj-group h2 + .cj-rule{
+  height:1px;background:#B8862B;opacity:.45;
+  margin:0 0 1.25rem;
+}
+
+.cj-list{list-style:none;margin:0;padding:0;}
+.cj-list li{
+  padding:.55rem 0;
+  border-bottom:1px solid rgba(30,42,56,.08);
+}
+.cj-list li:last-child{border-bottom:none;}
+
+.cj-list a{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:1.08rem;color:#1E2A38;
+  text-decoration:none;
+  border-bottom:1px solid rgba(184,134,43,.4);
+}
+.cj-list a:hover{border-bottom-color:#B8862B;}
+.cj-list a:focus-visible{outline:2px solid #B8862B;outline-offset:3px;}
+
+.cj-by{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:.98rem;color:#4A5666;
+}
+.cj-vol{font-size:.9rem;color:#8A93A0;}
+
+/* ---------- book page ---------- */
+
+.cj-book h1{margin-bottom:.4rem;}
+.cj-author{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:1.2rem;color:#4A5666;
+  margin:0 0 2.5rem;
+}
+.cj-author .cj-vol{display:block;margin-top:.3rem;}
+
+.cj-body p{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:1.15rem;line-height:1.75;
+  color:#1E2A38;max-width:44ch;
+  margin:0 0 1.4rem;
+}
+
+.cj-pub{
+  margin:2.5rem 0 0;
+  padding:1.5rem 0 0;
+  border-top:1px solid rgba(184,134,43,.45);
+}
+.cj-pub dl{
+  display:grid;grid-template-columns:8rem 1fr;
+  gap:.5rem 1.5rem;margin:0;
+}
+.cj-pub dt{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:.95rem;color:#8A93A0;
+}
+.cj-pub dd{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:.95rem;color:#1E2A38;margin:0;
+}
+
+.cj-note{
+  margin:3rem 0 0;padding:1.75rem 0 0;
+  border-top:1px solid rgba(184,134,43,.45);
+}
+.cj-note h2{
+  font-family:"Newsreader",Georgia,serif;
+  font-weight:600;font-size:1.2rem;
+  color:#1E2A38;margin:0 0 1rem;
+}
+
+.cj-back{
+  display:inline-block;margin:3.5rem 0 0;
+  font-family:"Newsreader",Georgia,serif;
+  font-size:1rem;color:#4A5666;
+  text-decoration:none;
+  border-bottom:1px solid rgba(184,134,43,.4);
+}
+.cj-back:hover{color:#1E2A38;border-bottom-color:#B8862B;}
+.cj-back:focus-visible{outline:2px solid #B8862B;outline-offset:3px;}
+
+@media (max-width:760px){
+  .cj-wrap{padding:2.5rem 1.25rem 2rem;}
+  .cj-pub dl{grid-template-columns:1fr;gap:.15rem;}
+  .cj-pub dd{margin-bottom:.75rem;}
+}
+
+/* ---------- cover photograph ---------- */
+
+.cj-cover{
+  margin:0 0 2.5rem;
+}
+.cj-cover img{
+  display:block;width:100%;height:auto;
+  max-width:26rem;
+  border:1px solid rgba(30,42,56,.12);
+}
+.cj-credit{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:.85rem;color:#8A93A0;
+  margin-top:.5rem;
+}
+.cj-credit a{color:#8A93A0;border-bottom:1px solid rgba(184,134,43,.35);text-decoration:none;}
+.cj-credit a:hover{color:#4A5666;}
