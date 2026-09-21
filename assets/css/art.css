@@ -1,0 +1,82 @@
+/* art.css — the art page. Site tokens only: bone, navy, sand, brass. */
+
+.art-wrap{max-width:72rem;margin:0 auto;padding:4rem 1.5rem 3rem;}
+.art-wrap h1{
+  font-family:"Newsreader",Georgia,serif;font-weight:600;
+  font-size:clamp(2.4rem,1.6rem + 3.4vw,4.2rem);
+  line-height:1.02;letter-spacing:-.015em;color:#1E2A38;margin:0 0 .75rem;
+}
+.art-lede{
+  font-family:"Newsreader",Georgia,serif;font-size:1.2rem;line-height:1.6;
+  color:#4A5666;margin:0 0 4rem;
+}
+
+/* ---------- index ---------- */
+
+.art-group{margin:0 0 4.5rem;}
+.art-group h2{
+  font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.45rem;
+  color:#1E2A38;margin:0 0 1.5rem;padding-bottom:.6rem;
+  border-bottom:1px solid rgba(184,134,43,.45);
+}
+.art-grid{columns:3 17rem;column-gap:1.75rem;}
+.art-card{
+  display:block;break-inside:avoid;margin:0 0 1.75rem;
+  text-decoration:none;color:inherit;
+}
+.art-card img{display:block;width:100%;height:auto;background:#EDEAE3;}
+.art-t{
+  display:block;margin-top:.65rem;
+  font-family:"Newsreader",Georgia,serif;font-size:1.05rem;line-height:1.35;color:#1E2A38;
+}
+.art-b{
+  display:block;margin-top:.15rem;
+  font-family:"Newsreader",Georgia,serif;font-size:.92rem;color:#8A93A0;
+}
+.art-card:hover .art-t{text-decoration:underline;text-decoration-color:#B8862B;text-underline-offset:3px;}
+.art-card:focus-visible{outline:2px solid #B8862B;outline-offset:4px;}
+
+/* works with no image: a quiet text plate the same width as the images */
+.art-text{
+  padding:2.25rem 1.5rem;border:1px solid rgba(30,42,56,.14);
+  background:rgba(30,42,56,.025);
+}
+.art-text .art-t{margin-top:0;font-size:1.15rem;}
+
+/* ---------- a single work ---------- */
+
+.art-work{max-width:56rem;}
+.art-plate{margin:0 0 2.5rem;}
+.art-plate img{
+  display:block;max-width:100%;max-height:82vh;width:auto;height:auto;margin:0 auto;
+}
+.art-work h1{font-size:clamp(2rem,1.4rem + 2.6vw,3.4rem);margin-bottom:.5rem;}
+.art-by{
+  font-family:"Newsreader",Georgia,serif;font-size:1.2rem;color:#4A5666;margin:0 0 .3rem;
+}
+.art-where{
+  font-family:"Newsreader",Georgia,serif;font-size:.98rem;color:#8A93A0;margin:0 0 2.25rem;
+}
+.art-body p,.art-note p{
+  font-family:"Newsreader",Georgia,serif;font-size:1.15rem;line-height:1.75;
+  color:#1E2A38;max-width:44ch;margin:0 0 1.3rem;
+}
+.art-note{margin:2.75rem 0 0;padding-top:1.75rem;border-top:1px solid rgba(184,134,43,.45);}
+.art-note h2{
+  font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.2rem;color:#1E2A38;margin:0 0 1rem;
+}
+.art-more{font-family:"Newsreader",Georgia,serif;font-size:1rem;margin:2rem 0 0;}
+.art-more a,.art-credit a{color:#4A5666;text-decoration:none;border-bottom:1px solid rgba(184,134,43,.4);}
+.art-more a:hover,.art-credit a:hover{color:#1E2A38;border-bottom-color:#B8862B;}
+.art-credit{font-family:"Newsreader",Georgia,serif;font-size:.85rem;color:#8A93A0;margin:1rem 0 0;}
+.art-back{
+  display:inline-block;margin:3rem 0 0;font-family:"Newsreader",Georgia,serif;font-size:1rem;
+  color:#4A5666;text-decoration:none;border-bottom:1px solid rgba(184,134,43,.4);
+}
+.art-back:hover{color:#1E2A38;border-bottom-color:#B8862B;}
+
+@media (max-width:760px){
+  .art-wrap{padding:2.5rem 1.25rem 2rem;}
+  .art-grid{columns:2 9rem;column-gap:1rem;}
+  .art-lede{margin-bottom:2.75rem;}
+}
