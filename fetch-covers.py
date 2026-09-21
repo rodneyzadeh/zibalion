@@ -126,15 +126,8 @@ def main():
         if d.get("cover_i"):
             r["cover_url"] = f"https://covers.openlibrary.org/b/id/{d['cover_i']}-L.jpg"
             found.append("cover")
-        if d.get("isbn") and not (r.get("isbn") or "").strip():
-            r["isbn"] = d["isbn"][0]
-            found.append("isbn")
-        if d.get("publisher") and not (r.get("publisher") or "").strip():
-            r["publisher"] = d["publisher"][0]
-            found.append("publisher")
-        if d.get("first_publish_year") and not (r.get("year") or "").strip():
-            r["year"] = str(d["first_publish_year"])
-            found.append("year")
+        # Covers only. Publisher, year and ISBN from search results come from
+        # random editions in random languages, so they are never taken.
 
         if found:
             hits += 1
