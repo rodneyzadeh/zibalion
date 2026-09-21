@@ -166,11 +166,19 @@ def main():
             sys.exit(f'Two works share the slug {r["slug"]}. Rename one.')
         seen.add(r["slug"])
         r["img"] = image_for(r["slug"])
+    hidden = [r["title"] for r in rows if not r["img"]]
+    rows = [r for r in rows if r["img"]]
+    # start clean so pages for hidden works don't linger at old URLs
+    import shutil
+    if os.path.isdir(OUT):
+        shutil.rmtree(OUT)
     build_index(rows, head, tail)
     for r in rows:
         build_page(r, head, tail)
     n = sum(1 for r in rows if r["img"])
-    print(f"Built /art/ with {len(rows)} works, {n} with images.")
+    print(f"Built /art/ with {len(rows)} works.")
+    if hidden:
+        print(f"{len(hidden)} hidden until they have an image: " + ", ".join(hidden))
 
 
 if __name__ == "__main__":
