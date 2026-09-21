@@ -300,3 +300,7 @@
 
 /* ZB-SHELVES-SPACING: the annotation paragraphs were running together */
 #shelves > p{margin:0 0 1.25rem;}
+
+/* ZB-STATION-SPACING: paragraphs in every station get the same gap */
+.pr-station > p{margin:0 0 1.25rem;}
+.pr-station > p:last-child{margin-bottom:0;}
