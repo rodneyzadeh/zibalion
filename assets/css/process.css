@@ -312,3 +312,15 @@
 @media (max-width:760px){
   .pr-hero__title .pr-hero{margin-top:1.75rem;}
 }
+
+/* ZB-FORM-FIX: one column width for the whole form, fields aligned,
+   and the station paragraph rules kept out of the <p> fields */
+.pr-form{max-width:28rem;}
+.pr-form .pr-field{max-width:none;margin:0 0 1.25rem;}
+.pr-form .pr-row{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem;align-items:start;}
+.pr-form .pr-row > .pr-field{margin:0 0 1.25rem;}
+.pr-form .pr-field input,
+.pr-form .pr-field textarea{width:100%;box-sizing:border-box;}
+@media (max-width:560px){
+  .pr-form .pr-row{grid-template-columns:1fr;}
+}
