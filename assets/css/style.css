@@ -1102,16 +1102,21 @@ footer a:has(svg),
 }
 /* ==== ZB-BACKDROP-WIDTH END ==== */
 
-/* ZB-HERO-HEAD: the head still breaks through the navy stripe,
-   but no longer rises far enough to be clipped at the top of the page */
+/* ZB-HERO-SEAT: desktop only. The figure's box runs from 1rem above the
+   panel to 6rem below the gold line. The photo sits on the BOTTOM of that
+   box at every width, so the feet always land in the same place, and it
+   may never be taller than the box, so the head never leaves the page.
+   top    = highest the head can rise (less negative = lower ceiling)
+   bottom = where the feet land (more negative = lower) */
 @media (min-width:1041px){
-  .hero__figure{top:-3.5rem;}
-}
-
-/* ZB-HERO-GROUND: figure moved down as a whole, same size.
-   top    = how far the head rises above the panel (less negative = lower head)
-   bottom = how far the feet drop below the gold line (more negative = lower)
-   Nudge these two numbers together to keep the seat on the backdrop floor. */
-@media (min-width:1041px){
-  .hero__figure{top:-1rem;bottom:-3rem;}
+  .hero__figure{
+    top:-1rem; bottom:-6rem;
+    display:flex; flex-direction:column;
+    justify-content:flex-end; align-items:flex-end;
+  }
+  .hero__figure img{
+    width:auto; height:auto;
+    max-width:min(32vw, 640px);
+    max-height:100%;
+  }
 }
