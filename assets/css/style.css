@@ -1101,3 +1101,9 @@ footer a:has(svg),
   }
 }
 /* ==== ZB-BACKDROP-WIDTH END ==== */
+
+/* ZB-HERO-HEAD: the head still breaks through the navy stripe,
+   but no longer rises far enough to be clipped at the top of the page */
+@media (min-width:1041px){
+  .hero__figure{top:-3.5rem;}
+}
