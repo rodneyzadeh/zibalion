@@ -1107,3 +1107,11 @@ footer a:has(svg),
 @media (min-width:1041px){
   .hero__figure{top:-3.5rem;}
 }
+
+/* ZB-HERO-GROUND: figure moved down as a whole, same size.
+   top    = how far the head rises above the panel (less negative = lower head)
+   bottom = how far the feet drop below the gold line (more negative = lower)
+   Nudge these two numbers together to keep the seat on the backdrop floor. */
+@media (min-width:1041px){
+  .hero__figure{top:-1rem;bottom:-3rem;}
+}
